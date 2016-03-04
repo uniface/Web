@@ -1,0 +1,28 @@
+#file .\asn\dbms.asn
+
+[SETTINGS]
+$putmess_logfile      = .\log\wasv_%p.log
+$search_resources     = resources_only
+$js_base_url          = ../dspjs
+$test_mode_components
+
+
+[RESOURCES]
+.\bin
+usys:usys.uar
+
+
+[FILES]
+*.log                 .\log\*.log
+
+[LOGICALS]
+URL_REWRITING         = 0
+BASE_URL              = ../
+
+STATE_MODULE          = TOMCAT
+
+;The style of navigation to use:
+;TOP       - A simple menu fixed to the top of the screen
+;MPOLY     -
+;
+NAVIGATION_TYPE       = TOP

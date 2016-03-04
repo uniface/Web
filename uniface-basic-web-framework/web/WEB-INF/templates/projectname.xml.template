@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- 
+ Context configuration file for Uniface
+ -->
+<Context docBase="<project_path>web">
+  <Valve className="org.apache.catalina.valves.AccessLogValve" prefix="<project_name>-" suffix=".log" pattern="common"/>
+</Context>

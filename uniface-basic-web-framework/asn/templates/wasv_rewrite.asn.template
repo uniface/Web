@@ -1,0 +1,13 @@
+#file .\asn\wasv.asn
+
+[SETTINGS]
+$js_base_url              = /<project_name>/dspjs
+
+
+[WEB]
+$uniface_runtime_base_url = /<project_name>/common
+
+
+[LOGICALS]
+BASE_URL              = /<project_name>/
+URL_REWRITING         = 1

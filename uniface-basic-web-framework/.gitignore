@@ -1,0 +1,23 @@
+UDBG.CNF
+Web Framework - Development.lnk
+Web Framework - Debug.lnk
+bin/
+dbms/app_data.db
+dbms/source_repo.db
+log/
+lst/
+web/dspjs/
+asn/idf.asn
+asn/urouter.asn
+asn/wasv_rewrite.asn
+adm/uproperties.ini
+adm/usys.ini
+adm/uweb.ini
+adm/rewrite/usys.ini
+adm/rewrite/uproperties.ini
+adm/rewrite/uweb.ini
+asn/setup.asn
+project.setup.xml
+web/WEB-INF/web.xml
+src/library/menu/USYS/USA/FILESYNC.mnx
+web/lib/polymer/

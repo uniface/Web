@@ -1,0 +1,69 @@
+{
+    "js": [
+        "js/main.js",
+        "js/config.js",
+        "lib/jquery-1.10.2.min.js",
+        "lib/bootstrap/js/bootstrap.min.js",
+        "lib/spin.js"
+    ],
+
+    "css": [
+        "lib/bootstrap/css/bootstrap.css",
+        "css/main.css",
+        "lib/font-awesome/css/font-awesome.css"
+    ],
+
+    "layout": "app_main.html",
+    "entryPoint": "APP_TOP",
+
+    "routes": {
+        "home" : {
+            "dsp": "BASIC_HOME"
+        },
+        "account" : {
+            "dsp": "APP_ACCOUNT",
+            "children": {
+                "changepassword": {
+                    "dsp": "APP_ACCOUNT_01"
+                }
+            }
+        },
+        "users" : {
+            "dsp": "APP_USERS",
+            "children": {
+                "detail" : {
+                    "dsp":          "APP_USER_DETAIL",
+                    "instanceName": "APP_USER_D"
+                },
+                "new" : {
+                    "dsp":          "APP_USER_DETAIL",
+                    "instanceName": "APP_USER_N"
+                }
+            }
+        },
+        "page01" : {
+            "dsp":          "BASIC_PAGE",
+            "instanceName": "BASIC_PAGE_01"
+        },
+        "page02" : {
+            "dsp":          "BASIC_PAGE",
+            "instanceName": "BASIC_PAGE_02"
+        },
+        "page03" : {
+            "dsp":          "BASIC_PAGE",
+            "instanceName": "BASIC_PAGE_03"
+        },
+        "page04" : {
+            "dsp":          "BASIC_PAGE",
+            "instanceName": "BASIC_PAGE_04"
+        },
+        "page05" : {
+            "dsp":          "BASIC_PAGE",
+            "instanceName": "BASIC_PAGE_05"
+        },
+        "page06" : {
+            "dsp":          "BASIC_PAGE",
+            "instanceName": "BASIC_PAGE_06"
+        }
+    }
+}

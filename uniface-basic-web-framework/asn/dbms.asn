@@ -1,0 +1,14 @@
+[DRIVER_SETTINGS]
+SLE     U1.0
+USYS$SLE_PARAMS create db = on
+
+[PATHS]
+; Path to the SQLite database for the Uniface Repository:
+$DBMS        SLE:.\dbms\source_repo.db
+; Path to the SQLite database for application data:
+$DBMS_DEF    SLE:.\dbms\app_data.db
+
+$SYS    $DBMS
+$UUU    $DBMS
+$IDF    $DBMS
+$DEF    $DBMS_DEF

@@ -1,0 +1,38 @@
+<!doctype html>
+
+<html lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Polymer Theme</title>
+
+  <script src="../lib/polymer/webcomponentsjs/webcomponents.js"></script>
+  <script>
+    //Force Polymer into full shadow DOM mode. If we don't do this
+    //then elements dynamically created by Uniface aren't recognised
+    //by Polymer elements.
+    window.Polymer = window.Polymer || {};
+    window.Polymer.dom = 'shadow';
+  </script>
+  <link rel="import" href="../elements/elements.html">
+
+  <!-- For shared styles, shared-styles.html import in elements.html -->
+  <style is="custom-style" include="shared-styles"></style>
+
+</head>
+
+<body unresolved class="fullbleed layout vertical">
+
+  <div id="ufld:MESSAGE_AREA.DUMMY.DUMMY" style="max-width:400px;margin:0 auto;">
+    <div class="alert alert-danger fade in">
+      <strong><span id="ufld:MESSAGE.DUMMY.DUMMY">Static Text</span></strong>
+      <span id="ufld:DESCRIPTION.DUMMY.DUMMY">Static Text</span>
+    </div>
+  </div>
+
+  <div id="ufld:CONTENT.DUMMY.DUMMY"></div>
+</body>
+
+</html>

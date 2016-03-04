@@ -1,0 +1,56 @@
+{
+    "js": [
+        "js/main.js",
+        "js/config.js"
+    ],
+
+    "css": [
+        "css/mpoly.css"
+    ],
+
+    "layout": "mpoly_main.html",
+    "entryPoint": "MPOLY_MENU",
+    "login": "MPOLY_LOGIN",
+
+    "routes": {
+        "home" : {
+            "dsp": "MPOLY_HOME"
+        },
+        "users" : {
+            "dsp": "MPOLY_USERS",
+            "instanceName": "MPOLY_USERS",
+            "children": {
+                "detail" : {
+                    "dsp":          "MPOLY_USER_DETAIL",
+                    "instanceName": "MPOLY_USER_D"
+                },
+                "new" : {
+                    "dsp":          "MPOLY_USER_DETAIL",
+                    "instanceName": "MPOLY_USER_N"
+                }
+            }
+        },
+        "contact" : {
+            "dsp": "MPOLY_CONTACT"
+        },
+
+
+        "account" : {
+            "dsp": "MPOLY_HOME",
+            "instanceName": "MPOLY_ACCOUNT",
+            "children": {
+                "changepassword": {
+                    "dsp": "MPOLY_HOME"
+                }
+            }
+        },
+        "page01" : {
+            "dsp":          "MPOLY_HOME",
+            "instanceName": "MPOLY_PAGE_01"
+        },
+        "page02" : {
+            "dsp":          "MPOLY_HOME",
+            "instanceName": "MPOLY_PAGE_02"
+        }
+    }
+}

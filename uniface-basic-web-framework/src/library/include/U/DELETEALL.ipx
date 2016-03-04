@@ -1,0 +1,135 @@
+﻿<?xml version='1.0' encoding='UTF-8' ?>
+<!-- Created by Uniface - (C) Uniface B.V. All rights reserved -->
+<!DOCTYPE UNIFACE PUBLIC "UNIFACE.DTD" "UNIFACE.DTD">
+<UNIFACE release="9.7" xmlengine="2.0">
+<TABLE>
+<DSC name="USOURCE" model="DICT" system="S" pseudo ="73" level="1" noupdate="0"
+ rbk="0" ffsql="0" transnr="0" segsize="0" ufocc="500" charset=".U">
+<FLD name="UTIMESTAMP" seqno="1" type="E" level="2" pack="0" scale="0" length="15"
+ pointer="0" inum="0" ufocc="0" />
+<FLD name="UCOMPSTAMP" seqno="2" type="E" level="2" pack="0" scale="0" length="15"
+ pointer="0" inum="0" ufocc="0" />
+<FLD name="USTAT" seqno="3" type="S" level="2" pack="0" scale="0" length="1"
+ pointer="0" inum="0" ufocc="0" />
+<FLD name="USUB" seqno="4" type="S" level="2" pack="0" scale="0" length="1"
+ pointer="0" inum="2" ufocc="0" mandatory="yes" idxnum="1,2" idxsnr="101,1" />
+<FLD name="UVAR" seqno="5" type="S" level="2" pack="0" scale="0" length="16"
+ pointer="0" inum="2" ufocc="0" mandatory="yes" idxnum="1,2" idxsnr="102,2" />
+<FLD name="ULABEL" seqno="6" type="S" level="2" pack="0" scale="0" length="16"
+ pointer="0" inum="1" ufocc="0" mandatory="yes" idxnum="1" idxsnr="103" />
+<FLD name="ULAN" seqno="7" type="S" level="2" pack="0" scale="0" length="3"
+ pointer="0" inum="1" ufocc="0" mandatory="yes" idxnum="1" idxsnr="104" />
+<FLD name="MSGTYPE" seqno="8" type="S" level="2" pack="0" scale="0" length="1"
+ pointer="0" inum="0" ufocc="0" />
+<FLD name="UVERS" seqno="9" type="S" level="2" pack="0" scale="0" length="12"
+ pointer="0" inum="0" ufocc="0" />
+<FLD name="UDESCR" seqno="10" type="S" level="2" pack="0" scale="0" length="25"
+ pointer="0" inum="0" ufocc="0" />
+<FLD name="UVPOS" seqno="11" type="S" level="2" pack="0" scale="0" length="6"
+ pointer="0" inum="0" ufocc="0" />
+<FLD name="UHPOS" seqno="12" type="S" level="2" pack="0" scale="0" length="6"
+ pointer="0" inum="0" ufocc="0" />
+<FLD name="UVSIZ" seqno="13" type="S" level="2" pack="0" scale="0" length="6"
+ pointer="0" inum="0" ufocc="0" />
+<FLD name="UHSIZ" seqno="14" type="S" level="2" pack="0" scale="0" length="6"
+ pointer="0" inum="0" ufocc="0" />
+<FLD name="AUTHORIZ" seqno="15" type="S" level="2" pack="0" scale="0" length="1"
+ pointer="0" inum="0" ufocc="0" />
+<FLD name="UCLASS" seqno="16" type="S" level="2" pack="0" scale="0" length="1"
+ pointer="0" inum="0" ufocc="0" />
+<FLD name="LOCREF" seqno="17" type="S" level="2" pack="0" scale="0" length="1"
+ pointer="0" inum="0" ufocc="0" />
+<FLD name="UCONFIRM" seqno="18" type="B" level="2" pack="0" scale="0" length="1"
+ pointer="0" inum="0" ufocc="0" />
+<FLD name="UAUDIO" seqno="19" type="N" level="2" pack="10" scale="0" length="1"
+ pointer="0" inum="0" ufocc="0" />
+<FLD name="UCOMMENT" seqno="20" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",0,0,0,,1,0,1,\1D,0,0,0,," />
+<FLD name="UTEXT" seqno="21" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,1,\1E,0,0,0,,0,0,0,," />
+<FLD name="UWLEVEL" seqno="22" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\C1,0,0,0,,0,0,0,," />
+</DSC>
+<OCC>
+<DAT name="UTIMESTAMP">2005-06-28T14:24:40.00</DAT>
+<DAT name="USUB">I</DAT>
+<DAT name="UVAR">U</DAT>
+<DAT name="ULABEL">DELETEALL</DAT>
+<DAT name="ULAN">P</DAT>
+<DAT name="UDESCR" xml:space='preserve'>SSV operation</DAT>
+<DAT name="UTEXT" xml:space='preserve'>; For the definition of &lt;myDtd&gt;, see the Defines trigger
+
+operation deleteall
+params
+  xmlstream [dtd:&lt;myDtd&gt;] x : INOUT
+  numeric pError            : OUT
+  string pErrorContext      : OUT
+endparams
+
+  pError = 0                   ; initialize $procerror return value
+  pErrorContext = ""           ; initialize $procerrorcontext return value
+
+  xmlload x, "dtd:&lt;myDtd&gt;"     ; load xml data x into component structure
+
+  if ($status &gt;= 0)            ; xmlload successful
+
+#ifdefined ssvEntity
+    if ($empty("&lt;ssvEntity&gt;") = 0) ; there is data
+#else
+    if ($empty = 0) ; there is data
+#endif
+      retrieve/reconnect       ; fire Read Trigger for changed or deleted occurrences
+
+      if ($status = 0)         ; validate successful
+        erase
+
+        if ($status &lt; 0)       ; erase error
+          pError = $procerror
+          pErrorContext = $procerrorcontext
+          rollback
+
+        elseif ($status = 0)   ; erase successful
+          commit
+
+          if ($status &lt; 0)     ; commit failed
+            pError = $procerror
+            pErrorContext = $procerrorcontext
+            rollback
+
+          endif
+        endif
+
+      else
+        ; retrieve/reconnect failed
+        pError = -35
+        putitem/id pErrorContext, "error", "-35"
+        putitem/id pErrorContext, "component", $componentname
+        putitem/id pErrorContext, "procname", "deleteAll()"
+        putitem/id pErrorContext, "description", "Reconnect failed"
+        rollback
+      endif
+    endif
+
+  else                         ; xmlload failed
+    pError = $procerror
+    pErrorContext = $procerrorcontext
+  endif
+
+  ; Return the result set as xmlStream to the Client. Validation errors are written
+  ; by the UNIFACE Component Engine in this stream using the 'valerr' meta-attribute.
+  ; Upon loading the xmlStream by the Client, On Error Triggers are fired
+  ; and the errors can be processed.
+  xmlsave x, "dtd:&lt;myDtd&gt;"   ; return xml document to client
+
+  if ($status &lt; 0)           ; xmlsave failed
+    pError = $procerror
+    pErrorContext = $procerrorcontext
+  endif
+
+  ; Possible errors are reported in 'error' and 'errorcontext'
+  return (0)
+End ; operation deleteAll
+</DAT>
+</OCC>
+</TABLE>
+</UNIFACE>

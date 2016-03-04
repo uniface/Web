@@ -1,0 +1,61 @@
+<setup-config>
+
+	<!--
+		These files will be copied from the "from" location to the "to" location with values
+		substituted in for the local environment
+	-->
+	<templates>
+		<template from=".\asn\templates\idf.asn.template" to=".\asn\idf.asn" />
+		<template from=".\asn\templates\setup.asn.template" to=".\asn\setup.asn" />
+		<template from=".\asn\templates\urouter.asn.template" to=".\asn\urouter.asn" />
+		<template from=".\asn\templates\wasv_rewrite.asn.template" to=".\asn\wasv_rewrite.asn" />
+
+		<template from=".\web\WEB-INF\templates\web.xml.template" to=".\web\WEB-INF\web.xml" />
+	</templates>
+
+	<!--
+		These files will be copied from "location" into the local Tomcat installation
+		directory with values substituted in for the local environment
+	-->
+	<web-templates>
+		<template from=".\web\WEB-INF\templates\projectname.xml.template" to="${projectname}.xml" />
+		<template from=".\web\WEB-INF\templates\projectname#common.xml.template" to="${projectname}#common.xml" />
+	</web-templates>
+
+	<!-- Specify where your project urouter.asn file is so it can be included in the main urouter.asn -->
+	<urouter-asn location=".\asn\urouter.asn" />
+
+	<!--
+		A list of folders that the setup tool should create. These would usually
+		be folders that the project needs but don't make sense to commit to
+		version control. For example, a log folder.
+	-->
+	<folders>
+		<folder name=".\adm\rewrite" />
+		<folder name=".\bin" />
+		<folder name=".\log" />
+		<folder name=".\lst" />
+		<folder name=".\web\dspjs" />
+	</folders>
+
+	<build-switches asn=".\asn\setup.asn" ini=".\asn\usys.ini" debug="0" />
+
+	<!-- Data files to import into the DEF database -->
+	<data-import-files>
+		<data-import-file location=".\dbms\exports\*.xml" />
+	</data-import-files>
+
+	<shortcuts>
+  		<shortcut name='Web Framework - Development'
+			target='%USYS97%\common\bin\idf.exe'
+			args='/adm="%USYS97%\uniface\adm\" /ini=".\asn\usys.ini" /asn=./asn/idf.asn ?' />
+
+		<shortcut name='Web Framework - Debug'
+			target='%USYS97%\common\bin\udbg.exe'
+			args='/adm="%USYS97%\uniface\adm" /deb=localhost+${debugport}:create' />
+	</shortcuts>
+
+	<do-import>1</do-import>
+	<do-compile>1</do-compile>
+
+</setup-config>

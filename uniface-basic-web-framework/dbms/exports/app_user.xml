@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!-- Created by Uniface - (C) Uniface B.V. All rights reserved -->
+<!DOCTYPE UNIFACE PUBLIC "UNIFACE.DTD" "UNIFACE.DTD">
+<UNIFACE release="10.1" xmlengine="2.0">
+<TABLE>
+<DSC name="APP_USER" model="APP" system="S" pseudo ="90" level="1" noupdate="0"
+ rbk="0" ffsql="0" transnr="0" segsize="0" ufocc="0">
+<FLD name="ID" seqno="1" type="S" level="2" pack="0" scale="0" length="32"
+ pointer="0" inum="1" ufocc="0" mandatory="yes" idxnum="1" idxsnr="101" />
+<FLD name="USERNAME" seqno="2" type="S" level="2" pack="0" scale="0" length="32"
+ pointer="0" inum="1" ufocc="0" mandatory="yes" idxnum="2" idxsnr="101" />
+<FLD name="PASSWORD" seqno="3" type="S" level="2" pack="0" scale="0" length="64"
+ pointer="0" inum="0" ufocc="0" />
+<FLD name="SALT" seqno="4" type="S" level="2" pack="0" scale="0" length="32"
+ pointer="0" inum="0" ufocc="0" />
+<FLD name="REGISTERED" seqno="5" type="E" level="2" pack="0" scale="0" length="15"
+ pointer="0" inum="0" ufocc="0" />
+<FLD name="LAST_LOGIN" seqno="6" type="E" level="2" pack="0" scale="0" length="15"
+ pointer="0" inum="0" ufocc="0" />
+<FLD name="ATTEMPTS" seqno="7" type="N" level="2" pack="7" scale="0" length="20"
+ pointer="0" inum="0" ufocc="0" />
+</DSC>
+<OCC>
+<DAT name="ID">0836DD6A829549D1BD7B5B7B64450848</DAT>
+<DAT name="USERNAME">admin</DAT>
+<DAT name="PASSWORD">E38AD7FD6E2709C853BB33112D35A92805734AF4F9B4E58E579D119A9055E936</DAT>
+<DAT name="SALT">D718AA700BCC44509731394C4C012305</DAT>
+<DAT name="LAST_LOGIN">2015-03-17T16:13:09.00</DAT>
+<DAT name="ATTEMPTS">0</DAT>
+</OCC>
+<OCC>
+<DAT name="ID">0836DD6A829549D1BD7B5B7B64450910</DAT>
+<DAT name="USERNAME">dwallace@pixonyx.mil</DAT>
+<DAT name="PASSWORD">C22A500E04A1598F6023FF709F03D272E25BF21987F83D5E73772BD2754EA771</DAT>
+<DAT name="SALT">D718AA700BCC44509731394C4C012305</DAT>
+<DAT name="LAST_LOGIN">2015-03-17T10:18:10.00</DAT>
+<DAT name="ATTEMPTS">0</DAT>
+</OCC>
+<OCC>
+<DAT name="ID">0836DD6A829549D1BD7B5B7B6445092</DAT>
+<DAT name="USERNAME">pryan@devify.gov</DAT>
+<DAT name="PASSWORD">C22A500E04A1598F6023FF709F03D272E25BF21987F83D5E73772BD2754EA771</DAT>
+<DAT name="SALT">D718AA700BCC44509731394C4C012305</DAT>
+<DAT name="LAST_LOGIN">2015-03-16T08:41:24.00</DAT>
+<DAT name="ATTEMPTS">0</DAT>
+</OCC>
+</TABLE>
+</UNIFACE>

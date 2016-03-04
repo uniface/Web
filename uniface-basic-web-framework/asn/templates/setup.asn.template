@@ -1,0 +1,9 @@
+#file .\asn\include.asn
+
+[SETTINGS]
+$putmess_logfile	.\log\setup_%p.log
+$transcript_log_file .\log\setup_%p.log /append
+
+[RESOURCES]
+<uniface_packages_path>ProjectSetup\ProjectSetup.uar
+<uniface_packages_path>ProjectSetup\ext\UnifaceMeta.uar

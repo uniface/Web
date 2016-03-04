@@ -1,0 +1,147 @@
+﻿<?xml version='1.0' encoding='UTF-8' ?>
+<!-- Created by Uniface - (C) Uniface B.V. All rights reserved -->
+<!DOCTYPE UNIFACE PUBLIC "UNIFACE.DTD" "UNIFACE.DTD">
+<UNIFACE release="9.6" xmlengine="2.0">
+<TABLE>
+<DSC name="USOURCE" model="DICT" system="S" pseudo ="73" level="1" noupdate="0"
+ rbk="0" ffsql="0" transnr="0" segsize="0" ufocc="500" charset=".U">
+<FLD name="UTIMESTAMP" seqno="1" type="E" level="2" pack="0" scale="0" length="15"
+ pointer="0" inum="0" ufocc="0" />
+<FLD name="UCOMPSTAMP" seqno="2" type="E" level="2" pack="0" scale="0" length="15"
+ pointer="0" inum="0" ufocc="0" />
+<FLD name="USTAT" seqno="3" type="S" level="2" pack="0" scale="0" length="1"
+ pointer="0" inum="0" ufocc="0" />
+<FLD name="USUB" seqno="4" type="S" level="2" pack="0" scale="0" length="1"
+ pointer="0" inum="2" ufocc="0" mandatory="yes" idxnum="1,2" idxsnr="101,1" />
+<FLD name="UVAR" seqno="5" type="S" level="2" pack="0" scale="0" length="16"
+ pointer="0" inum="2" ufocc="0" mandatory="yes" idxnum="1,2" idxsnr="102,2" />
+<FLD name="ULABEL" seqno="6" type="S" level="2" pack="0" scale="0" length="16"
+ pointer="0" inum="1" ufocc="0" mandatory="yes" idxnum="1" idxsnr="103" />
+<FLD name="ULAN" seqno="7" type="S" level="2" pack="0" scale="0" length="3"
+ pointer="0" inum="1" ufocc="0" mandatory="yes" idxnum="1" idxsnr="104" />
+<FLD name="MSGTYPE" seqno="8" type="S" level="2" pack="0" scale="0" length="1"
+ pointer="0" inum="0" ufocc="0" />
+<FLD name="UVERS" seqno="9" type="S" level="2" pack="0" scale="0" length="12"
+ pointer="0" inum="0" ufocc="0" />
+<FLD name="UDESCR" seqno="10" type="S" level="2" pack="0" scale="0" length="25"
+ pointer="0" inum="0" ufocc="0" />
+<FLD name="UVPOS" seqno="11" type="S" level="2" pack="0" scale="0" length="6"
+ pointer="0" inum="0" ufocc="0" />
+<FLD name="UHPOS" seqno="12" type="S" level="2" pack="0" scale="0" length="6"
+ pointer="0" inum="0" ufocc="0" />
+<FLD name="UVSIZ" seqno="13" type="S" level="2" pack="0" scale="0" length="6"
+ pointer="0" inum="0" ufocc="0" />
+<FLD name="UHSIZ" seqno="14" type="S" level="2" pack="0" scale="0" length="6"
+ pointer="0" inum="0" ufocc="0" />
+<FLD name="AUTHORIZ" seqno="15" type="S" level="2" pack="0" scale="0" length="1"
+ pointer="0" inum="0" ufocc="0" />
+<FLD name="UCLASS" seqno="16" type="S" level="2" pack="0" scale="0" length="1"
+ pointer="0" inum="0" ufocc="0" />
+<FLD name="LOCREF" seqno="17" type="S" level="2" pack="0" scale="0" length="1"
+ pointer="0" inum="0" ufocc="0" />
+<FLD name="UCONFIRM" seqno="18" type="B" level="2" pack="0" scale="0" length="1"
+ pointer="0" inum="0" ufocc="0" />
+<FLD name="UAUDIO" seqno="19" type="N" level="2" pack="10" scale="0" length="1"
+ pointer="0" inum="0" ufocc="0" />
+<FLD name="UCOMMENT" seqno="20" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",0,0,0,,1,0,1,\1D,0,0,0,," />
+<FLD name="UTEXT" seqno="21" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,1,\1E,0,0,0,,0,0,0,," />
+<FLD name="UWLEVEL" seqno="22" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\C1,0,0,0,,0,0,0,," />
+</DSC>
+<OCC>
+<DAT name="UTIMESTAMP">2015-06-18T11:06:39.00</DAT>
+<DAT name="USUB">I</DAT>
+<DAT name="UVAR">APP</DAT>
+<DAT name="ULABEL">SETSTATE</DAT>
+<DAT name="ULAN">P</DAT>
+<DAT name="UTEXT" xml:space='preserve'>; ----------------------------------------------
+; Generate response
+; ----------------------------------------------
+selectcase $webresponsetype
+; Update page
+case "UPDATE"
+	; Generate data
+	websave
+	if ($procerror &lt; 0)
+		webmessage/error "websave failed (Set State)%%^$procerror = %%$procerror%%%"
+		return 0
+	endif
+
+; Initial page
+case "FULLPAGE"
+
+	; Generate layout
+
+	#if (&lt;LAYOUT_SOURCE&gt;=FILE)
+
+		;Get the layout from a file
+		#ifundefined EXTERNAL_HTML
+			#error LAYOUT_SOURCE of "FILE" specified but no EXTERNAL_HTML define found
+		#endif
+		weblayout $concat(".\hts\", $lowercase("&lt;EXTERNAL_HTML&gt;"))
+
+	#elseif (&lt;LAYOUT_SOURCE&gt;=INSTANCE)
+
+		;Use the DSP's instance name to find the layout
+		weblayout $concat(".\hts\", $lowercase($instancename), ".html")
+
+
+	#elseif (&lt;LAYOUT_SOURCE&gt;=DYNAMIC)
+
+		;Get a file to use from GET_LAYOUT_PROC
+		#ifundefined GET_LAYOUT_PROC
+			#error LAYOUT_SOURCE of "DYNAMIC" specified but no GET_LAYOUT_PROC define found
+		#endif
+		weblayout $concat(".\hts\", $lowercase( &lt;GET_LAYOUT_PROC&gt;() ))
+
+	#else
+		
+		;Otherwise use the internal layout
+		weblayout
+
+	#endif
+
+	if ($procerror &lt; 0)
+		webmessage/error "weblayout failed (Set State)%%^$procerror = %%$procerror%%%"
+		return $status
+	endif
+
+	; Generate component definitions
+	webdefinitions
+	if ($procerror &lt; 0)
+		webmessage/error "webdefinitions failed (Set State)%%^$procerror = %%$procerror%%%"
+		return $status
+	endif
+
+	#ifdefined PAGE_CSS
+		#for STYLESHEET = (&lt;PAGE_CSS&gt;)
+			putitem $webinfo("CSS"), -1, &lt;STYLESHEET&gt;
+		#endfor
+	#endif
+
+	#ifdefined PAGE_JS
+		#for JS = (&lt;PAGE_JS&gt;)
+			putitem $webinfo("JAVASCRIPT"), -1, &lt;JS&gt;
+		#endfor
+	#endif
+
+	; Generate data
+	websave
+	if ($procerror &lt; 0)
+		webmessage/error "websave failed (Set State)%%^$procerror = %%$procerror%%%"
+		return 0
+  endif
+
+  #ifdefined POST_FULLPAGE_SET_STATE
+  ;This DSP defines a post fullpage set state operation, so call it
+  $instancehandle-&gt;postFullPageSetState()
+  #endif
+
+endselectcase
+
+return 0</DAT>
+</OCC>
+</TABLE>
+</UNIFACE>

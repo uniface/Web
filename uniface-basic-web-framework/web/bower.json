@@ -1,0 +1,14 @@
+{
+  "name": "Basic Web Framework",
+  "version": "0.0.0",
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "homepage": "",
+  "private": true,
+  "dependencies": {
+    "polymer": "Polymer/polymer#1.1.0",
+    "paper-elements": "PolymerElements/paper-elements#1.0.1",
+    "iron-pages": "PolymerElements/iron-pages#~1.0.3"
+  }
+}

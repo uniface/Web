@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!DOCTYPE web-app
+  PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+  "http://java.sun.com/dtd/web-app_2_3.dtd">
+
+<!-- Java Servlet (WRD) for Uniface Web Application Server -->
+<web-app>
+  <display-name>Uniface Web Request Dispatcher</display-name>
+
+  <filter>
+    <filter-name>UrlRewriteFilter</filter-name>
+    <filter-class>org.tuckey.web.filters.urlrewrite.UrlRewriteFilter</filter-class>
+  </filter>
+  
+  <filter-mapping>
+    <filter-name>UrlRewriteFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+
+  <!-- Uniface W(eb) R(equest) D(ispatcher) Servlet -->
+  <servlet>
+    <servlet-name>
+      wrd
+    </servlet-name>
+    <servlet-class>
+      com.compuware.uniface.urd.WRDServlet
+    </servlet-class>
+
+    <init-param>
+      <param-name>MAXFILEUPLOADSIZE</param-name>
+      <param-value>1000000</param-value>
+    </init-param>
+    <init-param>
+      <param-name>TESTABLE</param-name>
+      <param-value>true</param-value>
+    </init-param>
+    <init-param>
+       <param-name>USERUNPREFIX</param-name>
+       <param-value>false</param-value>
+    </init-param>
+    <init-param>
+      <param-name>MIDDLEWARE</param-name>
+      <param-value>UV8:<urouter_machine>+<urouter_port>|<userver_user>|<userver_password>|<project_name></param-value>
+    </init-param>
+
+    <!-- The settings ERRORDIR, RESOURCEDIR and WEBAPPURL are made optional -->
+    <!-- Do not use set them in a stand-alone web application -->
+  </servlet>
+
+  <!-- Uniface W(eb) R(equest) D(ispatcher) Servlet for debugging purposes -->
+  <servlet>
+    <servlet-name>
+      wrddbg
+    </servlet-name>
+    <servlet-class>
+      com.compuware.uniface.urd.WRDServlet
+    </servlet-class>
+
+    <init-param>
+      <param-name>MAXFILEUPLOADSIZE</param-name>
+      <param-value>1000000</param-value>
+    </init-param>
+    <init-param>
+       <param-name>USERUNPREFIX</param-name>
+       <param-value>false</param-value>
+    </init-param>
+    <init-param>
+       <param-name>ASVTIMEOUT</param-name>
+       <param-value>300</param-value>
+    </init-param>
+    <init-param>
+       <param-name>TESTABLE</param-name>
+       <param-value>true</param-value>
+    </init-param>
+    <init-param>
+       <param-name>MIDDLEWARE</param-name>
+      <param-value>UV8:<urouter_machine>+<urouter_port>|<userver_user>|<userver_password>|<project_name>_debug</param-value>
+    </init-param>
+
+    <!-- The settings ERRORDIR, RESOURCEDIR and WEBAPPURL are made optional -->
+    <!-- Do not use set them in a stand-alone web application -->
+  </servlet>
+
+  <!-- Uniface W(eb) R(equest) D(ispatcher) Servlet for debugging purposes -->
+  <servlet>
+    <servlet-name>
+      wrd_rewrite
+    </servlet-name>
+    <servlet-class>
+      com.compuware.uniface.urd.WRDServlet
+    </servlet-class>
+
+    <init-param>
+      <param-name>MAXFILEUPLOADSIZE</param-name>
+      <param-value>1000000</param-value>
+    </init-param>
+    <init-param>
+       <param-name>USERUNPREFIX</param-name>
+       <param-value>false</param-value>
+    </init-param>
+    <init-param>
+       <param-name>ASVTIMEOUT</param-name>
+       <param-value>300</param-value>
+    </init-param>
+    <init-param>
+       <param-name>TESTABLE</param-name>
+       <param-value>true</param-value>
+    </init-param>
+    <init-param>
+       <param-name>MIDDLEWARE</param-name>
+      <param-value>UV8:<urouter_machine>+<urouter_port>|<userver_user>|<userver_password>|<project_name>_rewrite</param-value>
+    </init-param>
+
+    <!-- The settings ERRORDIR, RESOURCEDIR and WEBAPPURL are made optional -->
+    <!-- Do not use set them in a stand-alone web application -->
+  </servlet>
+
+  <!-- Uniface S(oap) R(equest) D(ispatcher) Servlet -->
+  <servlet>
+    <servlet-name>
+      srd
+    </servlet-name>
+    <servlet-class>
+      com.compuware.uniface.urd.SRDServlet
+    </servlet-class>
+
+    <init-param>
+      <param-name>MIDDLEWARE</param-name>
+      <param-value>UV8:<urouter_machine>+<urouter_port>|<userver_user>|<userver_password>|<project_name></param-value>
+    </init-param>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>srd</servlet-name>
+    <url-pattern>/services/*</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>wrd</servlet-name>
+    <url-pattern>/wrd/*</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>wrddbg</servlet-name>
+    <url-pattern>/debug/*</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>wrd_rewrite</servlet-name>
+    <url-pattern>/wrd_rewrite/*</url-pattern>
+  </servlet-mapping>
+</web-app>
+
