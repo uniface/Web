@@ -1,0 +1,2040 @@
+﻿<?xml version='1.0' encoding='UTF-8' ?>
+<!-- Created by Uniface - (C) Uniface B.V. All rights reserved -->
+<!DOCTYPE UNIFACE PUBLIC "UNIFACE.DTD" "UNIFACE.DTD">
+<UNIFACE release="9.7" xmlengine="2.0">
+<TABLE>
+<DSC name="UCSCH" model="DICT" system="S" pseudo ="73" level="1" noupdate="0"
+ rbk="0" ffsql="0" transnr="0" segsize="0" ufocc="1000" charset=".U">
+<FLD name="UTIMESTAMP" seqno="1" type="E" level="2" pack="0" scale="0" length="15"
+ pointer="0" inum="0" ufocc="0" />
+<FLD name="U_STAT" seqno="2" type="S" level="2" pack="0" scale="0" length="4"
+ pointer="0" inum="0" ufocc="0" />
+<FLD name="U_VLAB" seqno="3" type="S" level="2" pack="0" scale="0" length="32"
+ pointer="0" inum="1" ufocc="0" mandatory="yes" idxnum="1" idxsnr="101" />
+<FLD name="UVERS" seqno="4" type="S" level="2" pack="0" scale="0" length="12"
+ pointer="0" inum="0" ufocc="0" />
+<FLD name="UDESCR" seqno="5" type="S" level="2" pack="0" scale="0" length="25"
+ pointer="0" inum="0" ufocc="0" />
+<FLD name="ICMODEL" seqno="6" type="S" level="2" pack="0" scale="0" length="16"
+ pointer="0" inum="0" ufocc="0" />
+<FLD name="ICDEFINED" seqno="7" type="B" level="2" pack="0" scale="0" length="1"
+ pointer="0" inum="0" ufocc="0" />
+<FLD name="ICDIRTY" seqno="8" type="B" level="2" pack="0" scale="0" length="1"
+ pointer="0" inum="0" ufocc="0" />
+<FLD name="U_DOC" seqno="9" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\C2,0,0,0,,0,0,0,," />
+<FLD name="UDIAGRAM" seqno="10" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\C3,0,0,0,,0,0,0,," />
+<FLD name="UML_DATA" seqno="11" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\C4,0,0,0,,0,0,0,," />
+</DSC>
+<OCC>
+<DAT name="UTIMESTAMP">2008-10-08T13:28:21.00</DAT>
+<DAT name="U_VLAB">U</DAT>
+<DAT name="UDESCR" xml:space='preserve'>UNIFACE Defaults</DAT>
+<DAT name="ICMODEL">0</DAT>
+<DAT name="ICDEFINED">F</DAT>
+<DAT name="ICDIRTY">F</DAT>
+<DAT name="U_DOC" xml:space='preserve'>Last revision: 9.4.01.</DAT>
+</OCC>
+</TABLE>
+<TABLE>
+<DSC name="UCTABLE" model="DICT" system="S" pseudo ="73" level="1" noupdate="0"
+ rbk="0" ffsql="0" transnr="0" segsize="0" ufocc="0" charset=".U">
+<FLD name="UTIMESTAMP" seqno="1" type="E" level="2" pack="0" scale="0" length="15"
+ pointer="0" inum="0" ufocc="0" />
+<FLD name="U_STAT" seqno="2" type="S" level="2" pack="0" scale="0" length="4"
+ pointer="0" inum="0" ufocc="0" />
+<FLD name="U_VLAB" seqno="3" type="S" level="2" pack="0" scale="0" length="32"
+ pointer="0" inum="2" ufocc="0" mandatory="yes" idxnum="1,2" idxsnr="101,1" />
+<FLD name="U_TLAB" seqno="4" type="S" level="2" pack="0" scale="0" length="32"
+ pointer="0" inum="1" ufocc="0" mandatory="yes" idxnum="1" idxsnr="102" />
+<FLD name="UVERS" seqno="5" type="S" level="2" pack="0" scale="0" length="12"
+ pointer="0" inum="0" ufocc="0" />
+<FLD name="UDESCR" seqno="6" type="S" level="2" pack="0" scale="0" length="25"
+ pointer="0" inum="0" ufocc="0" />
+<FLD name="U_DOC" seqno="7" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\C1,0,0,0,,0,0,0,," />
+</DSC>
+<OCC>
+<DAT name="UTIMESTAMP">2008-08-07T15:32:31.00</DAT>
+<DAT name="U_VLAB">U</DAT>
+<DAT name="U_TLAB">UBUTTONDEF</DAT>
+<DAT name="UDESCR" xml:space='preserve'>Default buttons</DAT>
+</OCC>
+<OCC>
+<DAT name="UTIMESTAMP">2008-08-07T15:32:31.00</DAT>
+<DAT name="U_VLAB">U</DAT>
+<DAT name="U_TLAB">UMENUDEF</DAT>
+<DAT name="UDESCR" xml:space='preserve'>Default switching</DAT>
+</OCC>
+<OCC>
+<DAT name="UTIMESTAMP">2008-08-07T15:32:31.00</DAT>
+<DAT name="U_VLAB">U</DAT>
+<DAT name="U_TLAB">USUPERTYPEDEF</DAT>
+</OCC>
+</TABLE>
+<TABLE>
+<DSC name="UCGROUP" model="DICT" system="S" pseudo ="73" level="1" noupdate="0"
+ rbk="0" ffsql="0" transnr="0" segsize="0" ufocc="1000" charset=".U">
+<FLD name="UTIMESTAMP" seqno="1" type="E" level="2" pack="0" scale="0" length="15"
+ pointer="0" inum="0" ufocc="0" />
+<FLD name="U_STAT" seqno="2" type="S" level="2" pack="0" scale="0" length="4"
+ pointer="0" inum="0" ufocc="0" />
+<FLD name="U_GLAB" seqno="3" type="S" level="2" pack="0" scale="0" length="32"
+ pointer="0" inum="1" ufocc="0" mandatory="yes" idxnum="1" idxsnr="101" />
+<FLD name="U_VLAB" seqno="4" type="S" level="2" pack="0" scale="0" length="32"
+ pointer="0" inum="3" ufocc="0" mandatory="yes" idxnum="1,2,3" idxsnr="102,1,1" />
+<FLD name="U_TLAB" seqno="5" type="S" level="2" pack="0" scale="0" length="32"
+ pointer="0" inum="1" ufocc="0" idxnum="2" idxsnr="2" />
+<FLD name="UVERS" seqno="6" type="S" level="2" pack="0" scale="0" length="12"
+ pointer="0" inum="0" ufocc="0" />
+<FLD name="UDESCR" seqno="7" type="S" level="2" pack="0" scale="0" length="25"
+ pointer="0" inum="0" ufocc="0" />
+<FLD name="U_BORD" seqno="8" type="S" level="2" pack="0" scale="0" length="1"
+ pointer="0" inum="0" ufocc="0" />
+<FLD name="U_INDB" seqno="9" type="S" level="2" pack="0" scale="0" length="1"
+ pointer="0" inum="0" ufocc="0" />
+<FLD name="U_DBMS" seqno="10" type="S" level="2" pack="0" scale="0" length="3"
+ pointer="0" inum="0" ufocc="0" />
+<FLD name="U_UPD" seqno="11" type="S" level="2" pack="0" scale="0" length="1"
+ pointer="0" inum="0" ufocc="0" />
+<FLD name="U_MINL" seqno="12" type="N" level="2" pack="0" scale="0" length="6"
+ pointer="0" inum="0" ufocc="0" />
+<FLD name="U_MAXL" seqno="13" type="N" level="2" pack="0" scale="0" length="6"
+ pointer="0" inum="0" ufocc="0" />
+<FLD name="U_MINR" seqno="14" type="N" level="2" pack="0" scale="0" length="6"
+ pointer="0" inum="0" ufocc="0" />
+<FLD name="U_MAXR" seqno="15" type="N" level="2" pack="0" scale="0" length="6"
+ pointer="0" inum="0" ufocc="0" />
+<FLD name="TPLGINTF" seqno="16" type="S" level="2" pack="0" scale="0" length="32"
+ pointer="0" inum="0" ufocc="0" />
+<FLD name="U_INTF" seqno="17" type="S" level="2" pack="0" scale="0" length="64"
+ pointer="0" inum="0" ufocc="0" />
+<FLD name="TEMPLATENAME" seqno="18" type="S" level="2" pack="0" scale="0" length="32"
+ pointer="0" inum="0" ufocc="0" />
+<FLD name="UINHERIT" seqno="19" type="S" level="2" pack="0" scale="0" length="1"
+ pointer="0" inum="0" ufocc="0" />
+<FLD name="TPLACTUAL" seqno="20" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\C1,0,0,0,,0,0,0,," />
+<FLD name="U_DOC" seqno="21" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\C2,0,0,0,,0,0,0,," />
+<FLD name="P_READ" seqno="22" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\C3,0,0,0,,0,0,0,," />
+<FLD name="P_WRIT" seqno="23" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\C4,0,0,0,,0,0,0,," />
+<FLD name="P_DEL" seqno="24" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\C5,0,0,0,,0,0,0,," />
+<FLD name="P_LOCK" seqno="25" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\C6,0,0,0,,0,0,0,," />
+<FLD name="P_WUP" seqno="26" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\C7,0,0,0,,0,0,0,," />
+<FLD name="P_DUP" seqno="27" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\C8,0,0,0,,0,0,0,," />
+<FLD name="P_HELP" seqno="28" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\C9,0,0,0,,0,0,0,," />
+<FLD name="P_DET" seqno="29" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\CA,0,0,0,,0,0,0,," />
+<FLD name="P_OCUR" seqno="30" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\CB,0,0,0,,0,0,0,," />
+<FLD name="P_OMOD" seqno="31" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\CC,0,0,0,,0,0,0,," />
+<FLD name="P_OREM" seqno="32" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\CD,0,0,0,,0,0,0,," />
+<FLD name="P_ODEF" seqno="33" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\CE,0,0,0,,0,0,0,," />
+<FLD name="P_MENU" seqno="34" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\CF,0,0,0,,0,0,0,," />
+<FLD name="P_FNDOCC" seqno="35" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\D0,0,0,0,,0,0,0,," />
+<FLD name="P_ERROR" seqno="36" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\D1,0,0,0,,0,0,0,," />
+<FLD name="P_STARTMOD" seqno="37" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\D2,0,0,0,,0,0,0,," />
+<FLD name="P_GENERAL" seqno="38" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\D3,0,0,0,,0,0,0,," />
+<FLD name="VLDE" seqno="39" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\D4,0,0,0,,0,0,0,," />
+<FLD name="VLDK" seqno="40" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\DC,0,0,0,,0,0,0,," />
+<FLD name="UPOPUP" seqno="41" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\DD,0,0,0,,0,0,0,," />
+<FLD name="UISBCLASS" seqno="42" type="B" level="2" pack="0" scale="0" length="1"
+ pointer="0" inum="0" ufocc="0" />
+<FLD name="UISASSOC" seqno="43" type="B" level="2" pack="0" scale="0" length="1"
+ pointer="0" inum="0" ufocc="0" />
+<FLD name="UML_DATA" seqno="44" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\E0,0,0,0,,0,0,0,," />
+<FLD name="U_OBJSVC" seqno="45" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\E1,0,0,0,,0,0,0,," />
+<FLD name="U_SVCUSE" seqno="46" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\E2,0,0,0,,0,0,0,," />
+<FLD name="HTML_ENTPROP" seqno="47" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\D5,0,0,0,,0,0,0,," />
+<FLD name="HTML_TABTYPE" seqno="48" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\D6,0,0,0,,0,0,0,," />
+<FLD name="HTML_ENTHK_B" seqno="49" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\D7,0,0,0,,0,0,0,," />
+<FLD name="HTML_ENTHK_E" seqno="50" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\D8,0,0,0,,0,0,0,," />
+<FLD name="HTML_OCCHK_B" seqno="51" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\D9,0,0,0,,0,0,0,," />
+<FLD name="HTML_OCCHK_E" seqno="52" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\DA,0,0,0,,0,0,0,," />
+<FLD name="HTML_ENTCLASS" seqno="53" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\DB,0,0,0,,0,0,0,," />
+<FLD name="UABBR" seqno="54" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\E3,0,0,0,,0,0,0,," />
+<FLD name="UEOINTERFACE" seqno="55" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\E4,0,0,0,,0,0,0,," />
+<FLD name="UECINTERFACE" seqno="56" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\E5,0,0,0,,0,0,0,," />
+<FLD name="UEOOPERS" seqno="57" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\E6,0,0,0,,0,0,0,," />
+<FLD name="UECOPERS" seqno="58" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\E7,0,0,0,,0,0,0,," />
+<FLD name="UEOTRIGGERS" seqno="59" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\E8,0,0,0,,0,0,0,," />
+<FLD name="UECTRIGGERS" seqno="60" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\E9,0,0,0,,0,0,0,," />
+<FLD name="UGEOMETRY" seqno="61" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\EA,0,0,0,,0,0,0,," />
+<FLD name="UFFFIELDS" seqno="62" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\EB,0,0,0,,0,0,0,," />
+<FLD name="UWIDGETTYPE" seqno="63" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\EC,0,0,0,,0,0,0,," />
+<FLD name="UWIDGETCREATE" seqno="64" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\ED,0,0,0,,0,0,0,," />
+<FLD name="PRLO" seqno="65" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\EE,0,0,0,,0,0,0,," />
+<FLD name="PSLO" seqno="66" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\EF,0,0,0,,0,0,0,," />
+<FLD name="PRSO" seqno="67" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\F0,0,0,0,,0,0,0,," />
+<FLD name="PSSO" seqno="68" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\F1,0,0,0,,0,0,0,," />
+<FLD name="UTARGET" seqno="69" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\F2,0,0,0,,0,0,0,," />
+<FLD name="UPARENT" seqno="70" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\F3,0,0,0,,0,0,0,," />
+<FLD name="UWEBWIDGETTYPE" seqno="71" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\F4,0,0,0,,0,0,0,," />
+<FLD name="UWEBWIDGETCREATE" seqno="72" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\F5,0,0,0,,0,0,0,," />
+</DSC>
+<OCC>
+<DAT name="UTIMESTAMP">2008-08-07T15:32:31.00</DAT>
+<DAT name="U_GLAB">UBUTTONDEF</DAT>
+<DAT name="U_VLAB">U</DAT>
+<DAT name="U_TLAB">UBUTTONDEF</DAT>
+<DAT name="UDESCR" xml:space='preserve'>Default buttons</DAT>
+<DAT name="U_BORD">N</DAT>
+<DAT name="U_INDB">N</DAT>
+<DAT name="U_DBMS">DEF</DAT>
+<DAT name="U_UPD">N</DAT>
+<DAT name="P_OREM" xml:space='preserve'>return (-1)</DAT>
+<DAT name="P_ODEF" xml:space='preserve'>return (-1)</DAT>
+<DAT name="UISBCLASS">F</DAT>
+<DAT name="UISASSOC">F</DAT>
+<DAT name="U_SVCUSE">N</DAT>
+<DAT name="HTML_ENTPROP" xml:space='preserve'>U_ATLEASTONE=1&uSEP;U_STARTOCC=1&uSEP;U_MAXOCC=</DAT>
+<DAT name="UABBR">UBUTTONDEF</DAT>
+<DAT name="UEOINTERFACE">UBUTTONDEFOCC</DAT>
+<DAT name="UECINTERFACE">UBUTTONDEFCOLL</DAT>
+<DAT name="UWIDGETTYPE">U_NONE</DAT>
+<DAT name="UWEBWIDGETTYPE">U_NONE</DAT>
+</OCC>
+<OCC>
+<DAT name="UTIMESTAMP">2006-10-27T12:26:26.00</DAT>
+<DAT name="U_GLAB">UBUTTONDEFFRM</DAT>
+<DAT name="U_VLAB">U</DAT>
+<DAT name="U_TLAB">UBUTTONDEF</DAT>
+<DAT name="UDESCR" xml:space='preserve'>Default buttons</DAT>
+<DAT name="U_BORD">N</DAT>
+<DAT name="U_INDB">N</DAT>
+<DAT name="U_DBMS">DEF</DAT>
+<DAT name="U_UPD">N</DAT>
+<DAT name="UISBCLASS">F</DAT>
+<DAT name="UISASSOC">F</DAT>
+<DAT name="U_SVCUSE">N</DAT>
+<DAT name="HTML_ENTPROP" xml:space='preserve'>U_ATLEASTONE=1&uSEP;U_STARTOCC=1&uSEP;U_MAXOCC=</DAT>
+<DAT name="UABBR">UBUTTONDEFFRM</DAT>
+<DAT name="UEOINTERFACE">UBUTTONDEFFRMOCC</DAT>
+<DAT name="UECINTERFACE">UBUTTONDEFFRMCOLL</DAT>
+<DAT name="UWIDGETTYPE">U_NONE</DAT>
+<DAT name="UTARGET">0</DAT>
+<DAT name="UPARENT">UBUTTONDEF</DAT>
+<DAT name="UWEBWIDGETTYPE">U_NONE</DAT>
+</OCC>
+<OCC>
+<DAT name="UTIMESTAMP">2006-10-27T12:26:26.00</DAT>
+<DAT name="U_GLAB">UBUTTONDEFUSP</DAT>
+<DAT name="U_VLAB">U</DAT>
+<DAT name="U_TLAB">UBUTTONDEF</DAT>
+<DAT name="UDESCR" xml:space='preserve'>Default buttons</DAT>
+<DAT name="U_BORD">N</DAT>
+<DAT name="U_INDB">N</DAT>
+<DAT name="U_DBMS">DEF</DAT>
+<DAT name="U_UPD">N</DAT>
+<DAT name="UISBCLASS">F</DAT>
+<DAT name="UISASSOC">F</DAT>
+<DAT name="U_SVCUSE">N</DAT>
+<DAT name="HTML_ENTPROP" xml:space='preserve'>U_ATLEASTONE=1&uSEP;U_STARTOCC=1&uSEP;U_MAXOCC=</DAT>
+<DAT name="UABBR">UBUTTONDEFUSP</DAT>
+<DAT name="UEOINTERFACE">UBUTTONDEFUSPOCC</DAT>
+<DAT name="UECINTERFACE">UBUTTONDEFUSPCOLL</DAT>
+<DAT name="UWIDGETTYPE">U_NONE</DAT>
+<DAT name="UTARGET">6</DAT>
+<DAT name="UPARENT">UBUTTONDEF</DAT>
+<DAT name="UWEBWIDGETTYPE">U_NONE</DAT>
+</OCC>
+<OCC>
+<DAT name="UTIMESTAMP">2008-08-20T00:00:00.00</DAT>
+<DAT name="U_GLAB">UCOMPONENTSUBTYPEDEFDSP</DAT>
+<DAT name="U_VLAB">U</DAT>
+<DAT name="U_TLAB">USUPERTYPEDEF</DAT>
+<DAT name="U_BORD">N</DAT>
+<DAT name="U_INDB">N</DAT>
+<DAT name="U_DBMS">DEF</DAT>
+<DAT name="U_UPD">N</DAT>
+<DAT name="P_READ" xml:space='preserve'>; DSP Subtype does not have Data I/O.</DAT>
+<DAT name="P_WRIT" xml:space='preserve'>; DSP Subtype does not have Data I/O.</DAT>
+<DAT name="P_DEL" xml:space='preserve'>; DSP Subtype does not have Data I/O.</DAT>
+<DAT name="P_LOCK" xml:space='preserve'>; DSP Subtype does not have Data I/O.</DAT>
+<DAT name="P_WUP" xml:space='preserve'>; DSP Subtype does not have Data I/O.</DAT>
+<DAT name="P_DUP" xml:space='preserve'>; DSP Subtype does not have Data I/O.</DAT>
+<DAT name="P_ERROR" xml:space='preserve'>; Upon loading an xmlstream, the On Error Trigger is fired for each element
+; for which the valErr meta-attribute was set.
+; Here, show a red background, in order to indicate a failed validation.
+
+if ($error = "0162")                          ; remote validation failed
+  putmess $item("ERRORMSG", $occproperties)    ; message frame
+  putitem/id $occproperties($entname), "css:background-color", "red"
+endif
+return (-1)
+</DAT>
+<DAT name="VLDE" xml:space='preserve'>; DSP Subtype in general does not do any validation.</DAT>
+<DAT name="VLDK" xml:space='preserve'>; DSP Subtype in general does not do any validation.</DAT>
+<DAT name="UISBCLASS">T</DAT>
+<DAT name="UISASSOC">F</DAT>
+<DAT name="U_SVCUSE">N</DAT>
+<DAT name="HTML_ENTPROP" xml:space='preserve'>U_ATLEASTONE=1&uSEP;U_STARTOCC=1&uSEP;U_MAXOCC=</DAT>
+<DAT name="UABBR">UCOMPSUBDEFDSP</DAT>
+<DAT name="UEOINTERFACE">UCOMPONENTSUBTYPEDEFDSPOCC</DAT>
+<DAT name="UECINTERFACE">UCOMPONENTSUBTYPEDEFDSPCOLL</DAT>
+<DAT name="UECOPERS" xml:space='preserve'>; The constants mySessionService, myDtd and myDtdMapping
+; are assumed to be defined in the Component Defines Trigger.
+
+partner operation load
+variables
+  xmlstream x
+  numeric vError
+  string vErrorContext
+endvariables
+
+  xmlsave x, "dtd:&lt;myDtd&gt;", "&lt;myDtdMapping&gt;"             ; capture retrieve-profile
+
+  if ($status &gt;= 0)
+    activate/stateless "&lt;mySessionService&gt;".load(x, vError, vErrorContext)
+
+    if ($status = 0)                                     ; activate of SSV successful...
+
+      if (vError = 0)                                    ; ...and the SSV processed sucessfully
+        clear/e "&lt;$entName&gt;"
+        xmlload x, "dtd:&lt;myDtd&gt;", "&lt;myDtdMapping&gt;"       ; load result set
+
+        if ($status &lt; 0)
+          $instancehandle-&gt;zProcError($procerrorcontext) ; report xmlload error
+        endif
+
+      else
+        $instancehandle-&gt;zProcError(vErrorContext)       ; report errors in SSV processing
+      endif
+
+    else
+      $instancehandle-&gt;zProcError($procerrorcontext)     ; report activate error
+    endif
+
+  else
+    $instancehandle-&gt;zProcError($procerrorcontext)       ; report xmlsave error
+  endif
+
+  webgen/append                                          ; append otherwise errormessages are lost
+
+End ; operation load
+
+partner operation save
+variables
+  xmlstream x
+  numeric vError
+  string vErrorContext
+endvariables
+
+  xmlsave x, "dtd:&lt;myDtd&gt;", "&lt;myDtdMapping&gt;"
+
+  if ($status &gt;= 0)
+    activate/stateless "&lt;mySessionService&gt;".save(x, vError, vErrorContext)
+
+    if ($status = 0)                                     ; activate of SSV successful...
+
+      if (vError != 0)                                   ; ...but the SSV processed unsuccessfully
+        $instancehandle-&gt;zProcError(vErrorContext)       ; report errors in SSV processing
+      endif
+
+
+      clear/e "&lt;$entName&gt;"
+
+      ; the xmlStream as returned by the SSV may contain flagged elements that did
+      ; not pass validation in the SSV. These elements are flagged using the
+      ; 'valerr' meta-attributes.
+      ; On Error Triggers are fired upon loading the result set by xmlLoad:
+      xmlload x, "dtd:&lt;myDtd&gt;", "&lt;myDtdMapping&gt;"
+
+      if ($status &lt; 0)
+        $instancehandle-&gt;zProcError($procerrorcontext)   ; report xmlload error
+      endif
+
+    else
+      $instancehandle-&gt;zProcError($procerrorcontext)     ; report activate error
+    endif
+
+  else
+    $instancehandle-&gt;zProcError($procerrorcontext)       ; report xmlsave error
+  endif
+
+  webgen/append                                          ; append otherwise errormessages are lost
+
+End ; operation save
+
+operation clear
+
+  clear/e "&lt;$entName&gt;"
+
+End ; operation clear
+
+partner operation add
+
+  creocc "&lt;$entName&gt;", -1
+
+End ; operation add</DAT>
+<DAT name="UWIDGETTYPE">U_NONE</DAT>
+<DAT name="UTARGET">7</DAT>
+<DAT name="UPARENT">USUPERTYPEDEF</DAT>
+<DAT name="UWEBWIDGETTYPE">U_NONE</DAT>
+</OCC>
+<OCC>
+<DAT name="UTIMESTAMP">2006-10-27T12:26:26.00</DAT>
+<DAT name="U_GLAB">UCOMPONENTSUBTYPEDEFESV</DAT>
+<DAT name="U_VLAB">U</DAT>
+<DAT name="U_TLAB">USUPERTYPEDEF</DAT>
+<DAT name="U_BORD">N</DAT>
+<DAT name="U_INDB">Y</DAT>
+<DAT name="U_DBMS">DEF</DAT>
+<DAT name="U_UPD">Y</DAT>
+<DAT name="P_READ" xml:space='preserve'>; Pre: ESV Component Operation 'uRetr&lt;esvEntity&gt;'.
+
+; Insert your code...
+
+if ($UWHERE$ = "" &amp; $WHERE$ = "")
+  read
+else
+  if ($WHERE$ != "" &amp; $UWHERE$ = "")
+    read where $WHERE$
+  else
+    if ($UWHERE$ != "" &amp; $WHERE$ = "")
+      read u_condition($UWHERE$)
+    endif
+  endif
+endif
+</DAT>
+<DAT name="P_WRIT" xml:space='preserve'>; Pre: ESV Component Operation 'uEndStore'.
+
+; Insert your code...
+
+write
+</DAT>
+<DAT name="P_DEL" xml:space='preserve'>; Pre: ESV Component Operation 'uEndStore'.
+
+; Insert your code...
+
+delete
+</DAT>
+<DAT name="P_LOCK" xml:space='preserve'>; The ESV Subtype lock is managed by the ESV Component Operation 'uLock'.</DAT>
+<DAT name="VLDE" xml:space='preserve'>; The Validate Occurrence Trigger is fired explicitly when the Proc statement 'validate'
+; is executed, or is fired implicitly when the Proc statement 'store' is encountered.
+
+; Here, this Trigger should only contain validation pertaining to the individual Business Object.
+</DAT>
+<DAT name="VLDK" xml:space='preserve'>; The Validate Key Trigger is fired explicitly when the Proc statement 'validate'
+; is executed, or is fired implicitly when the Proc statement 'store' is encountered.
+
+; Here, this Trigger should only contain validation pertaining to the individual Business Object.
+
+findkey $entname, $curkey
+
+selectcase $status
+  case 0             ; key not found
+    if ($foreign)    ; non existing key in up entity
+      return (-1)    ; only if Write Up trigger not filled
+    endif
+
+  case 1             ; key found in Component
+    if (!$foreign)   ; duplicate key in down entity
+      return (-1)
+    endif
+
+  case 2             ; key found in DBMS
+    if (!$foreign)   ; duplicate key in down entity
+      return (-1)
+    endif
+endselectcase
+
+return (0)
+</DAT>
+<DAT name="UISBCLASS">T</DAT>
+<DAT name="UISASSOC">F</DAT>
+<DAT name="U_SVCUSE">N</DAT>
+<DAT name="HTML_ENTPROP" xml:space='preserve'>U_ATLEASTONE=1&uSEP;U_STARTOCC=1&uSEP;U_MAXOCC=</DAT>
+<DAT name="UABBR">UCOMPSUBDEFESV</DAT>
+<DAT name="UEOINTERFACE">UCOMPONENTSUBTYPEDEFESVOCC</DAT>
+<DAT name="UECINTERFACE">UCOMPONENTSUBTYPEDEFESVCOLL</DAT>
+<DAT name="UEOOPERS" xml:space='preserve'>partner operation aftercreate
+; Insert your code; is executed after an object is created.
+; pre:     creocc
+; post:    okay: n = 0; not okay: n = -1 (blocks creation)
+params
+  numeric n : OUT
+endparams
+
+  n = 0
+  validatekey
+
+  if ($status &lt; 0)
+    n = -1
+
+  else
+    validateocc
+
+    if ($status &lt; 0)
+      n = -1
+    endif
+  endif
+End ; operation aftercreate
+
+partner operation beforeremove
+; Insert your code; is executed before an object is removed.
+; pre:      -
+; post:     okay: n = 0; not okay: n = -1 (blocks removal)
+params
+  numeric n : OUT
+endparams
+
+  n = 0
+End ; operation beforeremove
+
+partner operation afterupdate
+; Insert your code; is executed after an object has been updated.
+; pre:     -
+; post:    okay: n = 0; not okay: n = -1 (blocks update)
+params
+  numeric n : OUT
+endparams
+
+  validateocc
+
+  if ($status &lt; 0)
+    n = -1
+
+  else
+    n = 0
+  endif
+End ; operation afterupdate</DAT>
+<DAT name="UWIDGETTYPE">U_NONE</DAT>
+<DAT name="UTARGET">3</DAT>
+<DAT name="UPARENT">USUPERTYPEDEF</DAT>
+<DAT name="UWEBWIDGETTYPE">U_NONE</DAT>
+</OCC>
+<OCC>
+<DAT name="UTIMESTAMP">2006-10-27T12:26:26.00</DAT>
+<DAT name="U_GLAB">UCOMPONENTSUBTYPEDEFFRM</DAT>
+<DAT name="U_VLAB">U</DAT>
+<DAT name="U_TLAB">USUPERTYPEDEF</DAT>
+<DAT name="U_BORD">N</DAT>
+<DAT name="U_INDB">N</DAT>
+<DAT name="U_DBMS">DEF</DAT>
+<DAT name="U_UPD">N</DAT>
+<DAT name="P_READ" xml:space='preserve'>; FRM Subtype does not have Data I/O.</DAT>
+<DAT name="P_WRIT" xml:space='preserve'>; FRM Subtype does not have Data I/O.</DAT>
+<DAT name="P_DEL" xml:space='preserve'>; FRM Subtype does not have Data I/O.</DAT>
+<DAT name="P_LOCK" xml:space='preserve'>; FRM Subtype does not have Data I/O.</DAT>
+<DAT name="P_WUP" xml:space='preserve'>; FRM Subtype does not have Data I/O.</DAT>
+<DAT name="P_DUP" xml:space='preserve'>; FRM Subtype does not have Data I/O.</DAT>
+<DAT name="P_OCUR" xml:space='preserve'>; Background color is set to red after a failed validation in the On Error trigger.
+curoccvideo $entname, "COL=DEF"</DAT>
+<DAT name="P_OREM" xml:space='preserve'>; Delegate the 'Remove' to a Collection Operation.
+; This allows a uniform implementation that can be invoked
+; by other objects too (for example, by a 'Remove' Button).
+$collhandle()-&gt;remove()</DAT>
+<DAT name="P_ODEF" xml:space='preserve'>; Delegate the 'Add' to a Collection Operation.
+; This allows a uniform implementation that can be invoked
+; by other objects too (for example, by an 'Add' Button).
+$collhandle()-&gt;add()</DAT>
+<DAT name="P_FNDOCC" xml:space='preserve'>; FRM Subtype in general does not do any validation.</DAT>
+<DAT name="P_ERROR" xml:space='preserve'>; Upon loading an xmlstream, the On Error Trigger is fired for each element
+; for which the valErr meta-attribute was set.
+; Here, show a red background, in order to indicate a failed validation.
+
+; Note: The curoccvideo statement does not affect an entity that is painted with a single
+; occurrence, unless that entity is painted as an up entity and the outer entity is
+; painted with multiple occurrences.
+
+if ($error = "0162")                          ; remote validation failed
+  message $item("ERRORMSG", $occproperties)    ; message line
+  putmess $item("ERRORMSG", $occproperties)    ; message frame
+  curoccvideo $entname, "COL=4"
+else
+  message $text("%%$error%%%")
+endif
+
+return (-1)
+</DAT>
+<DAT name="VLDE" xml:space='preserve'>; FRM Subtype in general does not do any validation.</DAT>
+<DAT name="VLDK" xml:space='preserve'>; FRM Subtype in general does not do any validation.</DAT>
+<DAT name="UISBCLASS">T</DAT>
+<DAT name="UISASSOC">F</DAT>
+<DAT name="U_SVCUSE">N</DAT>
+<DAT name="HTML_ENTPROP" xml:space='preserve'>U_ATLEASTONE=1&uSEP;U_STARTOCC=1&uSEP;U_MAXOCC=</DAT>
+<DAT name="UABBR">UCOMPSUBDEFFRM</DAT>
+<DAT name="UEOINTERFACE">UCOMPONENTSUBTYPEDEFFRMOCC</DAT>
+<DAT name="UECINTERFACE">UCOMPONENTSUBTYPEDEFFRMCOLL</DAT>
+<DAT name="UECOPERS" xml:space='preserve'>; The constants mySessionService, myDtd and myDtdMapping
+; are assumed to be defined in the Component Defines Trigger.
+
+partner operation load
+variables
+  xmlstream x
+  numeric vError
+  string vErrorContext
+endvariables
+
+  xmlsave x, "dtd:&lt;myDtd&gt;", "&lt;myDtdMapping&gt;"             ; capture retrieve-profile
+
+  if ($status &gt;= 0)
+    activate/stateless "&lt;mySessionService&gt;".load(x, vError, vErrorContext)
+
+    if ($status = 0)                                     ; activate of SSV successful...
+
+      if (vError = 0)                                    ; ...and the SSV processed sucessfully
+        clear/e "&lt;$entName&gt;"
+        xmlload x, "dtd:&lt;myDtd&gt;", "&lt;myDtdMapping&gt;"       ; load result set
+
+        if ($status &lt; 0)
+          $instancehandle-&gt;zProcError($procerrorcontext) ; report xmlLoad error
+        endif
+
+      else
+        $instancehandle-&gt;zProcError(vErrorContext)       ; report errors in SSV processing
+
+      endif
+
+    else
+      $instancehandle-&gt;zProcError($procerrorcontext)     ; report activate error
+    endif
+
+  else
+     $instancehandle-&gt;zProcError($procerrorcontext)      ; report xmlSave error
+  endif
+
+End ; operation load
+
+partner operation save
+variables
+  xmlstream x
+  numeric vError
+  string vErrorContext
+  numeric vOccNo
+  numeric vStatus
+endvariables
+
+  vOccNo = $curocc(&lt;$entName&gt;)                           ; save current occurrence
+
+  xmlsave x, "dtd:&lt;myDtd&gt;", "&lt;myDtdMapping&gt;"
+
+  if ($status &gt;= 0)
+    activate/stateless "&lt;mySessionService&gt;".save(x, vError, vErrorContext)
+
+    if ($status = 0)                                     ; activate of SSV successful...
+
+      if (vError != 0)                                   ; ...but the SSV processed unsuccessfully
+        $instancehandle-&gt;zProcError(vErrorContext)       ; report errors in SSV processing
+      endif
+
+      clear/e "&lt;$entName&gt;"
+
+      ; the xmlStream as returned by the SSV may contain flagged elements that did
+      ; not pass validation in the SSV. These elements are flagged using the
+      ; 'valerr' meta-attributes.
+      ; On Error Triggers are fired upon loading the result set by xmlLoad:
+      xmlload x, "dtd:&lt;myDtd&gt;", "&lt;myDtdMapping&gt;"
+
+      if ($status &lt; 0)
+        $instancehandle-&gt;zProcError($procerrorcontext)   ; report xmlload error
+      endif
+
+    else
+      $instancehandle-&gt;zProcError($procerrorcontext)     ; report activate error
+    endif
+
+  else
+    $instancehandle-&gt;zProcError($procerrorcontext)       ; report xmlsave error
+  endif
+
+  vStatus = $status
+  setocc "&lt;$entName&gt;", vOccNo                            ; reset occurrence
+  $status = vStatus                                      ; ignore setocc status
+
+  if (vError != 0) $status = -1                          ; report error from SSV to caller
+
+  return ($status)                                       ; report $status to caller
+
+End ; operation save
+
+partner operation deleteall
+variables
+  xmlstream x
+  numeric vError
+  string vErrorContext
+endvariables
+
+  xmlsave x, "dtd:&lt;myDtd&gt;", "&lt;myDtdMapping&gt;"
+
+  if ($status &gt;= 0)
+    activate/stateless "&lt;mySessionService&gt;".deleteall(x, vError, vErrorContext)
+
+    if ($status = 0)                                     ; activate of SSV successful...
+
+      if (vError != 0)                                   ; ...but the SSV processed unsuccessfully
+        $instancehandle-&gt;zProcError(vErrorContext)       ; report errors in SSV processing
+      endif
+
+      clear/e "&lt;$entName&gt;"
+
+      ; the xmlStream as returned by the SSV may contain flagged elements that did
+      ; not pass validation in the SSV. These elements are flagged using the
+      ; 'valerr' meta-attributes.
+      ; On Error Triggers are fired upon loading the result set by xmlLoad:
+      xmlload x, "dtd:&lt;myDtd&gt;", "&lt;myDtdMapping&gt;"
+
+      if ($status &lt; 0)
+        $instancehandle-&gt;zProcError($procerrorcontext)   ; report xmlLoad error
+      endif
+
+    else
+      $instancehandle-&gt;zProcError($procerrorcontext)     ; report activate error
+    endif
+
+  else
+    $instancehandle-&gt;zProcError($procerrorcontext)       ; report xmlSave error
+  endif
+
+End ; operation deleteall
+
+partner operation clear
+
+  clear/e "&lt;$entName&gt;"
+
+End ; operation clear
+
+partner operation add
+
+  creocc "&lt;$entName&gt;", $curocc ("&lt;$entName&gt;") + 1
+
+End ; operation add
+
+partner operation remove
+
+  remocc "&lt;$entName&gt;"
+
+End ; operation remove</DAT>
+<DAT name="UWIDGETTYPE">U_NONE</DAT>
+<DAT name="UTARGET">0</DAT>
+<DAT name="UPARENT">USUPERTYPEDEF</DAT>
+<DAT name="UWEBWIDGETTYPE">U_NONE</DAT>
+</OCC>
+<OCC>
+<DAT name="UTIMESTAMP">2006-10-27T12:26:26.00</DAT>
+<DAT name="U_GLAB">UCOMPONENTSUBTYPEDEFRPT</DAT>
+<DAT name="U_VLAB">U</DAT>
+<DAT name="U_TLAB">USUPERTYPEDEF</DAT>
+<DAT name="U_BORD">N</DAT>
+<DAT name="U_INDB">Y</DAT>
+<DAT name="U_DBMS">DEF</DAT>
+<DAT name="U_UPD">N</DAT>
+<DAT name="UISBCLASS">T</DAT>
+<DAT name="UISASSOC">F</DAT>
+<DAT name="U_SVCUSE">N</DAT>
+<DAT name="HTML_ENTPROP" xml:space='preserve'>U_ATLEASTONE=1&uSEP;U_STARTOCC=1&uSEP;U_MAXOCC=</DAT>
+<DAT name="UABBR">UCOMPSUBDEFRPT</DAT>
+<DAT name="UEOINTERFACE">UCOMPONENTSUBTYPEDEFRPTOCC</DAT>
+<DAT name="UECINTERFACE">UCOMPONENTSUBTYPEDEFRPTCOLL</DAT>
+<DAT name="UWIDGETTYPE">U_NONE</DAT>
+<DAT name="UTARGET">2</DAT>
+<DAT name="UPARENT">USUPERTYPEDEF</DAT>
+<DAT name="UWEBWIDGETTYPE">U_NONE</DAT>
+</OCC>
+<OCC>
+<DAT name="UTIMESTAMP">2006-10-27T12:26:26.00</DAT>
+<DAT name="U_GLAB">UCOMPONENTSUBTYPEDEFSSV</DAT>
+<DAT name="U_VLAB">U</DAT>
+<DAT name="U_TLAB">USUPERTYPEDEF</DAT>
+<DAT name="U_BORD">N</DAT>
+<DAT name="U_INDB">Y</DAT>
+<DAT name="U_DBMS">DEF</DAT>
+<DAT name="U_UPD">Y</DAT>
+<DAT name="P_READ" xml:space='preserve'>; If the SSV Subtype has the 'Data Access' property set to 'DBMS',
+; then the Proc statement 'read' is propagated by the UNIFACE Component Engine
+; to the DBMS Driver.
+
+; If the SSV subtype has the 'Data Access' property set to 'Entity Service',
+; then the first Proc statement 'read' is propagated by the UNIFACE Component Engine
+; to the 'uRetr...' operation at the Entity Service.
+; At the Entity Service, a sequence of Read Triggers is fired.
+; The Proc statement 'read' in these Triggers is propagated by the UNIFACE Component Engine
+; to the DBMS Driver. A hitlist is built on the Entity Service.
+; After the last 'read' at the Entity Service, the hitlist is implicitly returned to the Session Service.
+; Here, another sequence of Read Triggers is fired, in order to load the hitlist into
+; the Session Service Component Structure.
+
+read</DAT>
+<DAT name="P_WRIT" xml:space='preserve'>; If the SSV Subtype has the 'Data Access' property set to 'DBMS',
+; then the Proc statement 'write' is propagated by the UNIFACE Component Engine
+; to the DBMS Driver.
+
+; If the SSV subtype has the 'Data Access' property set to 'Entity Service',
+; then each Proc statement 'write' is propagated by the UNIFACE Component Engine
+; to the 'uUpd...' operation at the Entity Service.
+; After the last 'write' or 'delete' at the Session Service, the UNIFACE Component Engine
+; implicitly activates the 'uEndStore' operation at the Entity Service.
+; This operation contains a Proc statement 'store', resulting in
+; a sequence of Write and Delete Triggers at the Entity Service.
+; There, the Proc statements 'write' and 'delete' are propagated by the UNIFACE Component Engine
+; to the DBMS Driver.
+
+write</DAT>
+<DAT name="P_DEL" xml:space='preserve'>; If the SSV Subtype has the 'Data Access' property set to 'DBMS',
+; then the Proc statement 'delete' is propagated by the UNIFACE Component Engine
+; to the DBMS Driver.
+
+; If the SSV subtype has the 'Data Access' property set to 'Entity Service',
+; each Proc statement 'delete' is propagated by the UNIFACE Component Engine
+; to the 'uUpd...' operation at the Entity Service.
+; After the last 'write' or 'delete' at the Session Service, the UNIFACE Component Engine
+; implicitly activates the 'uEndStore' operation at the Entity Service.
+; This operation contains a Proc statement 'store', resulting in
+; a sequence of Write and Delete Triggers at the Entity Service.
+; There, the Proc statements 'write' and 'delete' are propagated by the UNIFACE Component Engine
+; to the DBMS Driver.
+
+delete</DAT>
+<DAT name="P_LOCK" xml:space='preserve'>; If the SSV Subtype has the 'Data Access' property set to 'DBMS',
+; then the Proc statement 'lock' is propagated by the UNIFACE Component Engine
+; to the DBMS Driver.
+
+; If the SSV subtype has the 'Data Access' property set to 'Entity Service',
+; then the Proc statement 'lock' is propagated by the UNIFACE Component Engine
+; to the 'uLock' operation at the Entity Service.
+; At the Entity Service, the Proc statement 'lock' is propagated by the UNIFACE Component Engine
+; to the DBMS Driver.
+
+lock
+if ($status = -10) reload
+</DAT>
+<DAT name="VLDE" xml:space='preserve'>; The Validate Occurrence Trigger is fired explicitly when the Proc statement 'validate'
+; is executed, or is fired implicitly when the Proc statement 'store' is encountered.
+
+; If a negative status is returned in this Trigger, then a xmlsave will process this status
+; into the xmlstream's 'valerr' meta-attribute.
+; Upon loading the xmlstream at the Client side, the relevant Entity level On Error Trigger is fired and
+; the error can be processed.
+
+if ($entinfo($entname, "DataAccess") = "D")
+  ;  The SSV Subtype has the 'Data Access' property set to 'DBMS', now
+  ;  the Validate Occurrence Trigger should only contain validation
+  ;  pertaining to the composite Business Object Structure. Validation pertaining to
+  ;  the individual Business Object should be handled at the Entity Service.
+
+elseif ($entinfo($entname, "DataAccess") = "E")
+  ;  The Subtype has the 'Data Access' property set to 'Entity Service', now
+  ;  the Validate Occurrence Trigger should contain validation pertaining to
+  ;  the composite Business Object Structure, as well as validation
+  ;  pertaining to the individual Business Object.
+
+endif
+</DAT>
+<DAT name="VLDK" xml:space='preserve'>; The Validate Key Trigger is fired explicitly when the Proc statement 'validate'
+; is executed, or is fired implicitly when the Proc statement 'store' is encountered.
+
+; If a negative status is returned in this Trigger, then a xmlsave will process this status
+; into the xmlstream's 'valerr' meta-attribute.
+; Upon loading the xmlstream at the Client side, the relevant Entity level On Error Trigger is fired
+; and the error can be processed.
+
+if ($entinfo($entname, "DataAccess") = "D")
+  ; The SSV Subtype has the 'Data Access' property set to 'DBMS', now
+  ; the Validate Key Trigger should only contain validation pertaining
+  ; to the composite Business Object Structure. Validation pertaining to
+  ; the individual Business Object should be handled at the Entity Service.
+
+  findkey $entname, $curkey
+
+  selectcase $status
+    case 0             ; key not found
+      if ($foreign)    ; non existing key in up entity
+        return (-1)    ; only if Write Up trigger not filled
+      endif
+
+    case 1             ; key found in Component
+      if (!$foreign)   ; duplicate key in down entity
+        return (-1)
+      endif
+
+    case 2             ; key found in DBMS
+      if (!$foreign)   ; duplicate key in down entity
+        return (-1)
+      endif
+  endselectcase
+
+  return (0)
+
+elseif ($entinfo($entname, "DataAccess") = "E")
+  ; The Component Subtype has the 'Data Access' property set to 'Entity Service', now
+  ; the Validate Key Trigger should contain validation pertaining
+  ; to the composite Business Object Structure, as well as validation
+  ; pertaining to the individual Business Object.
+endif
+</DAT>
+<DAT name="UISBCLASS">T</DAT>
+<DAT name="UISASSOC">F</DAT>
+<DAT name="U_SVCUSE">N</DAT>
+<DAT name="HTML_ENTPROP" xml:space='preserve'>U_ATLEASTONE=1&uSEP;U_STARTOCC=1&uSEP;U_MAXOCC=</DAT>
+<DAT name="UABBR">UCOMPSUBDEFSSV</DAT>
+<DAT name="UEOINTERFACE">UCOMPONENTSUBTYPEDEFSSVOCC</DAT>
+<DAT name="UECINTERFACE">UCOMPONENTSUBTYPEDEFSSVCOLL</DAT>
+<DAT name="UWIDGETTYPE">U_NONE</DAT>
+<DAT name="UTARGET">4</DAT>
+<DAT name="UPARENT">USUPERTYPEDEF</DAT>
+<DAT name="UWEBWIDGETTYPE">U_NONE</DAT>
+</OCC>
+<OCC>
+<DAT name="UTIMESTAMP">2006-10-27T12:26:26.00</DAT>
+<DAT name="U_GLAB">UCOMPONENTSUBTYPEDEFSVC</DAT>
+<DAT name="U_VLAB">U</DAT>
+<DAT name="U_TLAB">USUPERTYPEDEF</DAT>
+<DAT name="U_BORD">N</DAT>
+<DAT name="U_INDB">Y</DAT>
+<DAT name="U_DBMS">DEF</DAT>
+<DAT name="U_UPD">Y</DAT>
+<DAT name="UISBCLASS">T</DAT>
+<DAT name="UISASSOC">F</DAT>
+<DAT name="U_SVCUSE">N</DAT>
+<DAT name="HTML_ENTPROP" xml:space='preserve'>U_ATLEASTONE=1&uSEP;U_STARTOCC=1&uSEP;U_MAXOCC=</DAT>
+<DAT name="UABBR">UCOMPSUBDEFSVC</DAT>
+<DAT name="UEOINTERFACE">UCOMPONENTSUBTYPEDEFSVCOCC</DAT>
+<DAT name="UECINTERFACE">UCOMPONENTSUBTYPEDEFSVCCOLL</DAT>
+<DAT name="UWIDGETTYPE">U_NONE</DAT>
+<DAT name="UTARGET">1</DAT>
+<DAT name="UPARENT">USUPERTYPEDEF</DAT>
+<DAT name="UWEBWIDGETTYPE">U_NONE</DAT>
+</OCC>
+<OCC>
+<DAT name="UTIMESTAMP">2006-10-27T12:26:26.00</DAT>
+<DAT name="U_GLAB">UCOMPONENTSUBTYPEDEFUSP</DAT>
+<DAT name="U_VLAB">U</DAT>
+<DAT name="U_TLAB">USUPERTYPEDEF</DAT>
+<DAT name="U_BORD">N</DAT>
+<DAT name="U_INDB">N</DAT>
+<DAT name="U_DBMS">DEF</DAT>
+<DAT name="U_UPD">N</DAT>
+<DAT name="P_READ" xml:space='preserve'>; USP Subtype does not have Data I/O.</DAT>
+<DAT name="P_WRIT" xml:space='preserve'>; USP Subtype does not have Data I/O.</DAT>
+<DAT name="P_DEL" xml:space='preserve'>; USP Subtype does not have Data I/O.</DAT>
+<DAT name="P_LOCK" xml:space='preserve'>; USP Subtype does not have Data I/O.</DAT>
+<DAT name="P_WUP" xml:space='preserve'>; USP Subtype does not have Data I/O.</DAT>
+<DAT name="P_DUP" xml:space='preserve'>; USP Subtype does not have Data I/O.</DAT>
+<DAT name="P_ERROR" xml:space='preserve'>; Upon loading an xmlstream, the On Error Trigger is fired for each element
+; for which the valErr meta-attribute was set.
+; Here, show a red background, in order to indicate a failed validation.
+
+$webinfo("OUTPUT") = "%%$webinfo("OUTPUT")%%%&lt;BR&gt;%%$item("ERRORMSG", $occproperties)%%%" ; Show error in USP.
+putitem/id $occproperties, "SubClass", "errorStyle"
+
+return (-1)
+</DAT>
+<DAT name="VLDE" xml:space='preserve'>; USP Subtype in general does not do any validation.</DAT>
+<DAT name="VLDK" xml:space='preserve'>; USP Subtype in general does not do any validation.</DAT>
+<DAT name="UISBCLASS">T</DAT>
+<DAT name="UISASSOC">F</DAT>
+<DAT name="U_SVCUSE">N</DAT>
+<DAT name="HTML_ENTPROP" xml:space='preserve'>U_ATLEASTONE=1&uSEP;U_STARTOCC=1&uSEP;U_MAXOCC=</DAT>
+<DAT name="UABBR">UCOMPSUBDEFUSP</DAT>
+<DAT name="UEOINTERFACE">UCOMPONENTSUBTYPEDEFUSPOCC</DAT>
+<DAT name="UECINTERFACE">UCOMPONENTSUBTYPEDEFUSPCOLL</DAT>
+<DAT name="UECOPERS" xml:space='preserve'>; The constants mySessionService, myDtd and myDtdMapping
+; are assumed to be defined in the Component Defines Trigger.
+
+partner operation load
+variables
+  xmlstream x
+  numeric vError
+  string vErrorContext
+endvariables
+
+  xmlsave x, "dtd:&lt;myDtd&gt;", "&lt;myDtdMapping&gt;"             ; capture retrieve-profile
+
+  if ($status &gt;= 0)
+    activate/stateless "&lt;mySessionService&gt;".load(x, vError, vErrorContext)
+
+    if ($status = 0)                                     ; activate of SSV successful...
+
+      if (vError = 0)                                    ; ...and the SSV processed sucessfully
+        clear/e "&lt;$entName&gt;"
+        xmlload x, "dtd:&lt;myDtd&gt;", "&lt;myDtdMapping&gt;"       ; load result set
+
+        if ($status &lt; 0)
+          $instancehandle-&gt;zProcError($procerrorcontext) ; report xmlload error
+        endif
+
+      else
+        $instancehandle-&gt;zProcError(vErrorContext)       ; report errors in SSV processing
+      endif
+
+    else
+      $instancehandle-&gt;zProcError($procerrorcontext)     ; report activate error
+    endif
+
+  else
+    $instancehandle-&gt;zProcError($procerrorcontext)       ; report xmlsave error
+  endif
+
+  webgen/append                                          ; append otherwise errormessages are lost
+
+End ; operation load
+
+partner operation save
+variables
+  xmlstream x
+  numeric vError
+  string vErrorContext
+endvariables
+
+  xmlsave x, "dtd:&lt;myDtd&gt;", "&lt;myDtdMapping&gt;"
+
+  if ($status &gt;= 0)
+    activate/stateless "&lt;mySessionService&gt;".save(x, vError, vErrorContext)
+
+    if ($status = 0)                                     ; activate of SSV successful...
+
+      if (vError != 0)                                   ; ...but the SSV processed unsuccessfully
+        $instancehandle-&gt;zProcError(vErrorContext)       ; report errors in SSV processing
+      endif
+
+
+      clear/e "&lt;$entName&gt;"
+
+      ; the xmlStream as returned by the SSV may contain flagged elements that did
+      ; not pass validation in the SSV. These elements are flagged using the
+      ; 'valerr' meta-attributes.
+      ; On Error Triggers are fired upon loading the result set by xmlLoad:
+      xmlload x, "dtd:&lt;myDtd&gt;", "&lt;myDtdMapping&gt;"
+
+      if ($status &lt; 0)
+        $instancehandle-&gt;zProcError($procerrorcontext)   ; report xmlload error
+      endif
+
+    else
+      $instancehandle-&gt;zProcError($procerrorcontext)     ; report activate error
+    endif
+
+  else
+    $instancehandle-&gt;zProcError($procerrorcontext)       ; report xmlsave error
+  endif
+
+  webgen/append                                          ; append otherwise errormessages are lost
+
+End ; operation save
+
+operation clear
+
+  clear/e "&lt;$entName&gt;"
+
+End ; operation clear
+
+partner operation add
+
+  creocc "&lt;$entName&gt;", -1
+
+End ; operation add</DAT>
+<DAT name="UWIDGETTYPE">U_NONE</DAT>
+<DAT name="UTARGET">6</DAT>
+<DAT name="UPARENT">USUPERTYPEDEF</DAT>
+<DAT name="UWEBWIDGETTYPE">U_NONE</DAT>
+</OCC>
+<OCC>
+<DAT name="UTIMESTAMP">2008-08-20T09:37:38.00</DAT>
+<DAT name="U_GLAB">UFUNCTIONALSUBTYPEDEF</DAT>
+<DAT name="U_VLAB">U</DAT>
+<DAT name="U_TLAB">USUPERTYPEDEF</DAT>
+<DAT name="U_BORD">N</DAT>
+<DAT name="U_INDB">Y</DAT>
+<DAT name="U_DBMS">DEF</DAT>
+<DAT name="U_UPD">Y</DAT>
+<DAT name="UISBCLASS">T</DAT>
+<DAT name="UISASSOC">F</DAT>
+<DAT name="U_SVCUSE">N</DAT>
+<DAT name="HTML_ENTPROP" xml:space='preserve'>U_ATLEASTONE=1&uSEP;U_STARTOCC=1&uSEP;U_MAXOCC=</DAT>
+<DAT name="UABBR">UFUNCSUBDEF</DAT>
+<DAT name="UEOINTERFACE">UFUNCTIONALSUBTYPEDEFOCC</DAT>
+<DAT name="UECINTERFACE">UFUNCTIONALSUBTYPEDEFCOLL</DAT>
+<DAT name="UWIDGETTYPE">U_NONE</DAT>
+<DAT name="UPARENT">USUPERTYPEDEF</DAT>
+<DAT name="UWEBWIDGETTYPE">U_NONE</DAT>
+</OCC>
+<OCC>
+<DAT name="UTIMESTAMP">2008-08-07T15:32:31.00</DAT>
+<DAT name="U_GLAB">UMENUDEF</DAT>
+<DAT name="U_VLAB">U</DAT>
+<DAT name="U_TLAB">UMENUDEF</DAT>
+<DAT name="UDESCR" xml:space='preserve'>Default switching</DAT>
+<DAT name="U_BORD">N</DAT>
+<DAT name="U_INDB">N</DAT>
+<DAT name="U_DBMS">DEF</DAT>
+<DAT name="U_UPD">N</DAT>
+<DAT name="P_OREM" xml:space='preserve'>return (-1)</DAT>
+<DAT name="P_ODEF" xml:space='preserve'>return (-1)</DAT>
+<DAT name="UISBCLASS">F</DAT>
+<DAT name="UISASSOC">F</DAT>
+<DAT name="U_SVCUSE">N</DAT>
+<DAT name="HTML_ENTPROP" xml:space='preserve'>U_ATLEASTONE=1&uSEP;U_STARTOCC=1&uSEP;U_MAXOCC=</DAT>
+<DAT name="UABBR">UMENUDEF</DAT>
+<DAT name="UEOINTERFACE">UMENUDEFOCC</DAT>
+<DAT name="UECINTERFACE">UMENUDEFCOLL</DAT>
+<DAT name="UWIDGETTYPE">U_NONE</DAT>
+<DAT name="UWEBWIDGETTYPE">U_NONE</DAT>
+</OCC>
+<OCC>
+<DAT name="UTIMESTAMP">2006-10-27T12:26:26.00</DAT>
+<DAT name="U_GLAB">UMENUDEFUSP</DAT>
+<DAT name="U_VLAB">U</DAT>
+<DAT name="U_TLAB">UMENUDEF</DAT>
+<DAT name="UDESCR" xml:space='preserve'>Default switching</DAT>
+<DAT name="U_BORD">N</DAT>
+<DAT name="U_INDB">N</DAT>
+<DAT name="U_DBMS">DEF</DAT>
+<DAT name="U_UPD">N</DAT>
+<DAT name="UISBCLASS">F</DAT>
+<DAT name="UISASSOC">F</DAT>
+<DAT name="U_SVCUSE">N</DAT>
+<DAT name="HTML_ENTPROP" xml:space='preserve'>U_ATLEASTONE=1&uSEP;U_STARTOCC=1&uSEP;U_MAXOCC=</DAT>
+<DAT name="UABBR">UMENUDEFUSP</DAT>
+<DAT name="UEOINTERFACE">UMENUDEFUSPOCC</DAT>
+<DAT name="UECINTERFACE">UMENUDEFUSPCOLL</DAT>
+<DAT name="UWIDGETTYPE">U_NONE</DAT>
+<DAT name="UTARGET">6</DAT>
+<DAT name="UPARENT">UMENUDEF</DAT>
+<DAT name="UWEBWIDGETTYPE">U_NONE</DAT>
+</OCC>
+<OCC>
+<DAT name="UTIMESTAMP">2008-08-07T15:32:31.00</DAT>
+<DAT name="U_GLAB">USUPERTYPEDEF</DAT>
+<DAT name="U_VLAB">U</DAT>
+<DAT name="U_TLAB">USUPERTYPEDEF</DAT>
+<DAT name="U_BORD">N</DAT>
+<DAT name="U_INDB">Y</DAT>
+<DAT name="U_DBMS">DEF</DAT>
+<DAT name="U_UPD">Y</DAT>
+<DAT name="P_READ">read</DAT>
+<DAT name="P_WRIT">write</DAT>
+<DAT name="P_DEL">delete</DAT>
+<DAT name="P_LOCK" xml:space='preserve'>lock
+if ($status = -10) reload
+</DAT>
+<DAT name="P_FNDOCC" xml:space='preserve'>retrieve/o
+if ($status &lt; 0)
+  if ($status = -15) message $text(2202) ; multiple hits: in foreign entity
+  if ($status = -14) message $text(2205) ; multiple hits: not in foreign entity
+  if ($status = -11) message $text(2009) ; occurrence currently locked
+  if ($status = -7)  message $text(2006) ; duplicate key
+  if ($status = -4)  message $text(2003) ; cannot open table or file
+  if ($status = -3)  message $text(2002) ; exceptional I/O error
+  if ($status = -2)  message $text(2200) ; key not found:in foreign entity
+else
+  if ($status = 1)   message $text(2201) ; key not found: foreign entity w/WRITE UP
+  if ($status = 2)                       ; one occurrence found in foreign entity
+    retrieve/e
+    if ($status &lt; 0) message $text(2002) ; I/O error detected
+  endif
+  if ($status = 3)   message $text(2203) ; occurrence un-removed
+  if ($status = 4)   message $text(2204) ; key found: occurrence repositioned
+endif
+
+return ($status)
+</DAT>
+<DAT name="VLDK" xml:space='preserve'>findkey $entname, $curkey
+
+selectcase $status
+  case 0             ; key not found
+    if ($foreign)    ; non existing key in up entity
+      return (-1)    ; only if Write Up trigger not filled
+    endif
+
+  case 1             ; key found in Component
+    if (!$foreign)   ; duplicate key in down entity
+      return (-1)
+    endif
+
+  case 2             ; key found in DBMS
+    if (!$foreign)   ; duplicate key in down entity
+      return (-1)
+    endif
+endselectcase
+
+return (0)
+</DAT>
+<DAT name="UISBCLASS">T</DAT>
+<DAT name="UISASSOC">F</DAT>
+<DAT name="U_SVCUSE">N</DAT>
+<DAT name="HTML_ENTPROP" xml:space='preserve'>U_ATLEASTONE=1&uSEP;U_STARTOCC=1&uSEP;U_MAXOCC=</DAT>
+<DAT name="UABBR">USUPERTYPEDEF</DAT>
+<DAT name="UEOINTERFACE">USUPERTYPEDEFOCC</DAT>
+<DAT name="UECINTERFACE">USUPERTYPEDEFCOLL</DAT>
+<DAT name="UWIDGETTYPE">U_NONE</DAT>
+<DAT name="UWEBWIDGETTYPE">U_NONE</DAT>
+</OCC>
+</TABLE>
+<TABLE>
+<DSC name="UCFIELD" model="DICT" system="S" pseudo ="73" level="1" noupdate="0"
+ rbk="0" ffsql="0" transnr="0" segsize="0" ufocc="1000" charset=".U">
+<FLD name="UTIMESTAMP" seqno="1" type="E" level="2" pack="0" scale="0" length="15"
+ pointer="0" inum="0" ufocc="0" />
+<FLD name="U_STAT" seqno="2" type="S" level="2" pack="0" scale="0" length="4"
+ pointer="0" inum="0" ufocc="0" />
+<FLD name="U_FLAB" seqno="3" type="S" level="2" pack="0" scale="0" length="32"
+ pointer="0" inum="2" ufocc="0" mandatory="yes" idxnum="1,2" idxsnr="101,1" />
+<FLD name="U_VLAB" seqno="4" type="S" level="2" pack="0" scale="0" length="32"
+ pointer="0" inum="4" ufocc="0" mandatory="yes" idxnum="1,2,3,4" idxsnr="102,2,1,1" />
+<FLD name="U_TLAB" seqno="5" type="S" level="2" pack="0" scale="0" length="32"
+ pointer="0" inum="3" ufocc="0" mandatory="yes" idxnum="1,3,4" idxsnr="103,2,2" />
+<FLD name="U_FSEQ" seqno="6" type="N" level="2" pack="0" scale="0" length="4"
+ pointer="0" inum="1" ufocc="0" idxnum="3" idxsnr="3" />
+<FLD name="UVERS" seqno="7" type="S" level="2" pack="0" scale="0" length="12"
+ pointer="0" inum="0" ufocc="0" />
+<FLD name="UDESCR" seqno="8" type="S" level="2" pack="0" scale="0" length="25"
+ pointer="0" inum="0" ufocc="0" />
+<FLD name="U_LEV" seqno="9" type="S" level="2" pack="0" scale="0" length="2"
+ pointer="0" inum="0" ufocc="0" />
+<FLD name="U_DTYP" seqno="10" type="S" level="2" pack="0" scale="0" length="2"
+ pointer="0" inum="0" ufocc="0" />
+<FLD name="U_INDB" seqno="11" type="S" level="2" pack="0" scale="0" length="1"
+ pointer="0" inum="0" ufocc="0" />
+<FLD name="TPLINTF" seqno="12" type="S" level="2" pack="0" scale="0" length="32"
+ pointer="0" inum="0" ufocc="0" />
+<FLD name="U_INTF" seqno="13" type="S" level="2" pack="0" scale="0" length="64"
+ pointer="0" inum="0" ufocc="0" />
+<FLD name="TPLSYN" seqno="14" type="S" level="2" pack="0" scale="0" length="32"
+ pointer="0" inum="0" ufocc="0" />
+<FLD name="U_SYN" seqno="15" type="S" level="2" pack="0" scale="0" length="192"
+ pointer="0" inum="0" ufocc="0" />
+<FLD name="TPLLAY" seqno="16" type="S" level="2" pack="0" scale="0" length="32"
+ pointer="0" inum="0" ufocc="0" />
+<FLD name="U_LAY" seqno="17" type="S" level="2" pack="0" scale="0" length="128"
+ pointer="0" inum="0" ufocc="0" />
+<FLD name="WIDGETTYPE" seqno="18" type="S" level="2" pack="0" scale="0" length="16"
+ pointer="0" inum="0" ufocc="0" />
+<FLD name="TEMPLATENAME" seqno="19" type="S" level="2" pack="0" scale="0" length="32"
+ pointer="0" inum="1" ufocc="0" idxnum="5" idxsnr="1" />
+<FLD name="UINHERIT" seqno="20" type="B" level="2" pack="0" scale="0" length="1"
+ pointer="0" inum="0" ufocc="0" />
+<FLD name="UDEFWIDTH" seqno="21" type="S" level="2" pack="0" scale="0" length="6"
+ pointer="0" inum="0" ufocc="0" />
+<FLD name="UDEFDEPTH" seqno="22" type="S" level="2" pack="0" scale="0" length="6"
+ pointer="0" inum="0" ufocc="0" />
+<FLD name="U_DESC" seqno="23" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\C1,0,0,0,,0,0,0,," />
+<FLD name="U_DOC" seqno="24" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\C2,0,0,0,,0,0,0,," />
+<FLD name="P_HELP" seqno="25" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\C3,0,0,0,,0,0,0,," />
+<FLD name="P_DET" seqno="26" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\C4,0,0,0,,0,0,0,," />
+<FLD name="P_SMOD" seqno="27" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\C5,0,0,0,,0,0,0,," />
+<FLD name="P_EMOD" seqno="28" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\C6,0,0,0,,0,0,0,," />
+<FLD name="P_NFLD" seqno="29" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\C7,0,0,0,,0,0,0,," />
+<FLD name="P_PFLD" seqno="30" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\C8,0,0,0,,0,0,0,," />
+<FLD name="P_ENCR" seqno="31" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\C9,0,0,0,,0,0,0,," />
+<FLD name="P_DECR" seqno="32" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\CA,0,0,0,,0,0,0,," />
+<FLD name="P_MENU" seqno="33" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\CB,0,0,0,,0,0,0,," />
+<FLD name="P_ERROR" seqno="34" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\CC,0,0,0,,0,0,0,," />
+<FLD name="P_GENERAL" seqno="35" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\CD,0,0,0,,0,0,0,," />
+<FLD name="P_FORMAT" seqno="36" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\CE,0,0,0,,0,0,0,," />
+<FLD name="P_DEFORMAT" seqno="37" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\CF,0,0,0,,0,0,0,," />
+<FLD name="P_GETFOCUS" seqno="38" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\D0,0,0,0,,0,0,0,," />
+<FLD name="P_VCHANGED" seqno="39" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\D1,0,0,0,,0,0,0,," />
+<FLD name="WIDGETCREATE" seqno="40" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\DD,0,0,0,,0,0,0,," />
+<FLD name="VALLAB" seqno="41" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\DE,0,0,0,,0,0,0,," />
+<FLD name="INITVALUE" seqno="42" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\DF,0,0,0,,0,0,0,," />
+<FLD name="ACTVALS" seqno="43" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\E6,0,0,0,,0,0,0,," />
+<FLD name="VLDF" seqno="44" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\D2,0,0,0,,0,0,0,," />
+<FLD name="UPOPUP" seqno="45" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\DD,0,0,0,,0,0,0,," />
+<FLD name="UISOBJID" seqno="46" type="B" level="2" pack="0" scale="0" length="1"
+ pointer="0" inum="0" ufocc="0" />
+<FLD name="UML_DATA" seqno="47" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\D5,0,0,0,,0,0,0,," />
+<FLD name="HTML_FLDPROP" seqno="48" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\D3,0,0,0,,0,0,0,," />
+<FLD name="HTML_CTRLTYPE" seqno="49" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\D6,0,0,0,,0,0,0,," />
+<FLD name="HTML_HOOK_B" seqno="50" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\D7,0,0,0,,0,0,0,," />
+<FLD name="HTML_HOOK_M" seqno="51" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\D8,0,0,0,,0,0,0,," />
+<FLD name="HTML_HOOK_E" seqno="52" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\D9,0,0,0,,0,0,0,," />
+<FLD name="HTML_LBLHK_B" seqno="53" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\DA,0,0,0,,0,0,0,," />
+<FLD name="HTML_LBLHK_E" seqno="54" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\DB,0,0,0,,0,0,0,," />
+<FLD name="HTML_FLDCLASS" seqno="55" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\E0,0,0,0,,0,0,0,," />
+<FLD name="HTML_LBLCLASS" seqno="56" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\E1,0,0,0,,0,0,0,," />
+<FLD name="UFOPERS" seqno="57" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\E2,0,0,0,,0,0,0,," />
+<FLD name="UFTRIGGERS" seqno="58" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\E3,0,0,0,,0,0,0,," />
+<FLD name="UGEOMETRY" seqno="59" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\E4,0,0,0,,0,0,0,," />
+<FLD name="USCOPE" seqno="60" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\E5,0,0,0,,0,0,0,," />
+<FLD name="UFORMATS" seqno="61" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\E7,0,0,0,,0,0,0,," />
+<FLD name="UHINTERFACE" seqno="62" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\E8,0,0,0,,0,0,0,," />
+<FLD name="WEBWIDGETTYPE" seqno="63" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\E9,0,0,0,,0,0,0,," />
+<FLD name="WEBWIDGETCREATE" seqno="64" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\EA,0,0,0,,0,0,0,," />
+</DSC>
+<OCC>
+<DAT name="UTIMESTAMP">2001-02-08T15:31:46.00</DAT>
+<DAT name="U_FLAB">UADDDEF</DAT>
+<DAT name="U_VLAB">U</DAT>
+<DAT name="U_TLAB">UBUTTONDEF</DAT>
+<DAT name="U_FSEQ">3</DAT>
+<DAT name="UDESCR" xml:space='preserve'>Add button</DAT>
+<DAT name="U_DTYP">S</DAT>
+<DAT name="U_INDB">B</DAT>
+<DAT name="U_INTF">C1</DAT>
+<DAT name="WIDGETTYPE">COMMANDBUTTON</DAT>
+<DAT name="UINHERIT">F</DAT>
+<DAT name="UISOBJID">F</DAT>
+<DAT name="HTML_FLDPROP">SYNC=0</DAT>
+<DAT name="HTML_CTRLTYPE">U_BUTTON</DAT>
+<DAT name="WEBWIDGETTYPE">COMMANDBUTTON</DAT>
+</OCC>
+<OCC>
+<DAT name="UTIMESTAMP">2001-02-01T14:12:16.00</DAT>
+<DAT name="U_FLAB">UADDDEF</DAT>
+<DAT name="U_VLAB">U</DAT>
+<DAT name="U_TLAB">UBUTTONDEFFRM</DAT>
+<DAT name="U_FSEQ">3</DAT>
+<DAT name="UDESCR" xml:space='preserve'>Add button</DAT>
+<DAT name="U_DTYP">S</DAT>
+<DAT name="U_INDB">B</DAT>
+<DAT name="U_INTF">C1</DAT>
+<DAT name="WIDGETTYPE">COMMANDBUTTON</DAT>
+<DAT name="UINHERIT">F</DAT>
+<DAT name="P_DET">$collhandle("&lt;frmEntity&gt;")-&gt;add()</DAT>
+<DAT name="WIDGETCREATE" xml:space='preserve'>VSIZE=80&uSEP;POSITION=BOTTOM</DAT>
+<DAT name="INITVALUE">%Add</DAT>
+<DAT name="UISOBJID">F</DAT>
+<DAT name="HTML_FLDPROP">SYNC=1</DAT>
+<DAT name="HTML_CTRLTYPE">U_BUTTON</DAT>
+<DAT name="WEBWIDGETTYPE">COMMANDBUTTON</DAT>
+</OCC>
+<OCC>
+<DAT name="UTIMESTAMP">2001-02-08T15:02:59.00</DAT>
+<DAT name="U_FLAB">UADDDEF</DAT>
+<DAT name="U_VLAB">U</DAT>
+<DAT name="U_TLAB">UBUTTONDEFUSP</DAT>
+<DAT name="U_FSEQ">3</DAT>
+<DAT name="UDESCR" xml:space='preserve'>Add button</DAT>
+<DAT name="U_DTYP">S</DAT>
+<DAT name="U_INDB">B</DAT>
+<DAT name="U_INTF">C1</DAT>
+<DAT name="WIDGETTYPE">COMMANDBUTTON</DAT>
+<DAT name="UINHERIT">F</DAT>
+<DAT name="P_DET">$collhandle("&lt;uspEntity&gt;")-&gt;add()</DAT>
+<DAT name="INITVALUE">Add</DAT>
+<DAT name="UISOBJID">F</DAT>
+<DAT name="HTML_FLDPROP">SYNC=0</DAT>
+<DAT name="HTML_CTRLTYPE">U_BUTTON</DAT>
+<DAT name="WEBWIDGETTYPE">COMMANDBUTTON</DAT>
+</OCC>
+<OCC>
+<DAT name="UTIMESTAMP">2001-02-09T15:51:20.00</DAT>
+<DAT name="U_FLAB">UBGO</DAT>
+<DAT name="U_VLAB">U</DAT>
+<DAT name="U_TLAB">UMENUDEF</DAT>
+<DAT name="U_FSEQ">1</DAT>
+<DAT name="U_DTYP">S</DAT>
+<DAT name="U_INDB">B</DAT>
+<DAT name="U_INTF">C1</DAT>
+<DAT name="WIDGETTYPE">COMMANDBUTTON</DAT>
+<DAT name="UINHERIT">F</DAT>
+<DAT name="INITVALUE">Go!</DAT>
+<DAT name="UISOBJID">F</DAT>
+<DAT name="HTML_FLDPROP">SYNC=0</DAT>
+<DAT name="HTML_CTRLTYPE">U_BUTTON</DAT>
+<DAT name="WEBWIDGETTYPE">COMMANDBUTTON</DAT>
+</OCC>
+<OCC>
+<DAT name="UTIMESTAMP">2001-02-09T15:51:48.00</DAT>
+<DAT name="U_FLAB">UBGO</DAT>
+<DAT name="U_VLAB">U</DAT>
+<DAT name="U_TLAB">UMENUDEFUSP</DAT>
+<DAT name="U_FSEQ">1</DAT>
+<DAT name="U_DTYP">S</DAT>
+<DAT name="U_INDB">B</DAT>
+<DAT name="U_INTF">C1</DAT>
+<DAT name="WIDGETTYPE">COMMANDBUTTON</DAT>
+<DAT name="UINHERIT">F</DAT>
+<DAT name="P_DET" xml:space='preserve'>if (UMENUDEF.UMENUDEFUSP != "")
+  activate "%%UMENUDEF.UMENUDEFUSP%%%".exec()
+endif
+</DAT>
+<DAT name="INITVALUE">Go!</DAT>
+<DAT name="UISOBJID">F</DAT>
+<DAT name="HTML_FLDPROP">SYNC=0</DAT>
+<DAT name="HTML_CTRLTYPE">U_BUTTON</DAT>
+<DAT name="WEBWIDGETTYPE">COMMANDBUTTON</DAT>
+</OCC>
+<OCC>
+<DAT name="UTIMESTAMP">2001-02-08T15:31:46.00</DAT>
+<DAT name="U_FLAB">UCANCELDEF</DAT>
+<DAT name="U_VLAB">U</DAT>
+<DAT name="U_TLAB">UBUTTONDEF</DAT>
+<DAT name="U_FSEQ">7</DAT>
+<DAT name="UDESCR" xml:space='preserve'>Cancel button</DAT>
+<DAT name="U_DTYP">S</DAT>
+<DAT name="U_INDB">X</DAT>
+<DAT name="U_INTF">C1</DAT>
+<DAT name="WIDGETTYPE">COMMANDBUTTON</DAT>
+<DAT name="UINHERIT">F</DAT>
+<DAT name="P_DET">$instancehandle()-&gt;quit()</DAT>
+<DAT name="WIDGETCREATE" xml:space='preserve'>ROLE=CANCEL&uSEP;VSIZE=100</DAT>
+<DAT name="UISOBJID">F</DAT>
+<DAT name="HTML_FLDPROP">SYNC=0</DAT>
+<DAT name="HTML_CTRLTYPE">U_BUTTON</DAT>
+<DAT name="WEBWIDGETTYPE">COMMANDBUTTON</DAT>
+</OCC>
+<OCC>
+<DAT name="UTIMESTAMP">2001-02-01T14:12:16.00</DAT>
+<DAT name="U_FLAB">UCANCELDEF</DAT>
+<DAT name="U_VLAB">U</DAT>
+<DAT name="U_TLAB">UBUTTONDEFFRM</DAT>
+<DAT name="U_FSEQ">7</DAT>
+<DAT name="UDESCR" xml:space='preserve'>Cancel button</DAT>
+<DAT name="U_DTYP">S</DAT>
+<DAT name="U_INDB">X</DAT>
+<DAT name="U_INTF">C1</DAT>
+<DAT name="WIDGETTYPE">COMMANDBUTTON</DAT>
+<DAT name="UINHERIT">F</DAT>
+<DAT name="WIDGETCREATE" xml:space='preserve'>ROLE=CANCEL&uSEP;VSIZE=80&uSEP;POSITION=BOTTOM</DAT>
+<DAT name="INITVALUE">%Cancel</DAT>
+<DAT name="UISOBJID">F</DAT>
+<DAT name="HTML_FLDPROP">SYNC=1</DAT>
+<DAT name="HTML_CTRLTYPE">U_BUTTON</DAT>
+<DAT name="WEBWIDGETTYPE">COMMANDBUTTON</DAT>
+</OCC>
+<OCC>
+<DAT name="UTIMESTAMP">2001-02-09T15:50:18.00</DAT>
+<DAT name="U_FLAB">UCANCELDEF</DAT>
+<DAT name="U_VLAB">U</DAT>
+<DAT name="U_TLAB">UBUTTONDEFUSP</DAT>
+<DAT name="U_FSEQ">7</DAT>
+<DAT name="UDESCR" xml:space='preserve'>Cancel button</DAT>
+<DAT name="U_DTYP">S</DAT>
+<DAT name="U_INDB">B</DAT>
+<DAT name="U_INTF">C1</DAT>
+<DAT name="WIDGETTYPE">COMMANDBUTTON</DAT>
+<DAT name="UINHERIT">F</DAT>
+<DAT name="P_DET" xml:space='preserve'>; No Cancel button in USP.</DAT>
+<DAT name="WIDGETCREATE" xml:space='preserve'>ROLE=CANCEL&uSEP;VSIZE=100</DAT>
+<DAT name="UISOBJID">F</DAT>
+<DAT name="HTML_FLDPROP">SYNC=0</DAT>
+<DAT name="HTML_CTRLTYPE">U_BUTTON</DAT>
+<DAT name="WEBWIDGETTYPE">COMMANDBUTTON</DAT>
+</OCC>
+<OCC>
+<DAT name="UTIMESTAMP">2001-02-08T15:31:46.00</DAT>
+<DAT name="U_FLAB">UCLEARDEF</DAT>
+<DAT name="U_VLAB">U</DAT>
+<DAT name="U_TLAB">UBUTTONDEF</DAT>
+<DAT name="U_FSEQ">1</DAT>
+<DAT name="UDESCR" xml:space='preserve'>Clear button</DAT>
+<DAT name="U_DTYP">S</DAT>
+<DAT name="U_INDB">X</DAT>
+<DAT name="U_INTF">C1</DAT>
+<DAT name="WIDGETTYPE">COMMANDBUTTON</DAT>
+<DAT name="UINHERIT">F</DAT>
+<DAT name="WIDGETCREATE">VSIZE=100</DAT>
+<DAT name="UISOBJID">F</DAT>
+<DAT name="HTML_FLDPROP">SYNC=0</DAT>
+<DAT name="HTML_CTRLTYPE">U_BUTTON</DAT>
+<DAT name="WEBWIDGETTYPE">COMMANDBUTTON</DAT>
+</OCC>
+<OCC>
+<DAT name="UTIMESTAMP">2001-02-01T14:12:16.00</DAT>
+<DAT name="U_FLAB">UCLEARDEF</DAT>
+<DAT name="U_VLAB">U</DAT>
+<DAT name="U_TLAB">UBUTTONDEFFRM</DAT>
+<DAT name="U_FSEQ">1</DAT>
+<DAT name="UDESCR" xml:space='preserve'>Clear button</DAT>
+<DAT name="U_DTYP">S</DAT>
+<DAT name="U_INDB">X</DAT>
+<DAT name="U_INTF">C1</DAT>
+<DAT name="WIDGETTYPE">COMMANDBUTTON</DAT>
+<DAT name="UINHERIT">F</DAT>
+<DAT name="P_DET">$collhandle("&lt;frmEntity&gt;")-&gt;clear()</DAT>
+<DAT name="WIDGETCREATE" xml:space='preserve'>VSIZE=80&uSEP;POSITION=BOTTOM</DAT>
+<DAT name="INITVALUE">Cl%ear</DAT>
+<DAT name="UISOBJID">F</DAT>
+<DAT name="HTML_FLDPROP">SYNC=1</DAT>
+<DAT name="HTML_CTRLTYPE">U_BUTTON</DAT>
+<DAT name="WEBWIDGETTYPE">COMMANDBUTTON</DAT>
+</OCC>
+<OCC>
+<DAT name="UTIMESTAMP">2001-02-09T15:50:18.00</DAT>
+<DAT name="U_FLAB">UCLEARDEF</DAT>
+<DAT name="U_VLAB">U</DAT>
+<DAT name="U_TLAB">UBUTTONDEFUSP</DAT>
+<DAT name="U_FSEQ">1</DAT>
+<DAT name="UDESCR" xml:space='preserve'>Clear button</DAT>
+<DAT name="U_DTYP">S</DAT>
+<DAT name="U_INDB">B</DAT>
+<DAT name="U_INTF">C1</DAT>
+<DAT name="WIDGETTYPE">COMMANDBUTTON</DAT>
+<DAT name="UINHERIT">F</DAT>
+<DAT name="P_DET">$collhandle("&lt;uspEntity&gt;")-&gt;clear()</DAT>
+<DAT name="WIDGETCREATE">VSIZE=100</DAT>
+<DAT name="INITVALUE">Clear</DAT>
+<DAT name="UISOBJID">F</DAT>
+<DAT name="HTML_FLDPROP">SYNC=0</DAT>
+<DAT name="HTML_CTRLTYPE">U_BUTTON</DAT>
+<DAT name="WEBWIDGETTYPE">COMMANDBUTTON</DAT>
+</OCC>
+<OCC>
+<DAT name="UTIMESTAMP">2008-08-20T00:00:00.00</DAT>
+<DAT name="U_FLAB">UFIELDDEF</DAT>
+<DAT name="U_VLAB">U</DAT>
+<DAT name="U_TLAB">UCOMPONENTSUBTYPEDEFDSP</DAT>
+<DAT name="U_FSEQ">1</DAT>
+<DAT name="U_DTYP">S</DAT>
+<DAT name="U_INDB">Y</DAT>
+<DAT name="WIDGETTYPE">EDITBOX</DAT>
+<DAT name="UINHERIT">F</DAT>
+<DAT name="P_ERROR" xml:space='preserve'>; Upon loading an xmlStream, the On Error Trigger is fired for each element
+; for which the valErr meta-attribute was set.
+; Set error properties, in order to indicate a failed validation on the browser.
+
+putitem/id $fieldproperties, "SubClass", "errorStyle"
+putitem/id $fieldproperties, "msgText", $text("%%$error%%%")
+return (-1)
+</DAT>
+<DAT name="UISOBJID">F</DAT>
+<DAT name="HTML_FLDPROP">SYNC=1</DAT>
+<DAT name="HTML_CTRLTYPE">U_INPUT</DAT>
+<DAT name="WEBWIDGETTYPE">EDITBOX</DAT>
+</OCC>
+<OCC>
+<DAT name="UTIMESTAMP">2006-10-04T09:28:58.00</DAT>
+<DAT name="U_FLAB">UFIELDDEF</DAT>
+<DAT name="U_VLAB">U</DAT>
+<DAT name="U_TLAB">UCOMPONENTSUBTYPEDEFESV</DAT>
+<DAT name="U_FSEQ">1</DAT>
+<DAT name="U_DTYP">S</DAT>
+<DAT name="U_INDB">Y</DAT>
+<DAT name="WIDGETTYPE">EDITBOX</DAT>
+<DAT name="UINHERIT">F</DAT>
+<DAT name="UISOBJID">F</DAT>
+<DAT name="HTML_FLDPROP">SYNC=1</DAT>
+<DAT name="HTML_CTRLTYPE">U_INPUT</DAT>
+<DAT name="WEBWIDGETTYPE">EDITBOX</DAT>
+</OCC>
+<OCC>
+<DAT name="UTIMESTAMP">2000-06-30T15:10:57.00</DAT>
+<DAT name="U_FLAB">UFIELDDEF</DAT>
+<DAT name="U_VLAB">U</DAT>
+<DAT name="U_TLAB">UCOMPONENTSUBTYPEDEFFRM</DAT>
+<DAT name="U_FSEQ">1</DAT>
+<DAT name="U_DTYP">S</DAT>
+<DAT name="U_INDB">Y</DAT>
+<DAT name="WIDGETTYPE">EDITBOX</DAT>
+<DAT name="UINHERIT">F</DAT>
+<DAT name="P_SMOD" xml:space='preserve'>; Background color is set to red after a failed validation in the On Error trigger.
+fieldvideo $fieldname, "COL=DEF"</DAT>
+<DAT name="P_ERROR" xml:space='preserve'>; Upon loading an xmlStream, the On Error Trigger is fired for each element
+; for which the valErr meta-attribute was set.
+; Show a red background, in order to indicate a failed validation.
+
+if ($error = "0161")                            ; remote validation failed
+  message $item("ERRORMSG", $fieldproperties)    ; message line
+  putmess $item("ERRORMSG", $fieldproperties)    ; message frame
+  fieldvideo $fieldname, "COL=4"
+else
+  message $text("%%$error%%%")
+endif
+
+return (-1)
+</DAT>
+<DAT name="UISOBJID">F</DAT>
+<DAT name="HTML_FLDPROP">SYNC=1</DAT>
+<DAT name="HTML_CTRLTYPE">U_INPUT</DAT>
+<DAT name="WEBWIDGETTYPE">EDITBOX</DAT>
+</OCC>
+<OCC>
+<DAT name="UTIMESTAMP">2006-10-04T09:29:01.00</DAT>
+<DAT name="U_FLAB">UFIELDDEF</DAT>
+<DAT name="U_VLAB">U</DAT>
+<DAT name="U_TLAB">UCOMPONENTSUBTYPEDEFRPT</DAT>
+<DAT name="U_FSEQ">1</DAT>
+<DAT name="U_DTYP">S</DAT>
+<DAT name="U_INDB">Y</DAT>
+<DAT name="WIDGETTYPE">EDITBOX</DAT>
+<DAT name="UINHERIT">F</DAT>
+<DAT name="UISOBJID">F</DAT>
+<DAT name="HTML_FLDPROP">SYNC=1</DAT>
+<DAT name="HTML_CTRLTYPE">U_INPUT</DAT>
+<DAT name="WEBWIDGETTYPE">EDITBOX</DAT>
+</OCC>
+<OCC>
+<DAT name="UTIMESTAMP">2000-06-30T15:10:58.00</DAT>
+<DAT name="U_FLAB">UFIELDDEF</DAT>
+<DAT name="U_VLAB">U</DAT>
+<DAT name="U_TLAB">UCOMPONENTSUBTYPEDEFSSV</DAT>
+<DAT name="U_FSEQ">1</DAT>
+<DAT name="U_DTYP">S</DAT>
+<DAT name="U_INDB">Y</DAT>
+<DAT name="WIDGETTYPE">EDITBOX</DAT>
+<DAT name="UINHERIT">F</DAT>
+<DAT name="VLDF" xml:space='preserve'>; The Validate Field Trigger is fired explicitly when the Proc statement 'validate'
+; is executed, or is fired implicitly when the Proc statement 'store' is encountered.
+
+; If a negative status is returned in this Trigger, then a xmlSave will process this status
+; into the xmlstream's 'valerr' meta-attribute.
+; Upon loading the xmlstream at the Client side, the relevant Field level On Error Trigger is fired and
+; the error can be processed.
+
+; if ($entinfo($entname, "DataAccess") = "D")
+;   The SSV Subtype has the 'Data Access' property set to 'DBMS', then
+;   the Validate Field Trigger should only contain validation
+;   pertaining to the composite Business Object Structure. Validation pertaining to
+;   the individual Business Object should be handled at the Entity Service.
+;
+; elseif ($entinfo($entname, "DataAccess") = "E")
+;   The SSV subtype has the 'Data Access' property set to 'Entity Service', now
+;   the Validate Field Trigger should contain validation pertaining to
+;   the composite Business Object Structure, as well as validation
+;   pertaining to the individual Business Object.
+;
+; endif
+</DAT>
+<DAT name="UISOBJID">F</DAT>
+<DAT name="HTML_FLDPROP">SYNC=1</DAT>
+<DAT name="HTML_CTRLTYPE">U_INPUT</DAT>
+<DAT name="WEBWIDGETTYPE">EDITBOX</DAT>
+</OCC>
+<OCC>
+<DAT name="UTIMESTAMP">2000-06-30T15:10:57.00</DAT>
+<DAT name="U_FLAB">UFIELDDEF</DAT>
+<DAT name="U_VLAB">U</DAT>
+<DAT name="U_TLAB">UCOMPONENTSUBTYPEDEFSVC</DAT>
+<DAT name="U_FSEQ">1</DAT>
+<DAT name="U_DTYP">S</DAT>
+<DAT name="U_INDB">Y</DAT>
+<DAT name="WIDGETTYPE">EDITBOX</DAT>
+<DAT name="UINHERIT">F</DAT>
+<DAT name="UISOBJID">F</DAT>
+<DAT name="HTML_FLDPROP">SYNC=1</DAT>
+<DAT name="HTML_CTRLTYPE">U_INPUT</DAT>
+<DAT name="WEBWIDGETTYPE">EDITBOX</DAT>
+</OCC>
+<OCC>
+<DAT name="UTIMESTAMP">2000-06-30T15:10:58.00</DAT>
+<DAT name="U_FLAB">UFIELDDEF</DAT>
+<DAT name="U_VLAB">U</DAT>
+<DAT name="U_TLAB">UCOMPONENTSUBTYPEDEFUSP</DAT>
+<DAT name="U_FSEQ">1</DAT>
+<DAT name="U_DTYP">S</DAT>
+<DAT name="U_INDB">Y</DAT>
+<DAT name="WIDGETTYPE">EDITBOX</DAT>
+<DAT name="UINHERIT">F</DAT>
+<DAT name="P_ERROR" xml:space='preserve'>; Upon loading an xmlStream, the On Error Trigger is fired for each element
+; for which the valErr meta-attribute was set.
+; Show a red background, in order to indicate a failed validation.
+
+$webinfo("OUTPUT") = "%%$webinfo("OUTPUT")%%%&lt;BR&gt;%%$item("ERRORMSG", $fieldproperties)%%%" ; Show error in USP.
+putitem/id $fieldproperties, "SubClass", "errorStyle"
+
+return (-1)
+</DAT>
+<DAT name="UISOBJID">F</DAT>
+<DAT name="HTML_FLDPROP">SYNC=1</DAT>
+<DAT name="HTML_CTRLTYPE">U_INPUT</DAT>
+<DAT name="WEBWIDGETTYPE">EDITBOX</DAT>
+</OCC>
+<OCC>
+<DAT name="UTIMESTAMP">2008-08-20T09:37:50.00</DAT>
+<DAT name="U_FLAB">UFIELDDEF</DAT>
+<DAT name="U_VLAB">U</DAT>
+<DAT name="U_TLAB">UFUNCTIONALSUBTYPEDEF</DAT>
+<DAT name="U_FSEQ">1</DAT>
+<DAT name="U_DTYP">S</DAT>
+<DAT name="U_INDB">Y</DAT>
+<DAT name="WIDGETTYPE">EDITBOX</DAT>
+<DAT name="UINHERIT">F</DAT>
+<DAT name="UISOBJID">F</DAT>
+<DAT name="HTML_FLDPROP">SYNC=1</DAT>
+<DAT name="HTML_CTRLTYPE">U_INPUT</DAT>
+<DAT name="WEBWIDGETTYPE">EDITBOX</DAT>
+</OCC>
+<OCC>
+<DAT name="UTIMESTAMP">2008-07-24T11:27:34.00</DAT>
+<DAT name="U_FLAB">UFIELDDEF</DAT>
+<DAT name="U_VLAB">U</DAT>
+<DAT name="U_TLAB">USUPERTYPEDEF</DAT>
+<DAT name="U_FSEQ">1</DAT>
+<DAT name="U_DTYP">S</DAT>
+<DAT name="U_INDB">Y</DAT>
+<DAT name="WIDGETTYPE">EDITBOX</DAT>
+<DAT name="UINHERIT">F</DAT>
+<DAT name="UISOBJID">F</DAT>
+<DAT name="HTML_FLDPROP">SYNC=1</DAT>
+<DAT name="HTML_CTRLTYPE">U_INPUT</DAT>
+<DAT name="WEBWIDGETTYPE">EDITBOX</DAT>
+</OCC>
+<OCC>
+<DAT name="UTIMESTAMP">2001-02-08T15:31:46.00</DAT>
+<DAT name="U_FLAB">ULOADDEF</DAT>
+<DAT name="U_VLAB">U</DAT>
+<DAT name="U_TLAB">UBUTTONDEF</DAT>
+<DAT name="U_FSEQ">2</DAT>
+<DAT name="UDESCR" xml:space='preserve'>Load button</DAT>
+<DAT name="U_DTYP">S</DAT>
+<DAT name="U_INDB">X</DAT>
+<DAT name="U_INTF">C1</DAT>
+<DAT name="WIDGETTYPE">COMMANDBUTTON</DAT>
+<DAT name="UINHERIT">F</DAT>
+<DAT name="UISOBJID">F</DAT>
+<DAT name="HTML_FLDPROP">SYNC=1</DAT>
+<DAT name="HTML_CTRLTYPE">U_BUTTON</DAT>
+<DAT name="WEBWIDGETTYPE">COMMANDBUTTON</DAT>
+</OCC>
+<OCC>
+<DAT name="UTIMESTAMP">2001-02-01T14:12:16.00</DAT>
+<DAT name="U_FLAB">ULOADDEF</DAT>
+<DAT name="U_VLAB">U</DAT>
+<DAT name="U_TLAB">UBUTTONDEFFRM</DAT>
+<DAT name="U_FSEQ">2</DAT>
+<DAT name="UDESCR" xml:space='preserve'>Load button</DAT>
+<DAT name="U_DTYP">S</DAT>
+<DAT name="U_INDB">X</DAT>
+<DAT name="U_INTF">C1</DAT>
+<DAT name="WIDGETTYPE">COMMANDBUTTON</DAT>
+<DAT name="UINHERIT">F</DAT>
+<DAT name="P_DET">$collhandle("&lt;frmEntity&gt;")-&gt;load()</DAT>
+<DAT name="WIDGETCREATE" xml:space='preserve'>VSIZE=80&uSEP;POSITION=BOTTOM</DAT>
+<DAT name="INITVALUE">%Load</DAT>
+<DAT name="UISOBJID">F</DAT>
+<DAT name="HTML_FLDPROP">SYNC=1</DAT>
+<DAT name="HTML_CTRLTYPE">U_BUTTON</DAT>
+<DAT name="WEBWIDGETTYPE">COMMANDBUTTON</DAT>
+</OCC>
+<OCC>
+<DAT name="UTIMESTAMP">2001-02-09T15:50:18.00</DAT>
+<DAT name="U_FLAB">ULOADDEF</DAT>
+<DAT name="U_VLAB">U</DAT>
+<DAT name="U_TLAB">UBUTTONDEFUSP</DAT>
+<DAT name="U_FSEQ">2</DAT>
+<DAT name="UDESCR" xml:space='preserve'>Load button</DAT>
+<DAT name="U_DTYP">S</DAT>
+<DAT name="U_INDB">B</DAT>
+<DAT name="U_INTF">C1</DAT>
+<DAT name="WIDGETTYPE">COMMANDBUTTON</DAT>
+<DAT name="UINHERIT">F</DAT>
+<DAT name="P_DET">$collhandle("&lt;uspEntity&gt;")-&gt;load()</DAT>
+<DAT name="INITVALUE">Load</DAT>
+<DAT name="UISOBJID">F</DAT>
+<DAT name="HTML_FLDPROP">SYNC=1</DAT>
+<DAT name="HTML_CTRLTYPE">U_BUTTON</DAT>
+<DAT name="WEBWIDGETTYPE">COMMANDBUTTON</DAT>
+</OCC>
+<OCC>
+<DAT name="UTIMESTAMP">2006-10-04T09:28:40.00</DAT>
+<DAT name="U_FLAB">UMENUDEF</DAT>
+<DAT name="U_VLAB">U</DAT>
+<DAT name="U_TLAB">UMENUDEF</DAT>
+<DAT name="U_FSEQ">2</DAT>
+<DAT name="U_DTYP">S</DAT>
+<DAT name="U_INDB">N</DAT>
+<DAT name="U_INTF">C40</DAT>
+<DAT name="WIDGETTYPE">DROPDOWNLIST</DAT>
+<DAT name="UINHERIT">F</DAT>
+<DAT name="UISOBJID">F</DAT>
+<DAT name="HTML_FLDPROP">SYNC=1</DAT>
+<DAT name="HTML_CTRLTYPE">U_MENU</DAT>
+<DAT name="WEBWIDGETTYPE">DROPDOWNLIST</DAT>
+</OCC>
+<OCC>
+<DAT name="UTIMESTAMP">2006-07-14T11:13:24.00</DAT>
+<DAT name="U_FLAB">UMENUDEF</DAT>
+<DAT name="U_VLAB">U</DAT>
+<DAT name="U_TLAB">UMENUDEFUSP</DAT>
+<DAT name="U_FSEQ">2</DAT>
+<DAT name="U_DTYP">S</DAT>
+<DAT name="U_INDB">N</DAT>
+<DAT name="U_INTF">C40</DAT>
+<DAT name="WIDGETTYPE">DROPDOWNLIST</DAT>
+<DAT name="UINHERIT">F</DAT>
+<DAT name="UISOBJID">F</DAT>
+<DAT name="HTML_FLDPROP">SYNC=1</DAT>
+<DAT name="HTML_CTRLTYPE">U_MENU</DAT>
+<DAT name="WEBWIDGETTYPE">DROPDOWNLIST</DAT>
+</OCC>
+<OCC>
+<DAT name="UTIMESTAMP">2001-02-08T15:31:46.00</DAT>
+<DAT name="U_FLAB">UOKDEF</DAT>
+<DAT name="U_VLAB">U</DAT>
+<DAT name="U_TLAB">UBUTTONDEF</DAT>
+<DAT name="U_FSEQ">6</DAT>
+<DAT name="UDESCR" xml:space='preserve'>OK button</DAT>
+<DAT name="U_DTYP">S</DAT>
+<DAT name="U_INDB">B</DAT>
+<DAT name="U_INTF">C1</DAT>
+<DAT name="WIDGETTYPE">COMMANDBUTTON</DAT>
+<DAT name="UINHERIT">F</DAT>
+<DAT name="P_DET">$instancehandle()-&gt;accept()</DAT>
+<DAT name="WIDGETCREATE" xml:space='preserve'>ROLE=DEFAULT&uSEP;VSIZE=100</DAT>
+<DAT name="UISOBJID">F</DAT>
+<DAT name="HTML_FLDPROP">SYNC=0</DAT>
+<DAT name="HTML_CTRLTYPE">U_BUTTON</DAT>
+<DAT name="WEBWIDGETTYPE">COMMANDBUTTON</DAT>
+</OCC>
+<OCC>
+<DAT name="UTIMESTAMP">2001-02-01T14:12:16.00</DAT>
+<DAT name="U_FLAB">UOKDEF</DAT>
+<DAT name="U_VLAB">U</DAT>
+<DAT name="U_TLAB">UBUTTONDEFFRM</DAT>
+<DAT name="U_FSEQ">6</DAT>
+<DAT name="UDESCR" xml:space='preserve'>OK button</DAT>
+<DAT name="U_DTYP">S</DAT>
+<DAT name="U_INDB">B</DAT>
+<DAT name="U_INTF">C1</DAT>
+<DAT name="WIDGETTYPE">COMMANDBUTTON</DAT>
+<DAT name="UINHERIT">F</DAT>
+<DAT name="WIDGETCREATE" xml:space='preserve'>ROLE=DEFAULT&uSEP;VSIZE=80&uSEP;POSITION=BOTTOM</DAT>
+<DAT name="INITVALUE">%OK</DAT>
+<DAT name="UISOBJID">F</DAT>
+<DAT name="HTML_FLDPROP">SYNC=1</DAT>
+<DAT name="HTML_CTRLTYPE">U_BUTTON</DAT>
+<DAT name="WEBWIDGETTYPE">COMMANDBUTTON</DAT>
+</OCC>
+<OCC>
+<DAT name="UTIMESTAMP">2001-02-08T15:22:03.00</DAT>
+<DAT name="U_FLAB">UOKDEF</DAT>
+<DAT name="U_VLAB">U</DAT>
+<DAT name="U_TLAB">UBUTTONDEFUSP</DAT>
+<DAT name="U_FSEQ">6</DAT>
+<DAT name="UDESCR" xml:space='preserve'>OK button</DAT>
+<DAT name="U_DTYP">S</DAT>
+<DAT name="U_INDB">B</DAT>
+<DAT name="U_INTF">C1</DAT>
+<DAT name="WIDGETTYPE">COMMANDBUTTON</DAT>
+<DAT name="UINHERIT">F</DAT>
+<DAT name="P_DET" xml:space='preserve'>; No OK button in USP.</DAT>
+<DAT name="WIDGETCREATE" xml:space='preserve'>ROLE=DEFAULT&uSEP;VSIZE=100</DAT>
+<DAT name="UISOBJID">F</DAT>
+<DAT name="HTML_FLDPROP">SYNC=0</DAT>
+<DAT name="HTML_CTRLTYPE">U_BUTTON</DAT>
+<DAT name="WEBWIDGETTYPE">COMMANDBUTTON</DAT>
+</OCC>
+<OCC>
+<DAT name="UTIMESTAMP">2001-02-08T15:31:46.00</DAT>
+<DAT name="U_FLAB">UREMOVEDEF</DAT>
+<DAT name="U_VLAB">U</DAT>
+<DAT name="U_TLAB">UBUTTONDEF</DAT>
+<DAT name="U_FSEQ">4</DAT>
+<DAT name="UDESCR" xml:space='preserve'>Remove button</DAT>
+<DAT name="U_DTYP">S</DAT>
+<DAT name="U_INDB">X</DAT>
+<DAT name="U_INTF">C1</DAT>
+<DAT name="WIDGETTYPE">COMMANDBUTTON</DAT>
+<DAT name="UINHERIT">F</DAT>
+<DAT name="UISOBJID">F</DAT>
+<DAT name="HTML_FLDPROP">SYNC=0</DAT>
+<DAT name="HTML_CTRLTYPE">U_BUTTON</DAT>
+<DAT name="WEBWIDGETTYPE">COMMANDBUTTON</DAT>
+</OCC>
+<OCC>
+<DAT name="UTIMESTAMP">2001-02-01T14:12:16.00</DAT>
+<DAT name="U_FLAB">UREMOVEDEF</DAT>
+<DAT name="U_VLAB">U</DAT>
+<DAT name="U_TLAB">UBUTTONDEFFRM</DAT>
+<DAT name="U_FSEQ">4</DAT>
+<DAT name="UDESCR" xml:space='preserve'>Remove button</DAT>
+<DAT name="U_DTYP">S</DAT>
+<DAT name="U_INDB">X</DAT>
+<DAT name="U_INTF">C1</DAT>
+<DAT name="WIDGETTYPE">COMMANDBUTTON</DAT>
+<DAT name="UINHERIT">F</DAT>
+<DAT name="P_DET">$collhandle("&lt;frmEntity&gt;")-&gt;remove()</DAT>
+<DAT name="WIDGETCREATE" xml:space='preserve'>VSIZE=80&uSEP;POSITION=BOTTOM</DAT>
+<DAT name="INITVALUE">%Remove</DAT>
+<DAT name="UISOBJID">F</DAT>
+<DAT name="HTML_FLDPROP">SYNC=1</DAT>
+<DAT name="HTML_CTRLTYPE">U_BUTTON</DAT>
+<DAT name="WEBWIDGETTYPE">COMMANDBUTTON</DAT>
+</OCC>
+<OCC>
+<DAT name="UTIMESTAMP">2001-02-09T15:50:18.00</DAT>
+<DAT name="U_FLAB">UREMOVEDEF</DAT>
+<DAT name="U_VLAB">U</DAT>
+<DAT name="U_TLAB">UBUTTONDEFUSP</DAT>
+<DAT name="U_FSEQ">4</DAT>
+<DAT name="UDESCR" xml:space='preserve'>Remove button</DAT>
+<DAT name="U_DTYP">S</DAT>
+<DAT name="U_INDB">B</DAT>
+<DAT name="U_INTF">C1</DAT>
+<DAT name="WIDGETTYPE">COMMANDBUTTON</DAT>
+<DAT name="UINHERIT">F</DAT>
+<DAT name="P_DET" xml:space='preserve'>; No Remove button in USP.</DAT>
+<DAT name="UISOBJID">F</DAT>
+<DAT name="HTML_FLDPROP">SYNC=0</DAT>
+<DAT name="HTML_CTRLTYPE">U_BUTTON</DAT>
+<DAT name="WEBWIDGETTYPE">COMMANDBUTTON</DAT>
+</OCC>
+<OCC>
+<DAT name="UTIMESTAMP">2001-02-08T15:31:46.00</DAT>
+<DAT name="U_FLAB">USAVEDEF</DAT>
+<DAT name="U_VLAB">U</DAT>
+<DAT name="U_TLAB">UBUTTONDEF</DAT>
+<DAT name="U_FSEQ">5</DAT>
+<DAT name="UDESCR" xml:space='preserve'>Save button</DAT>
+<DAT name="U_DTYP">S</DAT>
+<DAT name="U_INDB">B</DAT>
+<DAT name="U_INTF">C1</DAT>
+<DAT name="WIDGETTYPE">COMMANDBUTTON</DAT>
+<DAT name="UINHERIT">F</DAT>
+<DAT name="UISOBJID">F</DAT>
+<DAT name="HTML_FLDPROP">SYNC=1</DAT>
+<DAT name="HTML_CTRLTYPE">U_BUTTON</DAT>
+<DAT name="WEBWIDGETTYPE">COMMANDBUTTON</DAT>
+</OCC>
+<OCC>
+<DAT name="UTIMESTAMP">2001-02-01T14:12:16.00</DAT>
+<DAT name="U_FLAB">USAVEDEF</DAT>
+<DAT name="U_VLAB">U</DAT>
+<DAT name="U_TLAB">UBUTTONDEFFRM</DAT>
+<DAT name="U_FSEQ">5</DAT>
+<DAT name="UDESCR" xml:space='preserve'>Save button</DAT>
+<DAT name="U_DTYP">S</DAT>
+<DAT name="U_INDB">B</DAT>
+<DAT name="U_INTF">C1</DAT>
+<DAT name="WIDGETTYPE">COMMANDBUTTON</DAT>
+<DAT name="UINHERIT">F</DAT>
+<DAT name="P_DET">$collhandle("&lt;frmEntity&gt;")-&gt;save()</DAT>
+<DAT name="WIDGETCREATE" xml:space='preserve'>VSIZE=80&uSEP;POSITION=BOTTOM</DAT>
+<DAT name="INITVALUE">%Save</DAT>
+<DAT name="UISOBJID">F</DAT>
+<DAT name="HTML_FLDPROP">SYNC=1</DAT>
+<DAT name="HTML_CTRLTYPE">U_BUTTON</DAT>
+<DAT name="WEBWIDGETTYPE">COMMANDBUTTON</DAT>
+</OCC>
+<OCC>
+<DAT name="UTIMESTAMP">2001-02-08T17:22:52.00</DAT>
+<DAT name="U_FLAB">USAVEDEF</DAT>
+<DAT name="U_VLAB">U</DAT>
+<DAT name="U_TLAB">UBUTTONDEFUSP</DAT>
+<DAT name="U_FSEQ">5</DAT>
+<DAT name="UDESCR" xml:space='preserve'>Save button</DAT>
+<DAT name="U_DTYP">S</DAT>
+<DAT name="U_INDB">B</DAT>
+<DAT name="U_INTF">C1</DAT>
+<DAT name="WIDGETTYPE">COMMANDBUTTON</DAT>
+<DAT name="UINHERIT">F</DAT>
+<DAT name="P_DET">$collhandle("&lt;uspEntity&gt;")-&gt;save()</DAT>
+<DAT name="INITVALUE">Save</DAT>
+<DAT name="UISOBJID">F</DAT>
+<DAT name="HTML_FLDPROP">SYNC=1</DAT>
+<DAT name="HTML_CTRLTYPE">U_BUTTON</DAT>
+<DAT name="WEBWIDGETTYPE">COMMANDBUTTON</DAT>
+</OCC>
+</TABLE>
+<TABLE>
+<DSC name="UCKEY" model="DICT" system="S" pseudo ="73" level="1" noupdate="0"
+ rbk="0" ffsql="0" transnr="0" segsize="0" ufocc="0" charset=".U">
+<FLD name="UTIMESTAMP" seqno="1" type="E" level="2" pack="0" scale="0" length="15"
+ pointer="0" inum="0" ufocc="0" />
+<FLD name="U_STAT" seqno="2" type="S" level="2" pack="0" scale="0" length="4"
+ pointer="0" inum="0" ufocc="0" />
+<FLD name="U_VLAB" seqno="3" type="S" level="2" pack="0" scale="0" length="32"
+ pointer="0" inum="2" ufocc="0" mandatory="yes" idxnum="1,2" idxsnr="101,1" />
+<FLD name="U_TLAB" seqno="4" type="S" level="2" pack="0" scale="0" length="32"
+ pointer="0" inum="2" ufocc="0" mandatory="yes" idxnum="1,2" idxsnr="102,2" />
+<FLD name="U_KSEQ" seqno="5" type="N" level="2" pack="0" scale="0" length="2"
+ pointer="0" inum="1" ufocc="0" mandatory="yes" idxnum="1" idxsnr="103" />
+<FLD name="U_KTYP" seqno="6" type="S" level="2" pack="0" scale="0" length="1"
+ pointer="0" inum="0" ufocc="0" />
+<FLD name="UVERS" seqno="7" type="S" level="2" pack="0" scale="0" length="12"
+ pointer="0" inum="0" ufocc="0" />
+<FLD name="UDESCR" seqno="8" type="S" level="2" pack="0" scale="0" length="25"
+ pointer="0" inum="0" ufocc="0" />
+<FLD name="U_DOC" seqno="9" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\C1,0,0,0,,0,0,0,," />
+<FLD name="U_FLABS" seqno="10" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\C2,0,0,0,,0,0,0,," />
+<FLD name="UVALKEY" seqno="11" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\C3,0,0,0,,0,0,0,," />
+<FLD name="UML_DATA" seqno="12" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\C4,0,0,0,,0,0,0,," />
+</DSC>
+<OCC>
+<DAT name="UTIMESTAMP">2000-07-10T08:55:28.00</DAT>
+<DAT name="U_VLAB">U</DAT>
+<DAT name="U_TLAB">USUPERTYPEDEF</DAT>
+<DAT name="U_KSEQ">1</DAT>
+<DAT name="U_KTYP">P</DAT>
+<DAT name="U_FLABS">UFIELDDEF</DAT>
+<DAT name="UVALKEY">T</DAT>
+</OCC>
+</TABLE>
+</UNIFACE>

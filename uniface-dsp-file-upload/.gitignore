@@ -1,0 +1,12 @@
+DSP File Upload - Debug.lnk
+DSP File Upload - Development.lnk
+bin/
+dbms/
+log/
+project.setup.xml
+asn/idf.asn
+asn/setup.asn
+asn/urouter.asn
+web/dspjs/
+web/WEB-INF/web.xml
+src/library/menu/USYS/USA/FILESYNC.mnx
