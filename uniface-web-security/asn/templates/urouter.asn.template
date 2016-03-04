@@ -1,0 +1,3 @@
+[SERVERS]
+<project_name>         = "<uniface_path>common\bin\userver.exe" /dir="<project_path>" /adm="<uniface_path>uniface\adm\" /asn=.\asn\wasv.asn
+<project_name>_debug   = "<uniface_path>common\bin\userver.exe" /dir="<project_path>" /adm="<uniface_path>uniface\adm\" /asn=.\asn\wasv.asn /max=1 /deb=<udbg_machine>+<udbg_port>:wait

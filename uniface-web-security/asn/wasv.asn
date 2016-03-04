@@ -1,0 +1,27 @@
+[SETTINGS]
+$enhanced_edit		all
+$putmess_logfile	.\log\wasv_%p.log
+$search_resources	resources_only
+$test_mode_components
+
+
+[RESOURCES]
+.\bin
+
+usys:usys.uar
+usys:usysicon.uar
+
+
+[FILES]
+usys:*.xml		usysuniface:.\misc\*.xml
+
+*.log		    .\log\*.log
+*.*lst			.\lst\*.*lst
+
+[LOGICALS]
+URL_REWRITING   = 0
+BASE_URL        = ../
+NAVIGATION_TYPE = TOP
+
+
+#file .\asn\dbms.asn

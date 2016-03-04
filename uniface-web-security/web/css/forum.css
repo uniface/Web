@@ -1,0 +1,55 @@
+#spMainContainer .spLeft {
+  float:left
+}
+
+#spMainContainer .spRight {
+  float:right
+}
+
+#spMainContainer .spCenter {
+  text-align:center;
+  margin-left:auto;
+  margin-right:auto
+}
+
+#spMainContainer .spTopicPostSection {
+  color:black;
+  background:white;
+  border:none;
+  border-bottom:1px solid #C7D6EE;
+  margin:0 1px 5px 1px;
+  overflow:hidden;
+  padding:0;
+  -webkit-gradientborder-radius:0px 0px 0px 0px;
+  border-radius:0px 0px 0px 0px;
+  position:relative
+}
+
+#spMainContainer .spTopicPostSection .spPostSection {
+  padding:4px 2px 200px 4px;
+  margin-bottom:-200px;
+  background:#FFF;
+  -webkit-gradientborder-radius:0px 0px 0px 0px;
+  border-radius:0px 0px 0px 0px
+}
+
+#spMainContainer .spTopicPostSection .spPostUserDate,
+#spMainContainer .spTopicPostSection .spPostUserName {
+  font-size:100%;
+  margin:0;
+  padding:5px;
+  line-height:1em
+}
+
+#spMainContainer .spTopicPostSection .spPostUserName {
+  font-family:inherit;
+  font-weight:bold
+}
+
+#spMainContainer .spTopicPostSection .spPostSection .spPostContentSection .spPostContent {
+  color:black;
+  margin:5px 0;
+  padding:10px;
+  font-size:90%;
+  line-height:1.2em
+}
