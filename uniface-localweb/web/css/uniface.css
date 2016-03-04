@@ -1,0 +1,165 @@
+/* Common CSS */
+body {
+  background-color: white;
+  color: black;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 10pt;
+}
+h1 {
+  font-size: 10pt;
+  color: hsl(220, 50%, 50%);
+  text-align: center;
+}
+h2 {
+  font-size: 10pt;
+  color: hsl(220, 50%, 50%);
+}
+h3 {
+  font-size: 9pt;
+  color: hsl(220, 50%, 50%);
+}
+h4 {
+  font-size: 9pt;
+  color: hsl(220, 50%, 50%);
+}
+p {
+  font-size: 10pt;
+}
+code {
+  font-family: Consolas, "Courier New", Courier, mono;
+  font-size: 9pt;
+}
+
+/* .u style layout */
+body.u {
+  margin: 0em;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.u .layout.header  {
+  display: block;
+  padding: 0.5em;
+  background-color: hsl(220, 50%, 90%);
+  border-bottom: solid 1px hsl(220, 50%, 80%);
+  overflow: hidden;
+  font-size: 1.5em;
+  font-weight: bold; 
+  color: hsl(220, 50%, 50%);
+  text-align: center;
+  position: fixed;
+  top: 0rem;
+  left: 0rem;
+  right: 0rem;
+  max-height: 2rem;
+  min-height: 2rem;
+}
+.u .layout.content  {
+  display: block;
+  padding: 0.1rem;
+  position: fixed;
+  top: 3.5rem;
+  right: 0rem;
+  left: 0rem;
+  bottom: 2.2rem;
+  overflow: auto;
+}
+.u .layout.footer  {
+  display: block;
+  background-color: hsl(220, 50%, 90%);
+  border-top: solid 1px hsl(220, 50%, 80%);
+  padding: 1em;
+  overflow: hidden;
+  font-size: 0.7em;
+  font-weight: bold; 
+  color: hsl(220, 50%, 50%);
+  position: fixed;
+  bottom: 0rem;
+  left: 0rem;
+  right: 0rem;
+}
+
+/* Html table styling for <* class="u"> */
+.u table {
+  border: solid 0px transparent;
+}
+.u table thead {
+  background-color: hsl(220, 50%, 85%);
+}
+.u table tfoot {
+  background-color: hsl(220, 50%, 85%);
+}
+.u table th {
+  border: solid 0px transparent;
+  text-align: left;
+}
+.u table td {
+  border: solid 0px transparent;
+  white-space: nowrap;
+}
+.u table tr:nth-child(odd) {
+  background-color: hsl(220, 50%, 98%);
+}
+.u table tr:nth-child(even) {
+  background-color: hsl(220, 50%, 95%);
+}
+/* Suppress border and background from editbox when not focused */
+.u table[id^="uent:"] [widgetid^="ufld:"]:not(.dijitFocused):not(.dijitError) {    /* Dojo Editbox (DSP) */
+  border-color: transparent !important;
+  background: transparent !important;
+}
+.u table input[type="text"]:not(:focus)  {                           /* Plain input type=text conrol (USP) */
+  border-color: transparent !important;
+  background: transparent !important;
+}
+
+
+.errorstyle { 
+  background-color: hsl(0, 50%, 85%);
+  color: red;
+}
+.errorhead {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 24pt;
+  text-align: center;
+  color: black;
+  background-color: red;
+  margin-left: 5pt;
+  margin-right: 5pt;
+  border-color: black;
+  padding: 5pt;
+  border: medium red outset;
+}
+.errornormaltxt {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 12pt;
+  font-style: normal;
+  margin-left: 10pt;
+  margin-right: 10pt;
+}
+.errorboldtxt {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 12pt;
+  font-style: normal;
+  font-weight: bold;
+  margin-left: 10pt;
+  margin-right: 10pt;
+}
+.errorblock {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 12pt;
+  font-style: normal;
+  text-align: left;
+  background-color: black;
+  color: black;
+  margin-top: 1pt;
+  margin-right: 25pt;
+  margin-left: 25pt;
+  border-color: #CC0000;
+  border: #CC0000;
+  border-style: none;
+  padding: 5pt;
+}

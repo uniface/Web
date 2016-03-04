@@ -1,0 +1,208 @@
+﻿<?xml version='1.0' encoding='UTF-8' ?>
+<!-- Created by Uniface - (C) Uniface B.V. All rights reserved -->
+<!DOCTYPE UNIFACE PUBLIC "UNIFACE.DTD" "UNIFACE.DTD">
+<UNIFACE release="9.6" xmlengine="2.0">
+<TABLE>
+<DSC name="USMENU" model="DICT" system="S" pseudo ="73" level="1" noupdate="0"
+ rbk="0" ffsql="0" transnr="0" segsize="0" ufocc="0" charset=".U">
+<FLD name="UMENU" seqno="1" type="S" level="2" pack="0" scale="0" length="16"
+ pointer="0" inum="1" ufocc="0" mandatory="yes" idxnum="1" idxsnr="101" />
+<FLD name="UVAR" seqno="2" type="S" level="2" pack="0" scale="0" length="16"
+ pointer="0" inum="1" ufocc="0" mandatory="yes" idxnum="1" idxsnr="102" />
+<FLD name="ULAN" seqno="3" type="S" level="2" pack="0" scale="0" length="3"
+ pointer="0" inum="1" ufocc="0" mandatory="yes" idxnum="1" idxsnr="103" />
+<FLD name="MENUTYPE" seqno="4" type="S" level="2" pack="0" scale="0" length="1"
+ pointer="0" inum="0" ufocc="0" />
+<FLD name="UTIMESTAMP" seqno="5" type="E" level="2" pack="0" scale="0" length="15"
+ pointer="0" inum="0" ufocc="0" />
+<FLD name="UVERS" seqno="6" type="S" level="2" pack="0" scale="0" length="12"
+ pointer="0" inum="0" ufocc="0" />
+<FLD name="UDESCR" seqno="7" type="S" level="2" pack="0" scale="0" length="25"
+ pointer="0" inum="0" ufocc="0" />
+<FLD name="AUTHORIZ" seqno="8" type="S" level="2" pack="0" scale="0" length="1"
+ pointer="0" inum="0" ufocc="0" />
+<FLD name="UCOMMENT" seqno="9" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\C1,0,0,0,,0,0,0,," />
+<FLD name="TITLE" seqno="10" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\C2,0,0,0,,0,0,0,," />
+<FLD name="UCREATE" seqno="11" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\C3,0,0,0,,0,0,0,," />
+</DSC>
+<OCC>
+<DAT name="UMENU">FILESYNC</DAT>
+<DAT name="UVAR">USYS</DAT>
+<DAT name="ULAN">USA</DAT>
+<DAT name="MENUTYPE">P</DAT>
+<DAT name="UTIMESTAMP">2015-07-01T13:22:55.00</DAT>
+<DAT name="UDESCR" xml:space='preserve'>File Sync Menu</DAT>
+</OCC>
+</TABLE>
+<TABLE>
+<DSC name="USITEM" model="DICT" system="S" pseudo ="73" level="1" noupdate="0"
+ rbk="0" ffsql="0" transnr="0" segsize="0" ufocc="300" charset=".U">
+<FLD name="UMENU" seqno="1" type="S" level="2" pack="0" scale="0" length="16"
+ pointer="0" inum="3" ufocc="0" mandatory="yes" idxnum="1,2,3" idxsnr="101,1,1" />
+<FLD name="UVAR" seqno="2" type="S" level="2" pack="0" scale="0" length="16"
+ pointer="0" inum="4" ufocc="0" mandatory="yes" idxnum="1,2,3,4" idxsnr="102,2,2,2" />
+<FLD name="ULAN" seqno="3" type="S" level="2" pack="0" scale="0" length="3"
+ pointer="0" inum="4" ufocc="0" mandatory="yes" idxnum="1,2,3,4" idxsnr="103,3,3,3" />
+<FLD name="UTECHSEQ" seqno="4" type="S" level="2" pack="0" scale="0" length="6"
+ pointer="0" inum="1" ufocc="0" mandatory="yes" idxnum="1" idxsnr="104" />
+<FLD name="USEQ" seqno="5" type="N" level="2" pack="0" scale="0" length="2"
+ pointer="0" inum="1" ufocc="0" idxnum="2" idxsnr="4" />
+<FLD name="UTIMESTAMP" seqno="6" type="E" level="2" pack="0" scale="0" length="15"
+ pointer="0" inum="0" ufocc="0" />
+<FLD name="UVERS" seqno="7" type="S" level="2" pack="0" scale="0" length="12"
+ pointer="0" inum="0" ufocc="0" />
+<FLD name="UDESCR" seqno="8" type="S" level="2" pack="0" scale="0" length="25"
+ pointer="0" inum="0" ufocc="0" />
+<FLD name="UENABLE" seqno="9" type="B" level="2" pack="0" scale="0" length="1"
+ pointer="0" inum="0" ufocc="0" />
+<FLD name="UHIDE" seqno="10" type="B" level="2" pack="0" scale="0" length="1"
+ pointer="0" inum="0" ufocc="0" />
+<FLD name="UCHECK" seqno="11" type="B" level="2" pack="0" scale="0" length="1"
+ pointer="0" inum="0" ufocc="0" />
+<FLD name="REFTYPE" seqno="12" type="S" level="2" pack="0" scale="0" length="1"
+ pointer="0" inum="0" ufocc="0" />
+<FLD name="UCASCADE" seqno="13" type="S" level="2" pack="0" scale="0" length="16"
+ pointer="0" inum="1" ufocc="0" idxnum="4" idxsnr="1" />
+<FLD name="UCOMMENT" seqno="14" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\C1,0,0,0,,0,0,0,," />
+<FLD name="TITLE" seqno="15" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" mandatory="yes" varinfo=",1,0,2,\1F\C2,0,0,0,,0,0,0,," />
+<FLD name="UCREATE" seqno="16" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\C3,0,0,0,,0,0,0,," />
+<FLD name="PRETRIG" seqno="17" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\C4,0,0,0,,0,0,0,," />
+<FLD name="UOPTTRIG" seqno="18" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\C5,0,0,0,,0,0,0,," />
+<FLD name="HELPTEXT" seqno="19" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\C6,0,0,0,,0,0,0,," />
+</DSC>
+<OCC>
+<DAT name="UMENU">FILESYNC</DAT>
+<DAT name="UVAR">USYS</DAT>
+<DAT name="ULAN">USA</DAT>
+<DAT name="UTECHSEQ">1</DAT>
+<DAT name="USEQ">1</DAT>
+<DAT name="UTIMESTAMP">2015-07-06T10:40:55.00</DAT>
+<DAT name="UDESCR" xml:space='preserve'>Project View</DAT>
+<DAT name="UENABLE">T</DAT>
+<DAT name="UHIDE">F</DAT>
+<DAT name="UCHECK">F</DAT>
+<DAT name="TITLE">Project</DAT>
+<DAT name="UCREATE">xl=</DAT>
+<DAT name="UOPTTRIG" xml:space='preserve'>variables
+	String	vCurrentVariation
+endvariables
+
+vCurrentVariation = $variation
+$variation = "VC_LIBRARY"
+
+activate "FIL_PROJECT"
+if($status &lt; 0)
+	message/error "Failed to start FIL_PROJECT. See message frame for details"
+endif
+
+$variation = vCurrentVariation
+</DAT>
+</OCC>
+<OCC>
+<DAT name="UMENU">FILESYNC</DAT>
+<DAT name="UVAR">USYS</DAT>
+<DAT name="ULAN">USA</DAT>
+<DAT name="UTECHSEQ">13</DAT>
+<DAT name="USEQ">4</DAT>
+<DAT name="UTIMESTAMP">2015-07-13T13:02:37.00</DAT>
+<DAT name="UENABLE">T</DAT>
+<DAT name="UHIDE">F</DAT>
+<DAT name="UCHECK">F</DAT>
+<DAT name="TITLE">Debug</DAT>
+<DAT name="UCREATE">xl=</DAT>
+<DAT name="UOPTTRIG" xml:space='preserve'>variables
+	String	vCurrentVariation
+endvariables
+
+vCurrentVariation = $variation
+$variation = "VC_LIBRARY"
+
+activate "VC_DEBUG".Exec("FIL")
+if($status &lt; 0)
+	putmess $procerrorcontext
+	message/error "Failed to start VC_DEBUG. See message frame for details"
+endif
+
+$variation = vCurrentVariation
+</DAT>
+</OCC>
+<OCC>
+<DAT name="UMENU">FILESYNC</DAT>
+<DAT name="UVAR">USYS</DAT>
+<DAT name="ULAN">USA</DAT>
+<DAT name="UTECHSEQ">14</DAT>
+<DAT name="USEQ">5</DAT>
+<DAT name="UTIMESTAMP">2015-07-06T10:40:55.00</DAT>
+<DAT name="UENABLE">T</DAT>
+<DAT name="UHIDE">F</DAT>
+<DAT name="UCHECK">F</DAT>
+<DAT name="TITLE">About</DAT>
+<DAT name="UCREATE">xl=</DAT>
+<DAT name="UOPTTRIG" xml:space='preserve'>variables
+	String	vCurrentVariation
+endvariables
+
+vCurrentVariation = $variation
+$variation = "VC_LIBRARY"
+
+activate "FIL_PROJECT".about()
+if($status &lt; 0)
+	putmess $procerrorcontext
+	message/error "Failed to start FIL_PROJECT. See message frame for details"
+endif
+
+$variation = vCurrentVariation
+</DAT>
+</OCC>
+<OCC>
+<DAT name="UMENU">FILESYNC</DAT>
+<DAT name="UVAR">USYS</DAT>
+<DAT name="ULAN">USA</DAT>
+<DAT name="UTECHSEQ">3</DAT>
+<DAT name="USEQ">2</DAT>
+<DAT name="UTIMESTAMP">2015-07-01T13:22:55.00</DAT>
+<DAT name="UDESCR" xml:space='preserve'>Settings Screen</DAT>
+<DAT name="UENABLE">T</DAT>
+<DAT name="UHIDE">F</DAT>
+<DAT name="UCHECK">F</DAT>
+<DAT name="TITLE">Settings</DAT>
+<DAT name="UCREATE">xl=</DAT>
+<DAT name="UOPTTRIG" xml:space='preserve'>variables
+	String	vCurrentVariation
+endvariables
+
+vCurrentVariation = $variation
+$variation = "VC_LIBRARY"
+
+activate "VC_SETTINGS"
+if($status &lt; 0)
+	message/error "Failed to start VC_SETTINGS. See message frame for details"
+endif
+
+$variation = vCurrentVariation
+</DAT>
+</OCC>
+<OCC>
+<DAT name="UMENU">FILESYNC</DAT>
+<DAT name="UVAR">USYS</DAT>
+<DAT name="ULAN">USA</DAT>
+<DAT name="UTECHSEQ">4</DAT>
+<DAT name="USEQ">3</DAT>
+<DAT name="UTIMESTAMP">2015-07-01T13:22:55.00</DAT>
+<DAT name="UENABLE">F</DAT>
+<DAT name="UHIDE">F</DAT>
+<DAT name="UCHECK">F</DAT>
+<DAT name="TITLE">%</DAT>
+<DAT name="UCREATE">xl=</DAT>
+</OCC>
+</TABLE>
+</UNIFACE>

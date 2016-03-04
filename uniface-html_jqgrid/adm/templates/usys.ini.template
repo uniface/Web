@@ -1,0 +1,362 @@
+; =========================================================================
+; Uniface for Windows configuration file for color/grayscale displays.
+; =========================================================================
+
+[paths]
+usysins=<uniface_path>
+helpdir=usysins:common\doc\help
+usys=usysins:common\usys
+usyscom=usysins:common
+usysuniface=usysins:uniface
+usysadm=usysins:uniface\adm
+javascript=.\web\dspjs
+
+[graphic filters]
+W=wmfimp.flt, WMF, Off
+
+[areaframes]
+SHORTCUTS=uframe(backcolor=#66B2E6;attach=hsize,vsize)
+
+[widgets]
+; Logical to physical widget mapping
+EditBox=ueditbox(font=editfont;autoselect=on;dimmedbackcolor=off)
+CommandButton=ucmdbutton(tooltip=on;font=buttonfont;actoneachclick=on)
+DropDownList=udropdownlist(font=listfont;forcefit=on;dimmedbackcolor=off;v8_printing=on)
+Combobox=ucombobox(font=listfont;dimmedbackcolor=off;autoselect=on)
+CheckBox=ucheckbox(font=label;fittotext=off)
+RadioGroup=uradiogroup(font=label)
+Map=umap(font=label)
+ListBox=ulistbox(font=listfont;dimmedbackcolor=off)
+Egrid=egrid(font=editfont;labelfont=editfont;bordertype=flat;bordercolor=silver)
+SpinButton=uspinbutton(font=editfont;autoselect=on;dimmedbackcolor=off)
+Picture=upicture
+Hyperlink=uhyperlink(font=HyperLabel;transparency=on)
+OleContainer=uOleContainer
+OcxContainer=uOcxContainer
+DragSource=udragdrop(source=on;label=on;sourcefeedback=icon)
+DropTarget=udragdrop(target=on;label=on;targetfeedback=copy,move;targethilite=halftone)
+Slider=uslider
+Meter=umeter
+Tree=utree
+Tab=utab
+TabEx=utabex
+FormContainer=ucontainer
+HTML=uhtml
+Progressbar=uprogressbar(orientation=horizontal;smooth=false;range=100)
+; colortype = web | system
+ColorList=ucolorlist(colortype=web;font=listfont)
+ColorBox=ucolorbox(font=editfont;frame=on;3d=on;dimmedbackcolor=off)
+OutputBox=uoutputbox(font=monosmall)
+MonthCalendar=umonthcalendar
+RichEditBox=urtfeditbox(font=editfont;toolbar=font,textcolor,attribute)
+
+; Logical widgets for development environment
+NoEditBox=ueditbox(font=editfont;3d=off;dimmedbackcolor=off)
+MessageBox=ueditbox(font=editfont)
+UnifaceButton=ucmdbutton(tooltip=on;font=buttonfont;representation=uniface)
+HeaderButton=ucmdbutton(tooltip=on;font=buttonfont;representation=header)
+; Logical widgets 9.7 development environment.
+; Note: These widgets are not visible in the GFP panel.
+IDFSpeedSearch=ueditbox(font=editfont;onedit=T)
+IDFTextCell=ueditbox(font=editfont)
+IDFButtonBottom=ucmdbutton(representation=Uniface;cursor=uhand;frametype=off;frame=off;font=IDFButtonText;labelfont=IDFButtonText;backcolor=#01A7E1;backcolorselect=#97D5EC;backcolorhover=#55C1E8;backcolorfocus=#0084CC;forecolor=white;forecolorselect=black;vsize=80;autolabel=F;position=center;valign=center)
+IDFButtonSide=ucmdbutton(representation=Uniface;cursor=uhand;frametype=off;frame=off;font=IDFButtonText;labelfont=IDFButtonText;backcolor=#01A7E1;backcolorselect=#97D5EC;backcolorhover=#55C1E8;backcolorfocus=#0084CC;forecolor=white;forecolorselect=black;vsize=80;autolabel=F;position=top)
+IDFButtonHeader=ucmdbutton(representation=Header;cursor=uhand;halign=left;valign=center;font=label)
+IDFButtonImage=ucmdbutton(representation=Uniface;cursor=uhand;frametype=off;frame=off;transparency=T)
+IDFButtonSpecial=ucmdbutton(representation=Uniface;cursor=uhand;frametype=off;frame=off;font=IDFButtonText;labelfont=IDFButtonText;backcolor=#01A7E1;backcolorselect=#97D5EC;backcolorhover=#55C1E8;backcolorfocus=#0084CC;forecolor=white;forecolorselect=black;vsize=80;POSITION=CENTER)
+IDFOpenProfile=ueditbox(frame=T;font=editfont;autoselect=on;dimmedbackcolor=off;dblclk=detail;multiline=F)
+
+; Custom widgets for development environment
+RichEdit=urichedit(font=procboxfont;maxtags=20;procbox=on)
+HtmlEdit=urichedit(font=procboxfont;procbox=on;language=html)
+HotSpot=uhotspot(cursor=on)
+UniForm=uniform
+Nav=unav(font=label)
+Gab=ugab
+UComposer=ucomposer
+
+; Special frames
+.L=ulabel(transparency=off;labelfont=label;inheritcolors=false;anchor=false)
+.P=ucmdbutton(tooltip=on;autolabel=off)
+.C=ucheckbox(v52=on)
+.I=upicture
+
+[gfp]
+; Logical widgets to appear on the main floating palette
+widgets=
+
+[accelerators]
+; Accelerator to key mapping
+fileopen=Ctrl+O
+; Ctrl F6 used to toggle paint tableau
+filecompile=Ctrl+F7
+filedebug=Ctrl+F8
+filetest=Ctrl+F5
+qrcode=Ctrl+F3
+filenew=Ctrl+N
+close=Ctrl+A
+quit=Ctrl+F4
+delete=Alt+D
+print=Ctrl+P
+save=Ctrl+S
+editcut=Ctrl+X
+editcopy=Ctrl+C
+editpaste=Ctrl+V
+editfind=F11
+editfindnext=F12
+editfindreplace=Ctrl+H
+editundo=Ctrl+Z
+editredo=Ctrl+Y
+editselectall=Ctrl+A
+clearfield=Alt+F1
+
+; Debugger Accelerator to key mapping
+udbg_start=Shift+Ctrl+G
+udbg_stepinto=Shift+Ctrl+S
+udbg_stepover=Shift+Ctrl+J
+udbg_stepout=Shift+Ctrl+Q
+udbg_toggle=Shift+Ctrl+B
+udbg_gocursor=Shift+Ctrl+C
+udbg_skip=Shift+Ctrl+K
+udbg_halt=Shift+Ctrl+H
+udbg_clear=Shift+Ctrl+P
+udbg_edit=Shift+Ctrl+E
+udbg_quickwatch=Shift+Ctrl+F2
+udbg_select=Shift+Ctrl+F3
+udbg_browser=Shift+Ctrl+F5
+udbg_callstack=Shift+Ctrl+F7
+udbg_error=Shift+Ctrl+F8
+udbg_messagelog=Shift+Ctrl+F9
+udbg_settings=Shift+Ctrl+F10
+udbg_pref=Shift+Ctrl+F11
+
+[application]
+logotime=0
+logosynch=off
+;valid values:maxwidth > 300 && maxwidth < 1024 pixels. duration > 5 && duration < 20 seconds
+tooltip=utooltip(maxwidth=350;duration=5)
+shell=ushell(backcolor=white)
+window=uwindow(backcolor=white)
+menu=umenu(backcolor=white;forecolor=black;backcolorselect=#0084CC;forecolorselect=white;backcolorfill=flat)
+panel=upanel(backcolor=white;backcolorhover=white;backcolorlocked=#55C1E8;backcolorselect=#97D5EC;bordercolorhover=#55C1E8;bordercolorlocked=#0084CC;bordercolorselect=#0084CC)
+
+[user]
+name=USER
+
+[upi]
+; User settings
+asynchfieldclick=FALSE
+stretchimage=0
+buttonspacing=1
+buttontype=Icon
+focusflash=On
+paneltype=No
+msglines=50
+debuglines=50
+translines=16000
+frametype=Etched
+textframe=Etched
+linespace=0
+sound=On
+; Advanced settings
+minresource=20
+automaximize=Off
+; Japanese extensions
+autoimeopen=Off
+autoimegold=On
+autoimeclose=On
+; Compatibility settings
+scrollbars=Aligned
+bold=On
+italic=On
+underline=On
+fmtsessionpanel=On
+; panelcolor = #RRGGBB or RRR,GGG,BBB or WEB Color like "tomato","orange" etc.
+panelcolor=Off
+fmtformpanels=On
+colornormal=56
+colorinverse=7
+profile=183
+keypadenteraccess=Off
+cellheight=100
+framealign=Center
+buttonstyle=9
+windowonunifield=Off
+closecontext=On
+systemcolors=On
+UGETNAME_NoApplicationName=0
+
+[layout]
+history=on
+savecontainedform=Off
+
+[toolbar]
+charsets=0,0,0,0,0,0,0,0
+fontlist=Off
+stylebuttons=Off
+viewtoggle=Off
+mdicontrols=Off
+menutoggle=Off
+csetaccelerator=2
+
+[foreground]
+normal=0,0,0, 0,0,255, 0,255,0, 0,255,255, 255,0,0, 255,0,255, 255,255,0, 0,0,0
+bright=128,128,128, 0,0,128, 0,128,0, 0,128,128, 128,0,0, 128,0,128, 128,128,0, 128,128,128
+blink=255,255,255, 192,192,192, 0,255,0, 0,255,255, 255,0,0, 255,0,255, 255,255,0, 255,255,255
+brightblink=128,128,128, 0,0,128, 0,128,0, 0,128,128, 128,0,0, 128,0,128, 128,128,0, 128,128,128
+
+[background]
+normal=192,192,192, 0,0,255, 0,255,0, 0,255,255, 255,0,0, 255,0,255, 255,255,0, 255,255,255
+bright=192,192,192, 0,0,255, 0,255,0, 0,255,255, 255,0,0, 255,0,255, 255,255,0, 255,255,255
+blink=0,0,255, 0,0,255, 0,0,255, 0,0,255, 0,0,255, 0,0,255, 0,0,255, 0,0,255
+brightblink=0,255,255, 0,255,255, 0,255,255, 0,255,255, 0,255,255, 0,255,255, 0,255,255, 0,255,255
+
+[screen]
+; Default label font
+Label=Arial,Western,8,regular
+
+; Some custom logical fonts
+HyperLabel=Segoe UI,Western,8,underline
+MonoHuge=Courier New,18,regular
+MonoLarge=Courier New,12,regular
+MonoMedium=Courier New,10,regular
+MonoSmall=Courier New,8,regular
+MonoTiny=Courier New,7,regular
+SansHuge=Microsoft Sans Serif,18,regular
+SansLarge=Microsoft Sans Serif,12,regular
+SansMedium=Microsoft Sans Serif,10,regular
+SansSmall=Microsoft Sans Serif,8,regular
+SansTiny=Microsoft Sans Serif,7,regular
+SerifHuge=Times New Roman,18,regular
+SerifLarge=Times New Roman,12,regular
+SerifMedium=Times New Roman,10,regular
+SerifSmall=Times New Roman,8,regular
+SerifTiny=Times New Roman,7,regular
+TahomaSmall=Tahoma,8,regular
+TahomaMedium=Tahoma,9,regular
+TahomaLarge=Tahoma,11,regular
+VerdanaSmall=Verdana,8,regular
+VerdanaMedium=Verdana,9,regular
+VerdanaLarge=Verdana,11,regular
+
+; Font for labels that represent form texts
+FormText=Courier New,Western,9,regular
+
+; Canvas fonts
+; If the canvas font changes, so should the other following fonts.
+font0=Courier New,Western,9,regular
+
+; Logical fonts used by Development environment
+EditFont=Segoe UI,Western,8,regular
+ListFont=Segoe UI,Western,8,regular
+GFP=Segoe UI,Western,8,regular
+ButtonFont=Segoe UI,Western,8,regular
+DiagramFont=Segoe UI,Western,8,regular
+ProcboxFont=Consolas,10,regular
+
+; Logical fonts used by 9.7 Development environment
+IDFButtonText=Segoe UI,Western,8,bold
+IDFButtonTextLarge=Segoe UI,Western,12,bold
+IDFCategories=Microsoft Sans Serif,13,regular
+
+; Logical fonts used by panel, toolbar, messageline and debugger
+combo=Segoe UI,Western,8,regular
+debug=Segoe UI,Western,8,regular
+buttons=Segoe UI,Western,8,regular
+messagefont=Segoe UI,Western,8,regular
+
+[printer]
+; Always restore to default printer
+defaultprinter=FALSE
+; Default label font
+Label=Arial,Western,8,regular
+
+; Some custom logical fonts
+SansHuge=Arial,18,regular
+SansLarge=Arial,12,regular
+SansMedium=Arial,10,regular
+SansSmall=Arial,8,regular
+SansTiny=Arial,7,regular
+
+; Logical fonts used by Development environment
+ButtonFont=Arial,Western,8,regular
+
+; Logical fonts used by panel, toolbar, messageline and debugger
+buttons=Arial,Western,8,regular
+colorno=
+font0=Courier New,Western,10,regular
+
+[udde]
+timeout=1
+dde=off
+
+[chui]
+; Font for CHR driver
+facename=Terminal
+fontsize=10
+
+[state]
+windowsize=1000,756
+windowpos=8, 6
+panel=On
+panelsize=300, 24
+panelpos=400, 40
+windowmax=Off
+panelmin=Off
+GFPstatus=665,447,1,
+GFPpalette=827,179,2,
+
+[help]
+default=uniface.hlp
+messages=messages.hlp
+
+[uniface_dlls]
+nls=USA
+
+[webwidgets]
+; Logical to physical widget mapping for DSPs
+EditBox=htmlinput(html:type=text;detail=dblclick)
+TextArea=htmltextarea(detail=dblclick)
+CommandButton=htmlinput(html:type=button;clientsyntaxcheck=false)[syntax=ned]
+CommandButton_updatable=htmlinput(html:type=button;clientsyntaxcheck=false)
+CheckBox=htmlinput(html:type=checkbox)
+DropDownList=htmlselect(html:size=1)
+ListBox=htmlselect(html:size=3)
+DatePicker=htmlinput(html:type=date)
+RadioGroup=htmlradiogroup(style:display=inline-block)
+Password=htmlinput(html:type=password)
+Picture=image(clientsyntaxcheck=false)[syntax=ned,npr]
+Picture_updatable=image(clientsyntaxcheck=false)[syntax=npr]
+PictureButton=image(clientsyntaxcheck=false)[syntax=ned]
+PictureButton_updatable=image(clientsyntaxcheck=false)
+Label=label(clientsyntaxcheck=false)[syntax=ned]
+StaticText=plain(rawhtml=false;clientsyntaxcheck=false)[syntax=ned,npr]
+StaticText_updatable=plain(rawhtml=false;clientsyntaxcheck=false)[syntax=npr]
+RawHtml=plain(rawhtml=true;clientsyntaxcheck=false)[syntax=ned,npr]
+RawHtml_updatable=plain(rawhtml=true;clientsyntaxcheck=false)[syntax=npr]
+FlatButton=plain(rawhtml=false;clientsyntaxcheck=false)[syntax=ned]
+FlatButton_updatable=plain(rawhtml=false;clientsyntaxcheck=false)
+AttributesOnly=genericHTML
+DspContainer=dspcontainer
+; DOJO widgets
+; EditBox=dojoeditbox(theme=tundra;css=$LIBURL/dijit/themes/tundra/tundra.css)
+; Password=dojopassword(theme=tundra;css=$LIBURL/dijit/themes/tundra/tundra.css)
+; TextArea=dojotextarea(theme=tundra;css=$LIBURL/dijit/themes/tundra/tundra.css)
+; CommandButton=dojocommandbutton(theme=tundra;css=$LIBURL/dijit/themes/tundra/tundra.css;clientsyntaxcheck=false)[syntax=ned]
+; CommandButton_updatable=dojocommandbutton(theme=tundra;css=$LIBURL/dijit/themes/tundra/tundra.css;clientsyntaxcheck=false)
+; CheckBox=dojocheckbox(theme=tundra;css=$LIBURL/dijit/themes/tundra/tundra.css)
+; DropDownList=dojodropdownlist(theme=tundra;css=$LIBURL/dijit/themes/tundra/tundra.css)
+; ListBox=dojolistbox(theme=tundra;css=$LIBURL/dijit/themes/tundra/tundra.css)
+; DatePicker=dojodatepicker(theme=tundra;css=$LIBURL/dijit/themes/tundra/tundra.css)
+; RadioGroup=dojoradiogroup(theme=tundra;css=$LIBURL/dijit/themes/tundra/tundra.css)
+
+[install]
+version=9.7.01
+root=d:\Uniface970x\common
+project=d:\usys97x\project
+urouter_port=13001
+urouter_machine=localhost
+tomcat_port=8090
+udbg_port=13002
+udbg_machine=localhost
+browser="C:\Program Files (x86)\Google\Chrome\Application\chrome.exe"

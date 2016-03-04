@@ -1,0 +1,4 @@
+start /b java.exe -jar <project_path>ext\winstone-0.9.10.jar --webroot=<project_path>web\ --logfile=<project_path>log\winstone.log --httpPort=<tomcat_port>
+start /b <project_path>ext\paexec -s <uniface_path>common\bin\urouter.exe /dbg /adm=<uniface_path>common\adm /asn=<project_path>asn\urouter2.asn  /dir=<project_path>   tcp:<urouter_machine>+<urouter_port>
+REM C:\Program Files (x86)\IBM\solidDB\solidDB6.5\bin\solid.exe -c<project_pathdbms  -n"dbms" -x hide
+exit

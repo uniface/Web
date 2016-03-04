@@ -1,0 +1,16 @@
+dbms/
+log/
+bin/
+build/
+lst/
+web/dspjs/
+asn/dbms.asn
+asn/idf.asn
+asn/include.asn
+asn/setup.asn
+asn/urouter2.asn
+asn/wasv.asn
+adm/usys.ini
+project.setup.xml
+Development.lnk
+

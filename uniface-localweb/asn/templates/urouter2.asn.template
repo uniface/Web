@@ -1,0 +1,11 @@
+[SETTINGS]
+$putmess_logfile = <project_path>log\urouter_manual%p.log
+$priv_mon_user = urouter
+$default_net = TCP:<urouter_machine>+<urouter_port>|||
+
+; =========================================================================
+; Uniface servers
+; =========================================================================
+[SERVERS]
+<project_name>         = "<uniface_path>common\bin\userver.exe" /dir="<project_path>" /adm="<uniface_path>uniface\adm" /asn=.\asn\wasv.asn
+<project_name>_debug   = "<uniface_path>common\bin\userver.exe" /dir="<project_path>" /adm="<uniface_path>uniface\adm" /asn=.\asn\wasv.asn /max=1 /deb=<udbg_machine>+<udbg_port>:wait

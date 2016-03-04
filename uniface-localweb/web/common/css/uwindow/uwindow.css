@@ -1,0 +1,77 @@
+/* webmessage styling */
+.uwindow {
+  position: absolute;
+  border-bottom: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  visibility: hidden;
+  background-color: ivory;
+  min-width: 500px;
+}
+.uwindow .utitlebar {
+  padding: 0.3em;
+}
+.usurroundings {
+  background-color:white;
+  cursor: not-allowed;
+  filter: alpha(opacity=0);       /* IE, Opera    */
+  opacity:.0;                     /* FF           */
+}
+.uontop {
+  position: absolute;
+  z-index: 9999;
+}
+.utitlebar {
+  padding: 1px;
+  text-indent: 3px;
+  height: 24px;
+  font: bold 14px Arial;
+  background-color: #CA0000;
+  background-image:url(../../images/uwindow/titlebar.jpg); 
+  color: white;
+  cursor: move;
+  overflow: hidden;
+  width: auto;
+  -moz-opacity: 1;
+  opacity: 1;
+}
+.utitlebar .wincontrols {
+  position: absolute;
+  right: 1px;
+  top: 2px;
+  cursor: hand;
+  cursor: pointer;
+}
+/*IE6 and below CSS hack. Width must be set to 100% in order for opaque title bar to render*/
+* html .utitlebar {
+  width: 100%;
+}
+.clientwindow {
+  border-top: 1px solid brown;
+  background-color: ivory;
+  color: black;
+  height: auto;
+  padding: 2px;
+  width: auto;
+}
+.clientwindow>div {
+  text-align: left !important;
+  padding-left: 1em;
+  overflow: scroll;
+  display: block;
+  font-family: monospace;
+  white-space: pre;
+}
+.clientwindow>div input {
+  margin-left: 45%;
+}
+.clientwindow>div img {
+  margin-left: -16px;
+  padding-left: 50%;
+}
+.statusline { /*CSS for Status Bar div (includes resizearea)*/
+  border-top: 1px solid gray;
+  background-color: #F8F8F8;
+  height: 24px;
+  font: 14px Arial;
+}

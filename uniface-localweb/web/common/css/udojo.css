@@ -1,0 +1,7 @@
+.unifaceRadioGroup, .unifaceRadioInput, .unifaceRadioLabel {
+  border: none;
+  background-color: transparent;
+}
+.unifaceRadioInput {
+  width: 16px;  /* Firefox two needs this, sometimes. */
+}
