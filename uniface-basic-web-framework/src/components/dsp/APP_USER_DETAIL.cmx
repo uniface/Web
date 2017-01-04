@@ -325,8 +325,10 @@ endvariables
 		webmessage/error "Failed to create service (%%$status%%%)"
 		return 0
 	endif
+	
+	; TSS Jan-04-2017 Change from "id" to "param" to pass options.
 
-	$status = vService-&gt;get(pOptions-&gt;"id", vXml)
+	$status = vService-&gt;get(pOptions-&gt;"param", vXml)
 	if($status &lt; 0)
 		webmessage/error "Load failed (%%$status%%%)"
 		return 0
