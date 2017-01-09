@@ -312,13 +312,16 @@ endvariables
 	vAction       = pOptions-&gt;"action"
 	vParam        = pOptions-&gt;"param"
 
-	USERNAME.MENU = lpGetUserName()
+	USERNAME.MENU/init = lpGetUserName()
 
-	;Figure out what DSP we should be displaying, look up the passed page in the 
-	;routes struct.
-	vResource = lpGetResourceByNameAndAction(vResourceName, vAction, vRoutes)
-	vDspName = vResource-&gt;"dsp"
-
+	if (vRoutes = "")
+		vDspName = $uppercase(vResourceName)
+	else
+		;Figure out what DSP we should be displaying, look up the passed page in the 
+		;routes struct.
+		vResource = lpGetResourceByNameAndAction(vResourceName, vAction, vRoutes)
+		vDspName = vResource-&gt;"dsp"
+	endif
 	if(vDspName == "")
 		;Default the DSP to the first route
 		vResourceName = vRoutes-&gt;*{1}-&gt;$name

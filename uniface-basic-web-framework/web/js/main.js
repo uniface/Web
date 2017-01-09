@@ -3,12 +3,14 @@
 
 var app = {
 
-  menuInstance:   null, //The Menu DSP Instance
-  urlRewriting:   null, //Is URL Rewriting switched on?
-  navigationType: null, //What UI are we using?
-  config:         null, //The contents of the application configuration file
   baseUrl:        null, //Base URL for the application (e.g. /WebFramework/)
-
+  config:         null, //The contents of the application configuration file
+  homePage:       "BASIC_HOME", // home page loaded inside mainPage
+  mainPage:       "APP_MAIN", // The main DSP
+  menuInstance:   null, //The Menu DSP Instance
+  navigationType: null, //What UI are we using?
+  urlRewriting:   null, //Is URL Rewriting switched on?
+  
   /*
   *  showScreen
   *
@@ -38,15 +40,28 @@ var app = {
     refreshPage = (typeof options.refreshPage === "undefined") ? false : options.refreshPage;
 
     resource = app.config.getResourceByNameAndAction(resourceName, action);
-    dspToShow = resource.dsp;
+	if (resource && resource.hasOwnProperty('dsp')) {
+		dspToShow = resource.dsp;
+		
+		//Does this resource define a DSP instance name? If not, default it to the name of the DSP
+		instanceToShow = (typeof resource.instanceName === "undefined") ? dspToShow : resource.instanceName;
 
-    //Does this resource define a DSP instance name? If not, default it to the name of the DSP;
-    instanceToShow = (typeof resource.instanceName === "undefined") ? dspToShow : resource.instanceName;
-
-    if (instanceToShow === undefined) {
-      //TODO: Proper way to report errors arising from JavaScript code like this
-      console.error("Menu config incorrect");
-    }
+		if (instanceToShow === undefined) {
+			//TODO: Proper way to report errors arising from JavaScript code like this
+			console.error("Menu config incorrect");
+		}
+	}
+	else {
+		// No route defined, use resource name or home page if not specified
+		if (resource) {
+			dspToShow = resource.toUpperCase();
+		}
+		else {
+			dspToShow = app.homePage;
+		}
+		//TODO provide a method to specify an instance name when no route defined
+		instanceToShow = dspToShow;
+	}
 
     //Push the param passed in on the URL to the options object, this then gets
     //passed to the DSP we're starting
@@ -81,6 +96,16 @@ var app = {
       });
 
     });
+  },
+  
+  // Override APP_MAIN if needed
+  setMainPage: function(mainPage) {
+	this.mainPage = mainMage
+  },
+
+  // Override BASIC_HOME if needed
+  setHomePage: function(homePage) {
+	this.homePage = homeMage
   },
 
   //Show a screen that hasn't be loaded into the browser yet

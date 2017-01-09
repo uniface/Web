@@ -14,27 +14,44 @@ app.config = {
         var routeCollection,
             route;
         
-        routeCollection = this.data.routes;
-        
-        //If no resource is passed in then simply return the first route
-        if(typeof resourceName === "undefined" | resourceName === null) {
+        if (this.data.hasOwnProperty('routes')) {
+			routeCollection = this.data.routes;
+	       //If no resource is passed in then simply return the first route
+			if(typeof resourceName === "undefined" | resourceName === null | !resourceName) {
             
-            for (var i in routeCollection) {
-                if (routeCollection.hasOwnProperty(i) && typeof(i) !== 'function') {
-                    return routeCollection[i];
-                }
-            }
-        }
+				for (var i in routeCollection) {
+					if (routeCollection.hasOwnProperty(i) && typeof(i) !== 'function') {
+						return routeCollection[i];
+					}
+				}
+			}
+ 		}
+		else {
+			routeCollection = null;
+		}
         
         action = (typeof action === "undefined" | action === null) ? "" : action;
-        
-        route = routeCollection[resourceName];
+ 
+		if (routeCollection) {
+			route = routeCollection[resourceName];
+			if (typeof route === "undefined") {
+				route = resourceName;
+			}
+		}
+		else {
+			route = resourceName;
+		}
         
         if (action != "") {
-            if (route.hasOwnProperty("children")) {
-                routeCollection = route.children;
-                route = routeCollection[action];   
-            }
+            if (route.hasOwnProperty("dsp")) {
+				if (route.hasOwnProperty("children")) {
+					routeCollection = route.children;
+					route = routeCollection[action];
+				}
+			}
+			else {
+				route = action;
+			}
         }
         
         return route;
