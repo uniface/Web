@@ -167,8 +167,8 @@
  pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\F1,0,0,0,,0,0,0,," />
 </DSC>
 <OCC>
-<DAT name="UTIMESTAMP">2017-01-10T14:24:39.00</DAT>
-<DAT name="UCOMPSTAMP">2017-01-10T14:27:46.00</DAT>
+<DAT name="UTIMESTAMP">2017-01-10T16:24:25.00</DAT>
+<DAT name="UCOMPSTAMP">2017-01-10T16:24:30.00</DAT>
 <DAT name="ULABEL">APP_MAIN</DAT>
 <DAT name="WVPOS">3</DAT>
 <DAT name="WHPOS">1</DAT>
@@ -235,6 +235,7 @@ webactivate $instancename.setupJS( %\
                                 vParam,           %\
                                 $navigationType$, %\
                                 vAppConfigJson,   %\
+                                $urlShow$,        %\
                                 $urlRewriting$,   %\
                                 $baseUrl$)
 
@@ -350,6 +351,7 @@ operation init
 
 	$baseUrl$        = $logical("BASE_URL")
 	$navigationType$ = $lowercase( $logical("NAVIGATION_TYPE") )
+	$urlShow$        = $logical("URL_SHOW")
 	$urlRewriting$   = $logical("URL_REWRITING")
 
 	call lpLoadMenuConfig($navigationType$, $appConfig$)
@@ -398,6 +400,7 @@ params
 	String  pParam          : IN
 	String  pNavigationType : IN
 	String  pAppConfigJson  : IN
+	Boolean pUpdateState    : IN
 	Boolean pUrlRewriting   : IN
 	String  pBaseUrl        : IN
 endparams
@@ -417,31 +420,35 @@ javascript
 		app.urlRewriting = true;
 	}
 
-	app._updateState(false, pResource, pAction, pParam);
+	if (pUpdateState == "T" || pUpdateState == true) {
+		app.updateState = true;
+		app._updateState(false, pResource, pAction, pParam);
+		/*
+		 *  Register a listener against the popState event
+		 *  to handle users pressing the back and forward
+		 *  buttons.
+		 */
 
-	/*
-	 *  Register a listener against the popState event
-	 *  to handle users pressing the back and forward
-	 *  buttons.
-	 */
-	window.addEventListener("popstate", function(e) {
+		window.addEventListener("popstate", function(e) {
 
-		if(!e.state) {
-			return
-		}
+			if(!e.state) {
+				return
+			}
 
-		console.log('Popping state..');
-		console.log(e.state);
+			console.log('Popping state..');
+			console.log(e.state);
 
-		var resource = e.state.resource;
-		var action   = e.state.action;
-		var param    = e.state.param;
+			var resource = e.state.resource;
+			var action   = e.state.action;
+			var param    = e.state.param;
 
-		var options = {};
-		options.updateState = false;
+			var options = {};
+			options.updateState = false;
 
-		app.showScreen(resource, action, param, options);
-	});
+			app.showScreen(resource, action, param, options);
+		});
+
+	}
 
 endjavascript
 
@@ -1066,6 +1073,12 @@ end ;modalCallback</DAT>
 <DAT name="UTIMESTAMP">2015-04-14T09:04:11.00</DAT>
 <DAT name="U_FORMLIB">APP_MAIN</DAT>
 <DAT name="U_NAME">URLREWRITING</DAT>
+<DAT name="U_DTYP">B</DAT>
+</OCC>
+<OCC>
+<DAT name="UTIMESTAMP">2017-01-10T15:32:55.00</DAT>
+<DAT name="U_FORMLIB">APP_MAIN</DAT>
+<DAT name="U_NAME">URLSHOW</DAT>
 <DAT name="U_DTYP">B</DAT>
 </OCC>
 </TABLE>

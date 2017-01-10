@@ -26,3 +26,6 @@ STATE_MODULE          = TOMCAT
 ;MPOLY     -
 ;
 NAVIGATION_TYPE       = TOP
+
+;Uncomment to enable HTML 5 history API (show URL and allow back/forward)
+;URL_SHOW = T

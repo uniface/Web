@@ -9,6 +9,7 @@ var app = {
   mainPage:       "APP_MAIN", // The main DSP
   menuInstance:   null, //The Menu DSP Instance
   navigationType: null, //What UI are we using?
+  updateState:    false, //Use HTML5 history - overridden by Uniface
   urlRewriting:   null, //Is URL Rewriting switched on?
   
   /*
@@ -35,9 +36,9 @@ var app = {
     attrName,
     state;
 
-    options     = (typeof options             === "undefined") ? {}    : options;
-    updateState = (typeof options.updateState === "undefined") ? true  : options.updateState;
-    refreshPage = (typeof options.refreshPage === "undefined") ? false : options.refreshPage;
+    options     = (typeof options             === "undefined") ? {}              : options;
+    updateState = (typeof options.updateState === "undefined") ? app.updateState : options.updateState;
+    refreshPage = (typeof options.refreshPage === "undefined") ? false           : options.refreshPage;
 
     resource = app.config.getResourceByNameAndAction(resourceName, action);
 	if (resource && resource.hasOwnProperty('dsp')) {
