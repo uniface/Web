@@ -167,8 +167,8 @@
  pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\F1,0,0,0,,0,0,0,," />
 </DSC>
 <OCC>
-<DAT name="UTIMESTAMP">2015-10-13T15:22:14.00</DAT>
-<DAT name="UCOMPSTAMP">2015-10-13T16:22:14.00</DAT>
+<DAT name="UTIMESTAMP">2017-01-10T13:35:07.00</DAT>
+<DAT name="UCOMPSTAMP">2017-01-10T13:35:08.00</DAT>
 <DAT name="ULABEL">APP_TOP</DAT>
 <DAT name="WVPOS">3</DAT>
 <DAT name="WHPOS">1</DAT>
@@ -275,9 +275,13 @@ end ;lpHighlightTab</DAT>
   &uFRM;TYP=F&uSEP;NAM=PAGE05&uSEP;WID=20&uSEP;HEI=1&uFRM;
   &uFRM;TYP=F&uSEP;NAM=PAGE06&uSEP;WID=20&uSEP;HEI=1&uFRM;
   &uFRM;TYP=F&uSEP;NAM=DROPDOWN_01&uSEP;WID=20&uSEP;HEI=1&uFRM;
-  &uFRM;TYP=F&uSEP;NAM=USERNAME&uSEP;WID=20&uSEP;HEI=1&uFRM;
   &uFRM;TYP=F&uSEP;NAM=LOGOUT&uSEP;WID=20&uSEP;HEI=1&uFRM;
   &uFRM;TYP=F&uSEP;NAM=LOADING&uSEP;WID=20&uSEP;HEI=1&uFRM;
+
+
+ &uFRM;TYP=E&uSEP;NAM=STATUS.DUMMY&uSEP;WID=25&uSEP;HEI=4&uSEP;HOC=25&uSEP;VOC=4&uFRM;
+  &uFRM;TYP=F&uSEP;NAM=USERNAME&uSEP;WID=20&uSEP;HEI=1&uFRM;
+  &uFRM;TYP=F&uSEP;NAM=LOGOUT&uSEP;WID=20&uSEP;HEI=1&uFRM;
 
 
  &uFRM;TYP=E&uSEP;NAM=DUMMY.DUMMY&uSEP;WID=25&uSEP;HEI=3&uSEP;HOC=25&uSEP;VOC=3&uFRM;
@@ -312,7 +316,7 @@ endvariables
 	vAction       = pOptions-&gt;"action"
 	vParam        = pOptions-&gt;"param"
 
-	USERNAME.MENU/init = lpGetUserName()
+	USERNAME.STATUS = lpGetUserName()
 
 	if (vRoutes = "")
 		vDspName = $uppercase(vResourceName)
@@ -322,6 +326,7 @@ endvariables
 		vResource = lpGetResourceByNameAndAction(vResourceName, vAction, vRoutes)
 		vDspName = vResource-&gt;"dsp"
 	endif
+
 	if(vDspName == "")
 		;Default the DSP to the first route
 		vResourceName = vRoutes-&gt;*{1}-&gt;$name
@@ -701,6 +706,23 @@ end ;detach
 <DAT name="HTML_ENTPROP" xml:space='preserve'>U_ATLEASTONE=1&uSEP;U_STARTOCC=1</DAT>
 <DAT name="UWEBWIDGETTYPE">U_NONE</DAT>
 </OCC>
+<OCC>
+<DAT name="UTIMESTAMP">2017-01-10T13:27:22.00</DAT>
+<DAT name="ULABEL">STATUS</DAT>
+<DAT name="UBASE">DUMMY</DAT>
+<DAT name="UFORM">APP_TOP</DAT>
+<DAT name="U_BORD">N</DAT>
+<DAT name="U_DBMS">XXX</DAT>
+<DAT name="U_UPD">N</DAT>
+<DAT name="UINHERIT">F</DAT>
+<DAT name="DELOCCR">remocc</DAT>
+<DAT name="CREOCC">creocc</DAT>
+<DAT name="UISBCLASS">F</DAT>
+<DAT name="UISASSOC">F</DAT>
+<DAT name="U_SVCUSE">N</DAT>
+<DAT name="HTML_ENTPROP" xml:space='preserve'>U_ATLEASTONE=1&uSEP;U_STARTOCC=1</DAT>
+<DAT name="UWEBWIDGETTYPE">U_NONE</DAT>
+</OCC>
 </TABLE>
 <TABLE>
 <DSC name="UXFIELD" model="DICT" system="S" pseudo ="73" level="1" noupdate="0"
@@ -1024,6 +1046,38 @@ endscope
 	return 0
 
 end ;onClick</DAT>
+<DAT name="WEBWIDGETTYPE">ATTRIBUTESONLY</DAT>
+</OCC>
+<OCC>
+<DAT name="UTIMESTAMP">2017-01-10T13:35:07.00</DAT>
+<DAT name="ULABEL">LOGOUT</DAT>
+<DAT name="GRP">STATUS</DAT>
+<DAT name="UBASE">DUMMY</DAT>
+<DAT name="UFORM">APP_TOP</DAT>
+<DAT name="U_DTYP">S</DAT>
+<DAT name="U_INDB">N</DAT>
+<DAT name="INTERFACEMOD">C*</DAT>
+<DAT name="WIDGETTYPE">EDITBOX</DAT>
+<DAT name="UINHERIT">F</DAT>
+<DAT name="UISOBJID">F</DAT>
+<DAT name="HTML_CTRLTYPE">U_INPUT</DAT>
+<DAT name="UFTRIGGERS" xml:space='preserve'>;---------------------------------------------------
+trigger onClick
+;---------------------------------------------------
+public web
+
+scope
+	input
+	output
+	operation &lt;MAIN_DSP&gt;.logOff
+endscope
+
+	activate "&lt;MAIN_DSP&gt;".logOff()
+
+	return 0
+
+end ;onClick
+</DAT>
 <DAT name="WEBWIDGETTYPE">ATTRIBUTESONLY</DAT>
 </OCC>
 <OCC>
@@ -1467,6 +1521,21 @@ end ;onClick</DAT>
 <DAT name="UTIMESTAMP">2015-04-14T10:20:09.00</DAT>
 <DAT name="ULABEL">USERNAME</DAT>
 <DAT name="GRP">MENU</DAT>
+<DAT name="UBASE">DUMMY</DAT>
+<DAT name="UFORM">APP_TOP</DAT>
+<DAT name="U_DTYP">S</DAT>
+<DAT name="U_INDB">N</DAT>
+<DAT name="INTERFACEMOD">C*</DAT>
+<DAT name="WIDGETTYPE">EDITBOX</DAT>
+<DAT name="UINHERIT">F</DAT>
+<DAT name="UISOBJID">F</DAT>
+<DAT name="HTML_CTRLTYPE">U_INPUT</DAT>
+<DAT name="WEBWIDGETTYPE">STATICTEXT</DAT>
+</OCC>
+<OCC>
+<DAT name="UTIMESTAMP">2017-01-10T13:27:54.00</DAT>
+<DAT name="ULABEL">USERNAME</DAT>
+<DAT name="GRP">STATUS</DAT>
 <DAT name="UBASE">DUMMY</DAT>
 <DAT name="UFORM">APP_TOP</DAT>
 <DAT name="U_DTYP">S</DAT>
