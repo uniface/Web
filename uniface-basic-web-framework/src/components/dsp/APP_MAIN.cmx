@@ -167,8 +167,8 @@
  pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\F1,0,0,0,,0,0,0,," />
 </DSC>
 <OCC>
-<DAT name="UTIMESTAMP">2015-11-25T11:24:42.00</DAT>
-<DAT name="UCOMPSTAMP">2015-11-25T11:25:38.00</DAT>
+<DAT name="UTIMESTAMP">2017-01-10T14:24:39.00</DAT>
+<DAT name="UCOMPSTAMP">2017-01-10T14:27:46.00</DAT>
 <DAT name="ULABEL">APP_MAIN</DAT>
 <DAT name="WVPOS">3</DAT>
 <DAT name="WHPOS">1</DAT>
@@ -229,7 +229,8 @@ vParam       = $item("PARAM", vQueryString)
 
 ;Send anything out to the browser that we need to use there
 structToJson vAppConfigJson, $appConfig$
-webactivate $instancename.setup(vResource,        %\
+webactivate $instancename.setupJS( %\
+                                vResource,        %\
                                 vAction,          %\
                                 vParam,           %\
                                 $navigationType$, %\
@@ -389,7 +390,7 @@ end ;postFullpageSetState
 
 
 ;---------------------------------------------------------
-weboperation setup
+weboperation setupJS
 ;---------------------------------------------------------
 params
 	String  pResource       : IN
@@ -444,7 +445,7 @@ javascript
 
 endjavascript
 
-end ;setup
+end ;setupJS
 
 
 ;---------------------------------------------------------
