@@ -167,8 +167,8 @@
  pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\F1,0,0,0,,0,0,0,," />
 </DSC>
 <OCC>
-<DAT name="UTIMESTAMP">2017-01-10T16:24:25.00</DAT>
-<DAT name="UCOMPSTAMP">2017-01-10T16:24:30.00</DAT>
+<DAT name="UTIMESTAMP">2017-01-26T09:43:44.00</DAT>
+<DAT name="UCOMPSTAMP">2017-01-26T09:47:20.00</DAT>
 <DAT name="ULABEL">APP_MAIN</DAT>
 <DAT name="WVPOS">3</DAT>
 <DAT name="WHPOS">1</DAT>
@@ -307,7 +307,8 @@ params
 endparams
 
 variables
-	String vMenuMapPath
+	String  vMenuMapPath
+	boolean vUseRoutes
 endvariables
 
 	vMenuMapPath = $concat(".\conf\menu.", pNavigationType, ".json")
@@ -317,6 +318,11 @@ endvariables
 		;Something went wrong. Do this step so we can validate the user
 		;created JSON on the server before we send it out to the browser.
 		return -1
+	endif
+
+	vUseRoutes = $logical("USE_ROUTES")
+	if (vUseRoutes != "" &amp; !vUseRoutes)
+		pMenuMapStruct-&gt;"routes"-&gt;$parent = ""
 	endif
 
 	return 0
