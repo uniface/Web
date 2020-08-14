@@ -1,3 +1,0 @@
-d:
-cd "<project_path>"
-start /min _Stopall.bat

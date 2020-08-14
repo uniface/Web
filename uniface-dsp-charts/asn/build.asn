@@ -1,5 +1,0 @@
-#file .\asn\idf.asn
-
-[SETTINGS]
-$putmess_logfile   .\log\build_%p.log
-$resources_output  .\build\DspCharts.uar
