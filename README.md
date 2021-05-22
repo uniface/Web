@@ -1,6 +1,11 @@
 #This repository contains multiple projects, each detailed below#
 
+## Setup ##
+:todo
+
+-----------------------------------------------  
 #1. Project  CSS Basics #
+-----------------------------------------------  
 
 ## Vanilla CSS ##
 
@@ -34,3 +39,19 @@ In a Uniface application we're going to want to do things like dynamically chang
   + Not "web" and UI only. So still stateful.
   + Pumping data in
   + Handling user interaction
+  
+-----------------------------------------------  
+# 2. DSP Charts #
+-----------------------------------------------  
+
+DSP Charts is a collection of samples demonstrating how to integrate Uniface DSPs with various JavaScript charting libraries. Libraries currently implemented are:
+
+ * [JQPLot](http://www.jqplot.com/)
+ * [morris.js](http://morrisjs.github.io/morris.js/)
+
+## Dependencies ##
+
+DSP Charts has been written and tested with:
+
+ * Uniface 10.3
+ * SQLite
