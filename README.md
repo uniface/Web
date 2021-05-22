@@ -1,4 +1,4 @@
-#This repository contains multiple projects, each detailed below#
+# This repository contains multiple projects, each outlined below #
 
 ## Setup ##
 
