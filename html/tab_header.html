@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>TAB_HEADER</title>
+
+    <link href="../web/lib/bootstrap/css/bootstrap.css" rel="stylesheet">
+
+    <script language="javascript">
+      function tabShow(id) {
+        $('#' + id).tab('show');
+      }
+    </script>
+
+  </head>
+
+  <body>
+    <ul id="myTabs" class="nav nav-tabs">
+      <li role="presentation" class="active"><a href="#" id="a">Form 01</a></li>
+      <li role="presentation">               <a href="#" id="b">Form 02</a></li>
+      <li role="presentation">               <a href="#" id="c">Form 03</a></li>
+      <li role="presentation">               <a href="#" id="d">Form 04</a></li>
+    </ul>
+
+    <script src="../web/lib/jquery-1.11.3.min.js"></script>
+    <script src="../web/lib/bootstrap/js/bootstrap.min.js"></script>
+
+    <script>
+      $('#myTabs a').click(function (e) {
+        e.preventDefault();
+        $(this).tab('show');
+
+        window.unifaceTriggers('tabClicked', this.id);
+
+      });
+    </script>
+  </body>
+
+</html>
