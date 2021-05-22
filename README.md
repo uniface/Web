@@ -38,9 +38,7 @@ In a Uniface application we're going to want to do things like dynamically chang
   + Pumping data in
   + Handling user interaction
   
------------------------------------------------  
-# 2. DSP Charts #
------------------------------------------------  
+# 2. DSP Charts #  
 
 DSP Charts is a collection of samples demonstrating how to integrate Uniface DSPs with various JavaScript charting libraries. Libraries currently implemented are:
 
