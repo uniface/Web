@@ -1,0 +1,11 @@
+.foo {
+  transition:background 3s;
+  height:30px;
+  width:200px;
+}
+
+.yellow {
+  background:yellow;
+  height:30px;
+  width:200px;
+}
