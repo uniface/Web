@@ -3,7 +3,7 @@
 ## Setup ##
 
  * This project can be synchronized using the WAS plugin (https://github.com/uniface/WASListener), compiled and run.
- * Import data in found in the exports folder
+ * Import the data found in the exports folder
  * If your webapp folder differs to web in your git repository root folder, please copy the contents of web to your webapp folder.
  
 # 1. Project  CSS Basics #
