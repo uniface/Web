@@ -5,6 +5,13 @@
  * This project can be synchronized using the WAS plugin (https://github.com/uniface/WASListener), compiled and run.
  * Import data in found in the exports folder
  * If your webapp folder differs to web in your git repository root folder, please copy the contents of web to your webapp folder.
+
+ ## Dependencies ##
+
+These samples have been written and tested with:
+
+ * Uniface 10.3.02
+ * SQLite
  
 # 1. Project  CSS Basics #
 
@@ -48,14 +55,7 @@ DSP Charts is a collection of samples demonstrating how to integrate Uniface DSP
  * [JQPLot](http://www.jqplot.com/)
  * [morris.js](http://morrisjs.github.io/morris.js/)
 
-## Dependencies ##
-
-DSP Charts has been written and tested with:
-
- * Uniface 10.3
- * SQLite
-
- # 3. HTML_JQGrid #
+# 3. HTML_JQGrid #
 
 The purpose of this repository is to provide samples on how the JQGrid library of Grids might be incorporated into a Uniface App. Targetted at web apps it is also possible to embed
 these grids inside of a Uniface HTML container as an alternate to the standard Uniface grid. The examples contain samples of both implementations and although not exhaustive
@@ -69,14 +69,11 @@ This includes but not limited to the following features:
  * Pagination
  * Selection & search
  
-## Dependencies ##
-
-HTML_JQGrid has been written and tested with:
-
- * Uniface 10.3.02
- * SQLite
- 
 
 The HTML embedded grid makes use of the freee version of jqgrid  https://github.com/free-jqgrid/jqGrid
 This is a forked MIT/GPL 'free' licensed version of the original grid by Tony Tomov. A newer version has since been commercialized and is available via guriddo.net.
 The resources folder also contain copies of JQuery and JQuery-ui-themes
+
+# 4. DSP File Upload #
+
+DSP File Upload is a collection of samples demonstrating a variety of techniques for uploading files in DSP web applications.

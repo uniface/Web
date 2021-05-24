@@ -141,12 +141,13 @@
  pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\E1,0,0,0,,0,0,0,," />
 </DSC>
 <OCC>
-<DAT name="UTIMESTAMP">2021-05-24T23:08:58.00</DAT>
-<DAT name="ULABEL">PB2</DAT>
+<DAT name="UTIMESTAMP">2015-03-25T11:03:43.00</DAT>
+<DAT name="ULABEL">FILE_UPLOAD_PROG</DAT>
 <DAT name="FTYP">K</DAT>
 <DAT name="DATA_ACCESS">N</DAT>
 <DAT name="UKVERSION">6</DAT>
 <DAT name="UMVERSION">3</DAT>
+<DAT name="UDESCR" xml:space='preserve'>File Upload Progress</DAT>
 <DAT name="WVPOS">3</DAT>
 <DAT name="WHPOS">1</DAT>
 <DAT name="WVSIZ">35</DAT>
@@ -154,10 +155,31 @@
 <DAT name="CLRSCRN">N</DAT>
 <DAT name="UBORDER">N</DAT>
 <DAT name="UINHERIT">F</DAT>
-<DAT name="UTRANSACT">6</DAT>
-<DAT name="UDECLARATIONS" xml:space='preserve'>variables
-  string          VFIELDS                  
-endvariables
+<DAT name="UTRANSACT">7</DAT>
+<DAT name="UDECLARATIONS" xml:space='preserve'>#Comment ----------------------------------------------
+#Comment start_of_references
+#ifdefined TEMPLATENAME
+#info symbol TEMPLATENAME is already or also defined as a global or local constant
+#endif
+#define TEMPLATENAME=
+#Comment 
+
+#Comment end_of_references
+
+
+#Comment ----------------------------------------------
+#Comment start_of_mappings
+#Comment end_of_mappings
+
+
+#Comment ----------------------------------------------
+#Comment start_of_symbols
+#Comment end_of_symbols
+
+
+#Comment ----------------------------------------------
+
+
 
 #comment The pre-defined constant $cmpStateManagedBy represents the component property 'State Managed By'.
 #comment See GetState and SetState triggers for usage.
@@ -167,38 +189,15 @@ endvariables
 #define  byCookie                = 1
 #define  byStateManagerComponent = 2
 </DAT>
-<DAT name="USCRIPT" xml:space='preserve'>#startdefine
-
-#define $triggerAbbr=OPER
-#include U:zProcError  ; Report an unexpected failure in a proc statement.
-
-#enddefine
-
-operation exec
-; To run this operation, it must be declared ‘public web’. Otherwise, it results in a security error on the browser.
-; The 'exec' operation is needed to access the static server page from a web client.
+<DAT name="USCRIPT" xml:space='preserve'>operation exec
 public web
-; Your VARIABLES block here (optional)...
 
-  ; Your pre-edit code here...
 
-  webget   ; Load data submitted by web client
-  if ($procerror == 0)
-    webgen ; Generate a response based on the layout and component data
-  else
-	; Your error handling here...
-  endif
-
-  ; Your post-edit code here...
-
-  ;   return 0    ; return &gt;= 0 typically indicates a succesful execution
-  return 0
-
-end
 
 trigger preActivate
 variables
-  string  WebServerContext, Cookie, Session, UserContext
+  string  WebServerContext, Cookie, Session, UserContext, sOuter
+  numeric i
 endvariables
 
 ; =======================================================================================
@@ -219,11 +218,6 @@ endvariables
   getlistitems/id /component UserContext
   ; Insert your code...
 #endif ; &lt;$cmpStateManagedBy&gt;
-
-
-$vfields$ = $replace($webinfo("input"),1,"&uSEP;","&lt;br /&gt;",-1)
-
-
 
 ; When using the State Manager Component:
 ; Use the following activates to delete an occurrence in your state table or cleanup your state table (USTATE.STATE).
@@ -246,6 +240,40 @@ $vfields$ = $replace($webinfo("input"),1,"&uSEP;","&lt;br /&gt;",-1)
 ; =======================================================================================
 
 
+
+; =======================================================================================
+; Parse request
+; ----------------------------------------------
+selectcase $webrequesttype
+case "DYNAMIC"
+  webload                         ; Get Data
+  if ($procerror &lt; 0)
+    webmessage/error "webload failed (Get State)%%^$procerror = %%$procerror%%%"
+    return (0)
+  endif
+
+  i = 1
+  getitem sOuter, $componentinfo($instancename, "OUTERENTITIES"), i
+  while ($status &gt; 0)
+    reconnect/readcheck "%%sOuter%%%"    ; Reconnect Data
+    if ($status != 0)
+      webmessage/error "reconnect %%sOuter%%% failed (Get State)%%^$status = %%$status%%%"
+      return ($status)
+    endif
+    i = i + 1
+    getitem sOuter, $componentinfo($instancename, "OUTERENTITIES"), i
+  endwhile
+
+  websetocc                       ; Set Occurrence Context
+  if ($procerror &lt; 0)
+    webmessage/error "websetocc failed (Get State)%%^$procerror = %%$procerror%%%"
+    return (0)
+  endif
+endselectcase
+; =======================================================================================
+
+
+
 ; =======================================================================================
 ; Execution ok
 ; ----------------------------------------------
@@ -260,6 +288,42 @@ variables
 endvariables
 
 ; =======================================================================================
+; Generate response
+; ----------------------------------------------
+selectcase $webresponsetype
+case "UPDATE"         ; Update page
+  websave               ; Generate data
+  if ($procerror &lt; 0)
+    webmessage/error "websave failed (Set State)%%^$procerror = %%$procerror%%%"
+    return (0)
+  endif
+case "FULLPAGE"       ; Initial page
+  weblayout             ; Generate layout
+  if ($procerror &lt; 0)
+    webmessage/error "weblayout failed (Set State)%%^$procerror = %%$procerror%%%"
+    return ($status)
+  endif
+
+  webdefinitions        ; Generate component definitions
+  if ($procerror &lt; 0)
+    webmessage/error "webdefinitions failed (Set State)%%^$procerror = %%$procerror%%%"
+    return ($status)
+  endif
+
+  ;Add our custom Javascript
+  putitem $webinfo("JAVASCRIPT"), -1, "../js/uploadProgress.js"
+
+  websave               ; Generate data
+  if ($procerror &lt; 0)
+    webmessage/error "websave failed (Set State)%%^$procerror = %%$procerror%%%"
+    return (0)
+  endif
+endselectcase
+; =======================================================================================
+
+
+
+; =======================================================================================
 ; Set state
 ; ----------------------------------------------
 ; The constants noState, byCookie and byStateManagerComponent are assumed
@@ -268,7 +332,7 @@ endvariables
   ; Insert your code...
 #elsif ("&lt;$cmpStateManagedBy&gt;" = "&lt;byCookie&gt;")
   ; Initialize Varlist with all component variables.
-  Varlist = $componentinfo($instancename, "VARIABLES")
+  Varlist = $componentinfo($componentname, "VARIABLES")
   ; Add the current values of the component variables to Varlist.
   putlistitems/id /component Varlist
   ; Insert your code...
@@ -277,13 +341,12 @@ endvariables
   WebServerCntxt = $webinfo("WEBSERVERCONTEXT")
   getitem/id SessionId, WebServerCntxt, "SESSION"
   ; Initialize Varlist with all component variables.
-  Varlist = $componentinfo($instancename, "VARIABLES")
+  Varlist = $componentinfo($componentname, "VARIABLES")
   ; Add the current values of the component variables to Varlist.
   putlistitems/id /component Varlist
   ; Insert your code...
   activate "USYSSTAT".SetState(SessionId, $instancename, Varlist)
 #endif
-$webinfo("output") = $replace($webinfo("output"),1,"$U$","&lt;br /&gt;Name:&lt;input type=%%"text%%" name=%%"name%%"&gt; E-mail:&lt;input type=%%"text%%" name=%%"email%%"&gt;&lt;br&gt;",-1)
 ; =======================================================================================
 
 
@@ -295,39 +358,37 @@ return (0)
 ; =======================================================================================
 </DAT>
 <DAT name="FORMPIC" xml:space='preserve'>
- &uFRM;TYP=E&uSEP;NAM=OUTER.U&uSEP;WID=22&uSEP;HEI=11&uSEP;HOC=22&uSEP;VOC=11&uFRM;
-  &uFRM;TYP=L&uSEP;NAM=NAME.OUTER&uSEP;WID=20&uSEP;HEI=1&uSEP;LAB=Name:&uFRM;
+ &uFRM;TYP=E&uSEP;NAM=DSP_DUMMY.DUMMY&uSEP;WID=22&uSEP;HEI=7&uSEP;HOC=22&uSEP;VOC=7&uFRM;
+  &uFRM;TYP=F&uSEP;NAM=UPLOAD_BUTTON&uSEP;WID=20&uSEP;HEI=1&uFRM;
 
-  &uFRM;TYP=F&uSEP;NAM=NAME&uSEP;WID=20&uSEP;HEI=1&uFRM;
+  &uFRM;TYP=F&uSEP;NAM=CANCEL_BUTTON&uSEP;WID=20&uSEP;HEI=1&uFRM;
 
-  &uFRM;TYP=L&uSEP;NAM=EMAIL.OUTER&uSEP;WID=20&uSEP;HEI=1&uSEP;LAB= E-mail:&uFRM;
-
-  &uFRM;TYP=F&uSEP;NAM=EMAIL&uSEP;WID=20&uSEP;HEI=1&uFRM;
-
-  &uFRM;TYP=F&uSEP;NAM=SUBMIT&uSEP;WID=20&uSEP;HEI=1&uFRM;</DAT>
+  &uFRM;TYP=F&uSEP;NAM=CLEAR&uSEP;WID=20&uSEP;HEI=1&uFRM;</DAT>
 <DAT name="USCONTAINED">1</DAT>
 <DAT name="USTATEMANAGEDBY">0</DAT>
-<DAT name="HTMLSKELETON" xml:space='preserve'>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
-&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;&lt;head&gt;
-&lt;meta name="Default" content="Uniface 9" /&gt;
-&lt;link rel="stylesheet" type="text/css" href="../css/applic.css" /&gt;
-&lt;x-subst type="function" name="$usp_formtitle"&gt;&lt;title&gt;$usp_formtitle&lt;/title&gt;
-
-&lt;/x-subst&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;form method="post" action="" onsubmit="return uSubmit(this);"&gt;
-&lt;x-entity name="OUTER.U"&gt;
-&lt;div u_atleastone="1" u_startocc="1"&gt;&lt;x-occurrence atleastone="1" start="first" max="25" name="OUTER.U"&gt;
-&lt;div&gt;&lt;x-subst type="label" name="NAME.OUTER.U"&gt;&lt;label&gt;Label&lt;/label&gt;
-&lt;/x-subst&gt;&lt;x-subst type="text" name="NAME.OUTER.U"&gt;&lt;input name="NAME.OUTER.U" value="Input" type="text" /&gt;&lt;/x-subst&gt;&lt;x-subst type="label" name="EMAIL.OUTER.U"&gt;&lt;label&gt;Label&lt;/label&gt;
-&lt;/x-subst&gt;&lt;x-subst type="text" name="EMAIL.OUTER.U"&gt;&lt;input name="EMAIL.OUTER.U" value="Input" type="text" /&gt;&lt;/x-subst&gt;&lt;br /&gt;
-$U$&lt;x-subst type="submit" name="SUBMIT.OUTER.U"&gt;&lt;input name="SUBMIT.OUTER.U" type="submit" /&gt;&lt;/x-subst&gt;&lt;/div&gt;
-&lt;/x-occurrence&gt;
-&lt;/div&gt;
-&lt;/x-entity&gt;
-&lt;/form&gt;
-&lt;/body&gt;&lt;/html&gt;</DAT>
+<DAT name="HTMLSKELETON" xml:space='preserve'>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;meta name="Default" content="Uniface 9"&gt;
+    &lt;title&gt;File Upload with Progress Bar&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;form action="" method="post" enctype="multipart/form-data"&gt;
+      &lt;input name="file" id="fileA" onchange="fileChange();" type="file"&gt;
+      &lt;input id="ufld:UPLOAD_BUTTON.DSP_DUMMY.DUMMY" name="upload" value="Upload" type="button"&gt;
+      &lt;input id="ufld:CANCEL_BUTTON.DSP_DUMMY.DUMMY" name="abort" value="Abort" type="button"&gt;
+      &lt;input id="ufld:CLEAR.DSP_DUMMY.DUMMY" value="Button" type="button"&gt;
+    &lt;/form&gt;
+    &lt;div&gt;
+      &lt;div id="fileName"&gt;&lt;/div&gt;
+      &lt;div id="fileSize"&gt;&lt;/div&gt;
+      &lt;div id="fileType"&gt;&lt;/div&gt;
+      &lt;progress id="progress" style="margin-top: 10px;"&gt;&lt;/progress&gt;
+      &lt;span id="percent"&gt;&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</DAT>
 </OCC>
 </TABLE>
 <TABLE>
@@ -455,15 +516,16 @@ $U$&lt;x-subst type="submit" name="SUBMIT.OUTER.U"&gt;&lt;input name="SUBMIT.OUT
  pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\ED,0,0,0,,0,0,0,," />
 </DSC>
 <OCC>
-<DAT name="ULABEL">OUTER</DAT>
-<DAT name="UBASE">U</DAT>
-<DAT name="UFORM">PB2</DAT>
+<DAT name="ULABEL">DSP_DUMMY</DAT>
+<DAT name="UBASE">DUMMY</DAT>
+<DAT name="UFORM">FILE_UPLOAD_PROG</DAT>
 <DAT name="UKVERSION">6</DAT>
 <DAT name="UMVERSION">4</DAT>
 <DAT name="U_BORD">N</DAT>
 <DAT name="DB_ACCESS">D</DAT>
 <DAT name="U_UPD">Y</DAT>
 <DAT name="UINHERIT">F</DAT>
+<DAT name="DSP_WIDGETTYPE">U_NONE</DAT>
 <DAT name="USP_WIDGETPROPS" xml:space='preserve'>U_ATLEASTONE=1&uSEP;U_STARTOCC=1</DAT>
 </OCC>
 </TABLE>
@@ -570,57 +632,87 @@ $U$&lt;x-subst type="submit" name="SUBMIT.OUTER.U"&gt;&lt;input name="SUBMIT.OUT
  pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\E0,0,0,0,,0,0,0,," />
 </DSC>
 <OCC>
-<DAT name="ULABEL">EMAIL</DAT>
-<DAT name="GRP">OUTER</DAT>
-<DAT name="UBASE">U</DAT>
-<DAT name="UFORM">PB2</DAT>
+<DAT name="ULABEL">CANCEL_BUTTON</DAT>
+<DAT name="GRP">DSP_DUMMY</DAT>
+<DAT name="UBASE">DUMMY</DAT>
+<DAT name="UFORM">FILE_UPLOAD_PROG</DAT>
 <DAT name="UKVERSION">6</DAT>
 <DAT name="UMVERSION">4</DAT>
 <DAT name="U_DTYP">S</DAT>
-<DAT name="IS_STATIC">F</DAT>
-<DAT name="IS_CONTROL">F</DAT>
-<DAT name="U_INT">C*</DAT>
-<DAT name="UINHERIT">F</DAT>
-<DAT name="FRM_WIDGETTYPE">EDITBOX</DAT>
-<DAT name="DSP_WIDGETTYPE">EDITBOX</DAT>
-<DAT name="USP_WIDGETTYPE">U_INPUT</DAT>
-</OCC>
-<OCC>
-<DAT name="ULABEL">NAME</DAT>
-<DAT name="GRP">OUTER</DAT>
-<DAT name="UBASE">U</DAT>
-<DAT name="UFORM">PB2</DAT>
-<DAT name="UKVERSION">6</DAT>
-<DAT name="UMVERSION">4</DAT>
-<DAT name="U_DTYP">S</DAT>
-<DAT name="IS_STATIC">F</DAT>
-<DAT name="IS_CONTROL">F</DAT>
-<DAT name="U_INT">C*</DAT>
-<DAT name="UINHERIT">F</DAT>
-<DAT name="FRM_WIDGETTYPE">EDITBOX</DAT>
-<DAT name="DSP_WIDGETTYPE">EDITBOX</DAT>
-<DAT name="USP_WIDGETTYPE">U_INPUT</DAT>
-</OCC>
-<OCC>
-<DAT name="ULABEL">SUBMIT</DAT>
-<DAT name="GRP">OUTER</DAT>
-<DAT name="UBASE">U</DAT>
-<DAT name="UFORM">PB2</DAT>
-<DAT name="UKVERSION">6</DAT>
-<DAT name="UMVERSION">4</DAT>
-<DAT name="U_DTYP">S</DAT>
-<DAT name="IS_STATIC">F</DAT>
-<DAT name="IS_CONTROL">F</DAT>
-<DAT name="U_INT">C1</DAT>
+<DAT name="IS_STATIC">T</DAT>
+<DAT name="IS_CONTROL">T</DAT>
+<DAT name="U_INT">C40</DAT>
 <DAT name="UINHERIT">F</DAT>
 <DAT name="USCRIPT" xml:space='preserve'>trigger detail
-public web
-$webinfo("OUTPUT") = "%%$vfields$%%%"
+webtrigger
+
+javascript
+
+uploadAbort();
+
+endjavascript
 </DAT>
-<DAT name="INITVALUE">Submit</DAT>
+<DAT name="INITVALUE">Cancel</DAT>
 <DAT name="FRM_WIDGETTYPE">EDITBOX</DAT>
-<DAT name="DSP_WIDGETTYPE">EDITBOX</DAT>
-<DAT name="USP_WIDGETTYPE">U_BUTTON</DAT>
+<DAT name="DSP_WIDGETTYPE">COMMANDBUTTON</DAT>
+<DAT name="USP_WIDGETTYPE">U_INPUT</DAT>
+</OCC>
+<OCC>
+<DAT name="ULABEL">CLEAR</DAT>
+<DAT name="GRP">DSP_DUMMY</DAT>
+<DAT name="UBASE">DUMMY</DAT>
+<DAT name="UFORM">FILE_UPLOAD_PROG</DAT>
+<DAT name="UKVERSION">6</DAT>
+<DAT name="UMVERSION">4</DAT>
+<DAT name="U_DTYP">S</DAT>
+<DAT name="IS_STATIC">T</DAT>
+<DAT name="IS_CONTROL">T</DAT>
+<DAT name="U_INT">C30</DAT>
+<DAT name="UINHERIT">F</DAT>
+<DAT name="USCRIPT" xml:space='preserve'>trigger detail
+webtrigger
+
+javascript
+
+document.getElementById("fileA").value = "";
+document.getElementById("fileName").innerHTML = "";
+document.getElementById("fileSize").innerHTML = "";
+document.getElementById("fileType").innerHTML = "";
+document.getElementById("progress").value = "";
+document.getElementById("percent").innerHTML = "";
+
+endjavascript
+</DAT>
+<DAT name="INITVALUE">Clear</DAT>
+<DAT name="FRM_WIDGETTYPE">EDITBOX</DAT>
+<DAT name="DSP_WIDGETTYPE">COMMANDBUTTON</DAT>
+<DAT name="USP_WIDGETTYPE">U_INPUT</DAT>
+</OCC>
+<OCC>
+<DAT name="ULABEL">UPLOAD_BUTTON</DAT>
+<DAT name="GRP">DSP_DUMMY</DAT>
+<DAT name="UBASE">DUMMY</DAT>
+<DAT name="UFORM">FILE_UPLOAD_PROG</DAT>
+<DAT name="UKVERSION">6</DAT>
+<DAT name="UMVERSION">4</DAT>
+<DAT name="U_DTYP">S</DAT>
+<DAT name="IS_STATIC">T</DAT>
+<DAT name="IS_CONTROL">T</DAT>
+<DAT name="U_INT">C40</DAT>
+<DAT name="UINHERIT">F</DAT>
+<DAT name="USCRIPT" xml:space='preserve'>trigger detail
+webtrigger
+
+javascript
+
+uploadFile();
+
+endjavascript
+</DAT>
+<DAT name="INITVALUE">Upload</DAT>
+<DAT name="FRM_WIDGETTYPE">EDITBOX</DAT>
+<DAT name="DSP_WIDGETTYPE">COMMANDBUTTON</DAT>
+<DAT name="USP_WIDGETTYPE">U_INPUT</DAT>
 </OCC>
 </TABLE>
 </UNIFACE>

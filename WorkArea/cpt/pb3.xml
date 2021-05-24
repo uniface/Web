@@ -141,7 +141,7 @@
  pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\E1,0,0,0,,0,0,0,," />
 </DSC>
 <OCC>
-<DAT name="UTIMESTAMP">2021-04-23T13:10:34.00</DAT>
+<DAT name="UTIMESTAMP">2021-05-24T23:09:32.00</DAT>
 <DAT name="ULABEL">PB3</DAT>
 <DAT name="FTYP">K</DAT>
 <DAT name="DATA_ACCESS">N</DAT>
@@ -183,6 +183,28 @@
 ;
 
 #enddefine
+
+operation exec
+; To run this operation, it must be declared ‘public web’. Otherwise, it results in a security error on the browser.
+; The 'exec' operation is needed to access the static server page from a web client.
+public web
+; Your VARIABLES block here (optional)...
+
+  ; Your pre-edit code here...
+
+  webget   ; Load data submitted by web client
+  if ($procerror == 0)
+    webgen ; Generate a response based on the layout and component data
+  else
+	; Your error handling here...
+  endif
+
+  ; Your post-edit code here...
+
+  ;   return 0    ; return &gt;= 0 typically indicates a succesful execution
+  return 0
+
+end
 
 
 trigger preActivate
@@ -618,6 +640,7 @@ Upload
 <DAT name="U_INT">C1</DAT>
 <DAT name="UINHERIT">F</DAT>
 <DAT name="USCRIPT" xml:space='preserve'>trigger detail
+public web
 variables
 string vFileContents
 endvariables

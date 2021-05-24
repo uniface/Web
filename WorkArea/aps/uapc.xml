@@ -1,0 +1,134 @@
+﻿<?xml version='1.0' encoding='UTF-8' ?>
+<!-- Created by Uniface - (C) Uniface B.V. All rights reserved -->
+<!DOCTYPE UNIFACE PUBLIC "UNIFACE.DTD" "UNIFACE.DTD">
+<UNIFACE release="10.3" repversion="7" xmlengine="2.0">
+<TABLE>
+<DSC name="UAPPL" model="DICT" system="S" pseudo ="73" level="1" noupdate="0"
+ rbk="0" ffsql="0" transnr="0" segsize="0" ufocc="0" charset=".U">
+<FLD name="UTIMESTAMP" seqno="1" type="E" level="2" pack="0" scale="0" length="15"
+ pointer="0" inum="0" ufocc="0" />
+<FLD name="ULABEL" seqno="2" type="S" level="2" pack="0" scale="0" length="60"
+ pointer="0" inum="1" ufocc="0" mandatory="yes" idxnum="1" idxsnr="101" />
+<FLD name="UKVERSION" seqno="3" type="N" level="2" pack="10" scale="0" length="2"
+ pointer="0" inum="1" ufocc="0" idxnum="2" idxsnr="1" />
+<FLD name="UMVERSION" seqno="4" type="N" level="2" pack="10" scale="0" length="2"
+ pointer="0" inum="1" ufocc="0" idxnum="3" idxsnr="1" />
+<FLD name="UDESCR" seqno="5" type="S" level="2" pack="13" scale="0" length="64"
+ pointer="0" inum="0" ufocc="0" />
+<FLD name="UTYPE" seqno="6" type="S" level="2" pack="0" scale="0" length="6"
+ pointer="0" inum="0" ufocc="0" />
+<FLD name="AIOPRINT" seqno="7" type="N" level="2" pack="0" scale="0" length="3"
+ pointer="0" inum="0" ufocc="0" />
+<FLD name="LIBRAR" seqno="8" type="S" level="2" pack="0" scale="0" length="60"
+ pointer="0" inum="0" ufocc="0" />
+<FLD name="UPANEL" seqno="9" type="S" level="2" pack="1" scale="0" length="128"
+ pointer="0" inum="0" ufocc="0" />
+<FLD name="SPANEL" seqno="10" type="S" level="2" pack="1" scale="0" length="128"
+ pointer="0" inum="0" ufocc="0" />
+<FLD name="POSPANEL" seqno="11" type="S" level="2" pack="1" scale="0" length="1"
+ pointer="0" inum="0" ufocc="0" />
+<FLD name="UPULL" seqno="12" type="S" level="2" pack="1" scale="0" length="128"
+ pointer="0" inum="0" ufocc="0" />
+<FLD name="UPURPOSE" seqno="13" type="S" level="2" pack="1" scale="0" length="1"
+ pointer="0" inum="0" ufocc="0" />
+<FLD name="UALT_NAME" seqno="14" type="S" level="2" pack="13" scale="0" length="64"
+ pointer="0" inum="0" ufocc="0" />
+<FLD name="UWAORDER" seqno="15" type="N" level="2" pack="7" scale="0" length="5"
+ pointer="0" inum="0" ufocc="0" />
+<FLD name="UCOMMENT" seqno="16" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",0,0,0,,1,0,1,\1D,0,0,0,," />
+<FLD name="UDECLARATIONS" seqno="17" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\C1,0,0,0,,0,0,0,," />
+<FLD name="USCRIPT" seqno="18" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\C2,0,0,0,,0,0,0,," />
+<FLD name="INIT" seqno="19" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\C3,0,0,0,,0,0,0,," />
+<FLD name="KEYCHAN" seqno="20" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\C4,0,0,0,,0,0,0,," />
+<FLD name="MENU" seqno="21" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\C5,0,0,0,,0,0,0,," />
+<FLD name="INTKEY" seqno="22" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\C6,0,0,0,,0,0,0,," />
+<FLD name="EPRINT" seqno="23" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\C7,0,0,0,,0,0,0,," />
+<FLD name="ASYNC" seqno="24" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\C8,0,0,0,,0,0,0,," />
+<FLD name="PREP" seqno="25" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\C9,0,0,0,,0,0,0,," />
+<FLD name="PSTP" seqno="26" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\CA,0,0,0,,0,0,0,," />
+<FLD name="TITLE" seqno="27" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\CB,0,0,0,,0,0,0,," />
+<FLD name="SCREENPIC" seqno="28" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\CC,0,0,0,,0,0,0,," />
+<FLD name="WINPROP" seqno="29" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\CD,0,0,0,,0,0,0,," />
+<FLD name="UPOPUP" seqno="30" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\CE,0,0,0,,0,0,0,," />
+<FLD name="APPPROP" seqno="31" type="S" level="2" pack="141" scale="0" length="0"
+ pointer="0" inum="0" ufocc="0" varinfo=",1,0,2,\1F\CF,0,0,0,,0,0,0,," />
+</DSC>
+<OCC>
+<DAT name="UTIMESTAMP">2016-08-16T15:27:47.00</DAT>
+<DAT name="ULABEL">UAPC</DAT>
+<DAT name="UKVERSION">6</DAT>
+<DAT name="UMVERSION">3</DAT>
+<DAT name="UDESCR" xml:space='preserve'>Application Shell - Character Mode</DAT>
+<DAT name="UTYPE">APC</DAT>
+<DAT name="UPURPOSE">T</DAT>
+<DAT name="UALT_NAME" xml:space='preserve'>Application Shell - Character Mode</DAT>
+<DAT name="UCOMMENT" xml:space='preserve'>{\rtf1\fbidis\ansi\ansicpg1252\deff0\deflang1043{\fonttbl{\f0\fswiss\fprq2\fcharset0 Verdana;}{\f1\fmodern\fprq1\fcharset0 Courier New;}{\f2\fnil Verdana;}}
+\viewkind4\uc1\pard\ltrpar\lang1033\b\f0\fs16 Application Server\par
+\b0\par
+When the Userver is used as an Application Server, the Application Shell (APS) is activated for every external activated operation:\par
+\par
+Userver-&gt;Urouter-&gt;Userver\par
+\par
+The order in which triggers are fired in the Userver is:\par
+\pard{\pntext\f0 1.\tab}{\*\pn\pnlvlbody\pnf0\pnindent0\pnstart1\pndec{\pntxta.}}
+\ltrpar\fi-360\li720 APS: trigger apstart (return value ignored)\par
+{\pntext\f0 2.\tab}DSP: operation init (as part of new instance)\par
+{\pntext\f0 3.\tab}DSP: trigger preActivate\lang1043\par
+\lang1033{\pntext\f0 4.\tab}DSP: operation MyRequestedOperation\lang1043\par
+\lang1033{\pntext\f0 5.\tab}DSP: trigger postActivate\lang1043\par
+\lang1033{\pntext\f0 6.\tab}DSP: operation cleanup (as part of delete instance)\par
+\pard\ltrpar\lang1043\par
+\lang1033\b Instructions\par
+\pard\ltrpar\fi-360\li720\b0 1.\tab Create a custom Application Shell (APS) from this template.\par
+2.\tab Give it a name, e.g. MYASV\par
+3.\tab Write script\par
+4.\tab Configure the URouter assignment file to use this Application Shell (APS):\line On Windows (usysins:common\\adm\\urouter.asn):\par
+\pard\ltrpar\f1 asv="usysins:common\\bin\\userver.exe" /dir="myProjectFolder" /asn=asv.asn MYASV.aps\par
+\pard\ltrpar\fi-360\li720\f0 5.\tab The default used APS, when not specified in the Urouter assignment file, is USERVER\par
+6.\tab Configure the assignment file of the caller process to redirect services (SVC) to this request:\line E.g. in your wasv.asn:\par
+\pard\ltrpar\li-142\f1 [PATHS]\line $asv=tcp:localhost|&lt;user&gt;|&lt;password&gt;|asv\par
+[SERVICES_EXEC]\par
+MYSVC=$asv:MYSVC\par
+\pard\ltrpar\fi-360\li720\f0 7.\tab Restart the Urouter after every change or kill all userver processes\par
+8.\tab Test\par
+\pard\ltrpar\lang1043\f2\par
+}
+</DAT>
+<DAT name="UDECLARATIONS" xml:space='preserve'>; Application Shell for Character Mode
+</DAT>
+<DAT name="USCRIPT" xml:space='preserve'>; Fired triggers are:
+;   trigger apstart        (&lt;v10 known as 'Application Execute' trigger)
+;   trigger receiveMessage (&lt;v10 known as 'Asynchronous Interrupt' trigger)
+;   trigger menu
+;   trigger userKey
+;   trigger keyboardSwitch
+
+
+; The trigger apstart is mandatory.
+trigger apstart
+; Your VARIABLES block here (optional)...
+
+  ; Activate this first component of your application here...
+
+end
+</DAT>
+<DAT name="SCREENPIC" xml:space='preserve'>&uFRM;TYP=F&uSEP;NAM=MESSAGE&uSEP;WID=80&uSEP;HEI=1&uSEP;HOC=80&uSEP;VOC=1&uFRM;
+&uFRM;TYP=F&uSEP;NAM=FORMAREA&uSEP;WID=80&uSEP;HEI=23&uSEP;HOC=80&uSEP;VOC=23&uFRM;</DAT>
+</OCC>
+</TABLE>
+</UNIFACE>

@@ -38,7 +38,7 @@
 </DSC>
 <OCC>
 <DAT name="ULABEL">JQGRID</DAT>
-<DAT name="UTIMESTAMP">2021-04-28T11:43:27.00</DAT>
+<DAT name="UTIMESTAMP">2021-05-24T23:34:41.00</DAT>
 <DAT name="UKVERSION">6</DAT>
 <DAT name="UMVERSION">2</DAT>
 <DAT name="UPURPOSE">N</DAT>
@@ -62,12 +62,6 @@
 <FLD name="UWAORDER" seqno="7" type="N" level="2" pack="7" scale="0" length="5"
  pointer="0" inum="0" ufocc="0" />
 </DSC>
-<OCC>
-<DAT name="UPROJECT">JQGRID</DAT>
-<DAT name="ULABEL">FILE_UPLOAD_USP</DAT>
-<DAT name="UKVERSION">6</DAT>
-<DAT name="UMVERSION">2</DAT>
-</OCC>
 <OCC>
 <DAT name="UPROJECT">JQGRID</DAT>
 <DAT name="ULABEL">PB1</DAT>
